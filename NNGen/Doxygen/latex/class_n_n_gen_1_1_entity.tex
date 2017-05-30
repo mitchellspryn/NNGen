@@ -1,0 +1,305 @@
+\hypertarget{class_n_n_gen_1_1_entity}{}\section{N\+N\+Gen.\+Entity Class Reference}
+\label{class_n_n_gen_1_1_entity}\index{N\+N\+Gen.\+Entity@{N\+N\+Gen.\+Entity}}
+
+
+An interface for any object that will eventually generate a V\+H\+D\+L entity  
+
+
+Inheritance diagram for N\+N\+Gen.\+Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{class_n_n_gen_1_1_entity}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract string \hyperlink{class_n_n_gen_1_1_entity_a9f25d1070c9ab8ad343c28443e62e6f2}{get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Returns a string representing the name of the entity (i.\+e. the X\+X\+X in the line \char`\"{}\+E\+N\+T\+I\+T\+Y X\+X\+X I\+S ...\char`\"{}) \end{DoxyCompactList}\item 
+abstract \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_entity_a01239f05c9efa61ec9e6a29cb2eaad50}{get\+Input\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns an array of Ports representing the inputs to the entity \end{DoxyCompactList}\item 
+abstract \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_entity_ace06368087778e254a5048c7d28747be}{get\+Output\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns an array of Ports representing the outputs of the entity \end{DoxyCompactList}\item 
+abstract \hyperlink{class_n_n_gen_1_1_signal}{Signal}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_entity_a62feb80e95ec84c650ea17bd53f0d510}{get\+Internal\+Signals} ()
+\begin{DoxyCompactList}\small\item\em Returns an array of singnals representing the internal signals of the entity \end{DoxyCompactList}\item 
+abstract bool \hyperlink{class_n_n_gen_1_1_entity_a1111d498446be08b20583b9625893a52}{write\+V\+H\+D\+L} (string file)
+\begin{DoxyCompactList}\small\item\em Writes the V\+H\+D\+L entity to file. \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_entity_a75a568e4f2375bb409c5f31e17bf2585}{write\+V\+H\+D\+L\+Includes} (Stream\+Writer sw)
+\begin{DoxyCompactList}\small\item\em Writes the \char`\"{}library\char`\"{} and \char`\"{}use\char`\"{} include statements for the project \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_entity_a9c1e22927e3bb62cbfbf391dc1c52301}{write\+V\+H\+D\+L\+Entity} (Stream\+Writer sw)
+\begin{DoxyCompactList}\small\item\em Writes an entity statement "E\+N\+T\+I\+T\+Y ... I\+S P\+O\+R\+T ( ... ); E\+N\+D ...; \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_entity_aee5c9d1fd7354d1b571f4d99043a0f51}{write\+V\+H\+D\+L\+Component} (Stream\+Writer sw)
+\begin{DoxyCompactList}\small\item\em Writes a component statment, used to declare smaller entities within a larger entity C\+O\+M\+P\+O\+N\+E\+N\+T ... P\+O\+R\+T ( ... ); E\+N\+D C\+O\+M\+P\+O\+N\+E\+N\+T; \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_entity_a9e1d15aff6a09e55419661983923e4b7}{write\+V\+H\+D\+L\+Ports} (Stream\+Writer sw)
+\begin{DoxyCompactList}\small\item\em Writes the port statement for a V\+H\+D\+L entity P\+O\+R\+T ( ... ); \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_entity_a841b967c6c90e24c6d5fe9ad2a420751}{write\+V\+H\+D\+L\+Dependencies} (Stream\+Writer sw, List$<$ \hyperlink{class_n_n_gen_1_1_entity}{Entity} $>$ dependent\+Entities)
+\begin{DoxyCompactList}\small\item\em Writes the component statment for each of the entities in dependent\+Entities See \hyperlink{class_n_n_gen_1_1_entity_aee5c9d1fd7354d1b571f4d99043a0f51}{write\+V\+H\+D\+L\+Component()} \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_entity_afb8bc38d1bea3b52be2557c2447942ef}{write\+V\+H\+D\+L\+Signals} (Stream\+Writer sw)
+\begin{DoxyCompactList}\small\item\em Writes the internal signals for the entity S\+I\+G\+N\+A\+L ... \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_entity_a643e1423f3ec04732cc2dd660ff97c33}{write\+Architecture\+Statement} (Stream\+Writer sw)
+\begin{DoxyCompactList}\small\item\em Writes the architecture statment for the entity A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E ... O\+F ... I\+S \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_entity_adfad533f41068a59a73ce65805e86081}{write\+V\+H\+D\+L\+Footer} (Stream\+Writer sw)
+\begin{DoxyCompactList}\small\item\em Writes the V\+H\+D\+L footer for the entity and flushes the stream E\+N\+D A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E; \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An interface for any object that will eventually generate a V\+H\+D\+L entity 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_entity_a01239f05c9efa61ec9e6a29cb2eaad50}{}\index{N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}!get\+Input\+Ports@{get\+Input\+Ports}}
+\index{get\+Input\+Ports@{get\+Input\+Ports}!N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}}
+\subsubsection[{get\+Input\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}abstract {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Entity.\+get\+Input\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_n_n_gen_1_1_entity_a01239f05c9efa61ec9e6a29cb2eaad50}
+
+
+Returns an array of Ports representing the inputs to the entity 
+
+\begin{DoxyReturn}{Returns}
+The inputs to the entity
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_n_n_gen_1_1_async_neural_network_a94ad9532f7e80514db3ff3eb16ba42cf}{N\+N\+Gen.\+Async\+Neural\+Network}, \hyperlink{class_n_n_gen_1_1_sync_neural_network_a8ed253e22e640d3ec0501dd1c43ad784}{N\+N\+Gen.\+Sync\+Neural\+Network}, \hyperlink{class_n_n_gen_1_1_async_neuron_a76ace6a3638e3f47135fd010ebfee4a0}{N\+N\+Gen.\+Async\+Neuron}, \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a383f86ef468440ca41a5018c8670c2ef}{N\+N\+Gen.\+Transfer\+Function\+Wrapper}, \hyperlink{class_n_n_gen_1_1_sync_neuron_a9f391d4a186cdd79f97ece5adab9ff6c}{N\+N\+Gen.\+Sync\+Neuron}, \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_ac4cf07415c0dc69efdaf91cfc561b68f}{N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx}, \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_a4e263ba9743751277b49cd90578e2455}{N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem}, and \hyperlink{class_n_n_gen_1_1_weight_memory_a0f80fe3a06082c2e238f1c7b552c723d}{N\+N\+Gen.\+Weight\+Memory}.
+
+\hypertarget{class_n_n_gen_1_1_entity_a62feb80e95ec84c650ea17bd53f0d510}{}\index{N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}!get\+Internal\+Signals@{get\+Internal\+Signals}}
+\index{get\+Internal\+Signals@{get\+Internal\+Signals}!N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}}
+\subsubsection[{get\+Internal\+Signals()}]{\setlength{\rightskip}{0pt plus 5cm}abstract {\bf Signal} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Entity.\+get\+Internal\+Signals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_n_n_gen_1_1_entity_a62feb80e95ec84c650ea17bd53f0d510}
+
+
+Returns an array of singnals representing the internal signals of the entity 
+
+\begin{DoxyReturn}{Returns}
+The internal signals of the entity
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_n_n_gen_1_1_async_neural_network_a4ef8c71674da4a162680bf5b5c22d928}{N\+N\+Gen.\+Async\+Neural\+Network}, \hyperlink{class_n_n_gen_1_1_sync_neural_network_a9303b53dc2d792c18ffa72e386eb0eae}{N\+N\+Gen.\+Sync\+Neural\+Network}, \hyperlink{class_n_n_gen_1_1_async_neuron_aeb97d091f87eae66eeb865557d674b72}{N\+N\+Gen.\+Async\+Neuron}, \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_ae64279d96fae0f113bf6cf0cfbadfdff}{N\+N\+Gen.\+Transfer\+Function\+Wrapper}, \hyperlink{class_n_n_gen_1_1_sync_neuron_a615a906839d1227ca0e4605b4165f892}{N\+N\+Gen.\+Sync\+Neuron}, \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_aa9ea30f1d5fa7e2ff1874f00e37deffb}{N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx}, \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_a6b11efb6fd2d874b9bb5cfaafdb528a5}{N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem}, and \hyperlink{class_n_n_gen_1_1_weight_memory_a7166780b7824c585e92da81172aaba22}{N\+N\+Gen.\+Weight\+Memory}.
+
+\hypertarget{class_n_n_gen_1_1_entity_a9f25d1070c9ab8ad343c28443e62e6f2}{}\index{N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}abstract string N\+N\+Gen.\+Entity.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_n_n_gen_1_1_entity_a9f25d1070c9ab8ad343c28443e62e6f2}
+
+
+Returns a string representing the name of the entity (i.\+e. the X\+X\+X in the line \char`\"{}\+E\+N\+T\+I\+T\+Y X\+X\+X I\+S ...\char`\"{}) 
+
+\begin{DoxyReturn}{Returns}
+Name of the entity
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_n_n_gen_1_1_async_neural_network_affd3f3ffb007593e408d63dccf256238}{N\+N\+Gen.\+Async\+Neural\+Network}, \hyperlink{class_n_n_gen_1_1_sync_neural_network_a91d58e0d612c6398c3164dee0fc34347}{N\+N\+Gen.\+Sync\+Neural\+Network}, \hyperlink{class_n_n_gen_1_1_async_neuron_a28513dfbc9af1012436c00d02322c278}{N\+N\+Gen.\+Async\+Neuron}, \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a0ee97f1271edd325188fe389f1b25372}{N\+N\+Gen.\+Transfer\+Function\+Wrapper}, \hyperlink{class_n_n_gen_1_1_sync_neuron_a0d24dc5f802b28e58318bbc70e4e999a}{N\+N\+Gen.\+Sync\+Neuron}, \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_a68e8a0e324f6cae64ee7d2f841c35506}{N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx}, \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_ad4e64419e06ee98cd0a8e52d7ed866b6}{N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem}, and \hyperlink{class_n_n_gen_1_1_weight_memory_a000cfa9b5dd1d41042ed77dbad178aeb}{N\+N\+Gen.\+Weight\+Memory}.
+
+\hypertarget{class_n_n_gen_1_1_entity_ace06368087778e254a5048c7d28747be}{}\index{N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}!get\+Output\+Ports@{get\+Output\+Ports}}
+\index{get\+Output\+Ports@{get\+Output\+Ports}!N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}}
+\subsubsection[{get\+Output\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}abstract {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Entity.\+get\+Output\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_n_n_gen_1_1_entity_ace06368087778e254a5048c7d28747be}
+
+
+Returns an array of Ports representing the outputs of the entity 
+
+\begin{DoxyReturn}{Returns}
+The outputs of the entity
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_n_n_gen_1_1_async_neural_network_a1efde159a323347b01cd88527d61c14e}{N\+N\+Gen.\+Async\+Neural\+Network}, \hyperlink{class_n_n_gen_1_1_sync_neural_network_aff93a78db054336cfe8b2f43885f145d}{N\+N\+Gen.\+Sync\+Neural\+Network}, \hyperlink{class_n_n_gen_1_1_async_neuron_ad10df3705cc6c39aaec226b0730a687e}{N\+N\+Gen.\+Async\+Neuron}, \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_ae687574b26429fd7853a53df4759ca90}{N\+N\+Gen.\+Transfer\+Function\+Wrapper}, \hyperlink{class_n_n_gen_1_1_sync_neuron_a79f19432c86cbaf3a2eaa2090cecf9cf}{N\+N\+Gen.\+Sync\+Neuron}, \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_ad4add2a8c53cc31373dab81e8ea634e2}{N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx}, \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_a56548ab0fbafaa0384aa3c5cddc4d050}{N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem}, and \hyperlink{class_n_n_gen_1_1_weight_memory_a96cae98991fe72526efcc94aa27c3294}{N\+N\+Gen.\+Weight\+Memory}.
+
+\hypertarget{class_n_n_gen_1_1_entity_a643e1423f3ec04732cc2dd660ff97c33}{}\index{N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}!write\+Architecture\+Statement@{write\+Architecture\+Statement}}
+\index{write\+Architecture\+Statement@{write\+Architecture\+Statement}!N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}}
+\subsubsection[{write\+Architecture\+Statement(\+Stream\+Writer sw)}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Entity.\+write\+Architecture\+Statement (
+\begin{DoxyParamCaption}
+\item[{Stream\+Writer}]{sw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_entity_a643e1423f3ec04732cc2dd660ff97c33}
+
+
+Writes the architecture statment for the entity A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E ... O\+F ... I\+S 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sw} & The stream in which to write. Must be open and valid\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the lines were written successfully, false otherwise
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_entity_a1111d498446be08b20583b9625893a52}{}\index{N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}!write\+V\+H\+D\+L@{write\+V\+H\+D\+L}}
+\index{write\+V\+H\+D\+L@{write\+V\+H\+D\+L}!N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}}
+\subsubsection[{write\+V\+H\+D\+L(string file)}]{\setlength{\rightskip}{0pt plus 5cm}abstract bool N\+N\+Gen.\+Entity.\+write\+V\+H\+D\+L (
+\begin{DoxyParamCaption}
+\item[{string}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_n_n_gen_1_1_entity_a1111d498446be08b20583b9625893a52}
+
+
+Writes the V\+H\+D\+L entity to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path to which the entity is to be written\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the file was written successfully, false otherwise.
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_n_n_gen_1_1_async_neural_network_ad57a90889256277e0da34e8e7f3e7848}{N\+N\+Gen.\+Async\+Neural\+Network}, \hyperlink{class_n_n_gen_1_1_sync_neural_network_ab236b9511b805fa1cabe60f3a2c871d6}{N\+N\+Gen.\+Sync\+Neural\+Network}, \hyperlink{class_n_n_gen_1_1_async_neuron_a8877af523d2fb9a4e55e74d17eb0d081}{N\+N\+Gen.\+Async\+Neuron}, \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a1c011e274cd2df8fc643228d77619890}{N\+N\+Gen.\+Transfer\+Function\+Wrapper}, \hyperlink{class_n_n_gen_1_1_sync_neuron_aebc20821885a0661e98403b4a7722643}{N\+N\+Gen.\+Sync\+Neuron}, \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_a1d78cd23e2a1f4e686980052ad8c7a44}{N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx}, \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_a6262571443276194d157c94be915f069}{N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem}, and \hyperlink{class_n_n_gen_1_1_weight_memory_a638a0f1ce7d8f3983ef0a0beb59e887d}{N\+N\+Gen.\+Weight\+Memory}.
+
+\hypertarget{class_n_n_gen_1_1_entity_aee5c9d1fd7354d1b571f4d99043a0f51}{}\index{N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}!write\+V\+H\+D\+L\+Component@{write\+V\+H\+D\+L\+Component}}
+\index{write\+V\+H\+D\+L\+Component@{write\+V\+H\+D\+L\+Component}!N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}}
+\subsubsection[{write\+V\+H\+D\+L\+Component(\+Stream\+Writer sw)}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Entity.\+write\+V\+H\+D\+L\+Component (
+\begin{DoxyParamCaption}
+\item[{Stream\+Writer}]{sw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_entity_aee5c9d1fd7354d1b571f4d99043a0f51}
+
+
+Writes a component statment, used to declare smaller entities within a larger entity C\+O\+M\+P\+O\+N\+E\+N\+T ... P\+O\+R\+T ( ... ); E\+N\+D C\+O\+M\+P\+O\+N\+E\+N\+T; 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sw} & The stream in which to write. Must be open and valid\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the lines were written successfully, false otherwise
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_entity_a841b967c6c90e24c6d5fe9ad2a420751}{}\index{N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}!write\+V\+H\+D\+L\+Dependencies@{write\+V\+H\+D\+L\+Dependencies}}
+\index{write\+V\+H\+D\+L\+Dependencies@{write\+V\+H\+D\+L\+Dependencies}!N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}}
+\subsubsection[{write\+V\+H\+D\+L\+Dependencies(\+Stream\+Writer sw, List$<$ Entity $>$ dependent\+Entities)}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Entity.\+write\+V\+H\+D\+L\+Dependencies (
+\begin{DoxyParamCaption}
+\item[{Stream\+Writer}]{sw, }
+\item[{List$<$ {\bf Entity} $>$}]{dependent\+Entities}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_entity_a841b967c6c90e24c6d5fe9ad2a420751}
+
+
+Writes the component statment for each of the entities in dependent\+Entities See \hyperlink{class_n_n_gen_1_1_entity_aee5c9d1fd7354d1b571f4d99043a0f51}{write\+V\+H\+D\+L\+Component()} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sw} & The stream in which to write. Must be open and valid\\
+\hline
+{\em dependent\+Entities} & The entities for which to write the component statements\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the lines were written successfully, false otherwise
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_entity_a9c1e22927e3bb62cbfbf391dc1c52301}{}\index{N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}!write\+V\+H\+D\+L\+Entity@{write\+V\+H\+D\+L\+Entity}}
+\index{write\+V\+H\+D\+L\+Entity@{write\+V\+H\+D\+L\+Entity}!N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}}
+\subsubsection[{write\+V\+H\+D\+L\+Entity(\+Stream\+Writer sw)}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Entity.\+write\+V\+H\+D\+L\+Entity (
+\begin{DoxyParamCaption}
+\item[{Stream\+Writer}]{sw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_entity_a9c1e22927e3bb62cbfbf391dc1c52301}
+
+
+Writes an entity statement "E\+N\+T\+I\+T\+Y ... I\+S P\+O\+R\+T ( ... ); E\+N\+D ...; 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sw} & The stream in which to write. Must be open and valid\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the lines were written successfully, false otherwise
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_entity_adfad533f41068a59a73ce65805e86081}{}\index{N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}!write\+V\+H\+D\+L\+Footer@{write\+V\+H\+D\+L\+Footer}}
+\index{write\+V\+H\+D\+L\+Footer@{write\+V\+H\+D\+L\+Footer}!N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}}
+\subsubsection[{write\+V\+H\+D\+L\+Footer(\+Stream\+Writer sw)}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Entity.\+write\+V\+H\+D\+L\+Footer (
+\begin{DoxyParamCaption}
+\item[{Stream\+Writer}]{sw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_entity_adfad533f41068a59a73ce65805e86081}
+
+
+Writes the V\+H\+D\+L footer for the entity and flushes the stream E\+N\+D A\+R\+C\+H\+I\+T\+E\+C\+T\+U\+R\+E; 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sw} & The stream in which to write. Must be open and valid\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the lines were written successfully, false otherwise
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_entity_a75a568e4f2375bb409c5f31e17bf2585}{}\index{N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}!write\+V\+H\+D\+L\+Includes@{write\+V\+H\+D\+L\+Includes}}
+\index{write\+V\+H\+D\+L\+Includes@{write\+V\+H\+D\+L\+Includes}!N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}}
+\subsubsection[{write\+V\+H\+D\+L\+Includes(\+Stream\+Writer sw)}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Entity.\+write\+V\+H\+D\+L\+Includes (
+\begin{DoxyParamCaption}
+\item[{Stream\+Writer}]{sw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_entity_a75a568e4f2375bb409c5f31e17bf2585}
+
+
+Writes the \char`\"{}library\char`\"{} and \char`\"{}use\char`\"{} include statements for the project 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sw} & The stream in which to write. Must be open and valid\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the lines were written successfully, false otherwise
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_entity_a9e1d15aff6a09e55419661983923e4b7}{}\index{N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}!write\+V\+H\+D\+L\+Ports@{write\+V\+H\+D\+L\+Ports}}
+\index{write\+V\+H\+D\+L\+Ports@{write\+V\+H\+D\+L\+Ports}!N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}}
+\subsubsection[{write\+V\+H\+D\+L\+Ports(\+Stream\+Writer sw)}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Entity.\+write\+V\+H\+D\+L\+Ports (
+\begin{DoxyParamCaption}
+\item[{Stream\+Writer}]{sw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_entity_a9e1d15aff6a09e55419661983923e4b7}
+
+
+Writes the port statement for a V\+H\+D\+L entity P\+O\+R\+T ( ... ); 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sw} & The stream in which to write. Must be open and valid\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the lines were written successfully, false otherwise
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_entity_afb8bc38d1bea3b52be2557c2447942ef}{}\index{N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}!write\+V\+H\+D\+L\+Signals@{write\+V\+H\+D\+L\+Signals}}
+\index{write\+V\+H\+D\+L\+Signals@{write\+V\+H\+D\+L\+Signals}!N\+N\+Gen\+::\+Entity@{N\+N\+Gen\+::\+Entity}}
+\subsubsection[{write\+V\+H\+D\+L\+Signals(\+Stream\+Writer sw)}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Entity.\+write\+V\+H\+D\+L\+Signals (
+\begin{DoxyParamCaption}
+\item[{Stream\+Writer}]{sw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_entity_afb8bc38d1bea3b52be2557c2447942ef}
+
+
+Writes the internal signals for the entity S\+I\+G\+N\+A\+L ... 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sw} & The stream in which to write. Must be open and valid\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the lines were written successfully, false otherwise
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_entity_8cs}{Entity.\+cs}\end{DoxyCompactItemize}

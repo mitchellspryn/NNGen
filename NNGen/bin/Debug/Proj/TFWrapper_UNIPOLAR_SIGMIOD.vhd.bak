@@ -1,0 +1,68 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+USE work.fixed_pkg.all;
+
+ENTITY TFWrapper_UNIPOLAR_SIGMIOD IS
+PORT
+(
+	clk : IN STD_LOGIC;
+	addr : IN sfixed(4 DOWNTO -4);
+	data : OUT sfixed(4 DOWNTO -4)
+);
+END TFWrapper_UNIPOLAR_SIGMIOD;
+
+ARCHITECTURE behavorial OF TFWrapper_UNIPOLAR_SIGMIOD IS 
+
+COMPONENT TFWrap_Mem_UNIPOLAR_SIGMIOD
+PORT
+(
+	clk : IN STD_LOGIC;
+	addr : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+	data : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
+);
+END COMPONENT;
+
+	SIGNAL oneMinusAddr : sfixed(4 DOWNTO -4);
+	SIGNAL memAddr : STD_LOGIC_VECTOR(8 DOWNTO 0);
+	SIGNAL memOut : STD_LOGIC_VECTOR(8 DOWNTO 0);
+	SIGNAL memOut_sfixed : sfixed(4 DOWNTO -4);
+	SIGNAL oneMinusMemOut_sfixed : sfixed(4 DOWNTO -4);
+	SIGNAL outSig : sfixed(4 DOWNTO -4);
+
+BEGIN
+
+	oneMinusAddr <= to_sfixed(1, oneMinusAddr) - addr;
+
+	process(addr) begin
+		if (addr >= 0) then
+			memAddr <= to_slv(addr);
+		else
+			memAddr <= to_slv(oneMinusAddr);
+		end if;
+	end process;
+
+	sm: TFWrap_Mem_UNIPOLAR_SIGMIOD PORT MAP
+	(
+		addr => memAddr,
+		clk => clk,
+		data => memOut
+	);
+	memOut_sfixed <= to_sfixed(memOut, memOut_sfixed);
+
+	oneMinusMemOut_sfixed <= to_sfixed(1, oneMinusMemOut_sfixed) - memOut_sfixed;
+
+	process(addr) begin
+		if (addr > to_sfixed(6, addr)) then
+			outSig <= to_sfixed(1, outSig);
+		elsif(addr < to_sfixed(6, addr)) then
+			outSig <= to_sfixed(-1, outSig);
+		elsif ((addr >= to_sfixed(0, addr)) AND (addr < to_sfixed(6, addr))) then
+			outSig <= memOut_sfixed;
+		else
+			outSig <= oneMinusMemOut_sfixed;
+		end if;
+	end process;
+
+	data <= outSig;
+END ARCHITECTURE;

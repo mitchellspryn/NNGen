@@ -1,0 +1,212 @@
+\hypertarget{class_n_n_gen_1_1_layer_setup}{}\section{N\+N\+Gen.\+Layer\+Setup Class Reference}
+\label{class_n_n_gen_1_1_layer_setup}\index{N\+N\+Gen.\+Layer\+Setup@{N\+N\+Gen.\+Layer\+Setup}}
+
+
+A pannel for setting up a single layer of the Neural Network  
+
+
+Inheritance diagram for N\+N\+Gen.\+Layer\+Setup\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_n_n_gen_1_1_layer_setup}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_layer_setup_a5daf76885695996275037fd51323d062}{Layer\+Setup} (string \+\_\+title\+String, bool \+\_\+bias\+Enabled, double \+\_\+bias\+Value, int \+\_\+num\+Neuron, bool \+\_\+thresholding\+Enabled, \hyperlink{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64}{Async\+Neuron.\+Neuron\+Activation\+Type} \+\_\+async\+Type, \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6}{Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type} \+\_\+sync\+Type, bool \+\_\+is\+Sync\+Layer, bool \+\_\+is\+Last\+Layer)
+\begin{DoxyCompactList}\small\item\em Construct the layer setup form \end{DoxyCompactList}\item 
+override bool \hyperlink{class_n_n_gen_1_1_layer_setup_a0601d6640ad94c5e34316b60e70f8ede}{verify} ()
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_n_n_gen_1_1_layer_setup_a0601d6640ad94c5e34316b60e70f8ede}{verify()} method implementation for this class. See N\+N\+Pannel.\+verify() for more documentation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_n_n_gen_1_1_layer_setup_a3a9b3fe98e68a22d02ca7caf42800408}{Dispose} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_n_n_gen_1_1_layer_setup_ad02db2fa93e561ffd181ad7824d6b296}{num\+Neurons}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of neurons in the layer \end{DoxyCompactList}\item 
+double \hyperlink{class_n_n_gen_1_1_layer_setup_a44fec12782544a7b0ec9f9705251ebaf}{bias\+Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The bias value applied to the layer \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_layer_setup_aba1fd67f0b1f840794b46dcd3626e05f}{bias\+Enabled}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A boolean representing whether the layer can have a bias node (disabled for the output layer) \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_layer_setup_a8b5e8dd32a59d8ebb4956e3ddb6220b8}{thresholding\+Enabled}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A boolean representing whether thresholding is available for the layer (disabled for the input layer) \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_layer_setup_a3c8d928b37fc46a8098bb9698dbd622c}{is\+Sync\+Layer}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A flag for whether this layer is synchronous \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_layer_setup_a7c89db95e04b0f4b046786ba56b97b76}{is\+Last\+Layer}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A flag for whether this is the last layer in the network \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_layer_setup_adbccceab05f4b3f3f7aba558408f4e94}{is\+Classifier}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A flag for whether this network should be a classification network as opposed to a regression network \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_layer_setup_afd7deda67d710ebec7628b2eec8f484b}{classifier\+Thresholds}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A structure for holding the thresholds for a classification network. If the network is a regression network, this item will be blank. \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64}{Async\+Neuron.\+Neuron\+Activation\+Type} \hyperlink{class_n_n_gen_1_1_layer_setup_a7b3a1f35136f4ba1abc63ef61d2733f3}{async\+Activation\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For an asynchronous network, the activation type for the layer \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6}{Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type} \hyperlink{class_n_n_gen_1_1_layer_setup_a305c28b6f6a27e7f729362e63280e997}{sync\+Activation\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For a synchronous network, the activation type for the layer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A pannel for setting up a single layer of the Neural Network 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_n_gen_1_1_layer_setup_a5daf76885695996275037fd51323d062}{}\index{N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}!Layer\+Setup@{Layer\+Setup}}
+\index{Layer\+Setup@{Layer\+Setup}!N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}}
+\subsubsection[{Layer\+Setup(string \+\_\+title\+String, bool \+\_\+bias\+Enabled, double \+\_\+bias\+Value, int \+\_\+num\+Neuron, bool \+\_\+thresholding\+Enabled, Async\+Neuron.\+Neuron\+Activation\+Type \+\_\+async\+Type, Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type \+\_\+sync\+Type, bool \+\_\+is\+Sync\+Layer, bool \+\_\+is\+Last\+Layer)}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Layer\+Setup.\+Layer\+Setup (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+title\+String, }
+\item[{bool}]{\+\_\+bias\+Enabled, }
+\item[{double}]{\+\_\+bias\+Value, }
+\item[{int}]{\+\_\+num\+Neuron, }
+\item[{bool}]{\+\_\+thresholding\+Enabled, }
+\item[{{\bf Async\+Neuron.\+Neuron\+Activation\+Type}}]{\+\_\+async\+Type, }
+\item[{{\bf Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type}}]{\+\_\+sync\+Type, }
+\item[{bool}]{\+\_\+is\+Sync\+Layer, }
+\item[{bool}]{\+\_\+is\+Last\+Layer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_layer_setup_a5daf76885695996275037fd51323d062}
+
+
+Construct the layer setup form 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+title\+String} & The string to display in the title\\
+\hline
+{\em \+\_\+bias\+Enabled} & The seed value for whether the bias node is enabled for this layer or not\\
+\hline
+{\em \+\_\+bias\+Value} & The seed value for the bias value for this layer\\
+\hline
+{\em \+\_\+num\+Neuron} & The seed value for the number of neurons in the layer\\
+\hline
+{\em \+\_\+thresholding\+Enabled} & A flag for determing whether thresholding is enabled in this layer\\
+\hline
+{\em \+\_\+async\+Type} & For asynchronous networks, the seed value for the activation type. This parameter is ingored for synchronous networks\\
+\hline
+{\em \+\_\+sync\+Type} & For synchronous networks, the seed value for the activation type. This parameter is ignored for the asynchronous networks\\
+\hline
+{\em \+\_\+is\+Sync\+Layer} & A flag for setting whether this layer is synchronous or asynchronous\\
+\hline
+{\em \+\_\+is\+Last\+Layer} & A flag for setting whether this is the last layer in the network or not\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_layer_setup_a3a9b3fe98e68a22d02ca7caf42800408}{}\index{N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}}
+\subsubsection[{Dispose(bool disposing)}]{\setlength{\rightskip}{0pt plus 5cm}override void N\+N\+Gen.\+Layer\+Setup.\+Dispose (
+\begin{DoxyParamCaption}
+\item[{bool}]{disposing}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_n_n_gen_1_1_layer_setup_a3a9b3fe98e68a22d02ca7caf42800408}
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_n_n_gen_1_1_layer_setup_a0601d6640ad94c5e34316b60e70f8ede}{}\index{N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}!verify@{verify}}
+\index{verify@{verify}!N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}}
+\subsubsection[{verify()}]{\setlength{\rightskip}{0pt plus 5cm}override bool N\+N\+Gen.\+Layer\+Setup.\+verify (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_layer_setup_a0601d6640ad94c5e34316b60e70f8ede}
+
+
+The \hyperlink{class_n_n_gen_1_1_layer_setup_a0601d6640ad94c5e34316b60e70f8ede}{verify()} method implementation for this class. See N\+N\+Pannel.\+verify() for more documentation. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_n_n_gen_1_1_n_n_panel_a36e3bcf90c9e561e8502eac6f884582a}{N\+N\+Gen.\+N\+N\+Panel}.
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_n_n_gen_1_1_layer_setup_a7b3a1f35136f4ba1abc63ef61d2733f3}{}\index{N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}!async\+Activation\+Type@{async\+Activation\+Type}}
+\index{async\+Activation\+Type@{async\+Activation\+Type}!N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}}
+\subsubsection[{async\+Activation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Async\+Neuron.\+Neuron\+Activation\+Type} N\+N\+Gen.\+Layer\+Setup.\+async\+Activation\+Type\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_layer_setup_a7b3a1f35136f4ba1abc63ef61d2733f3}
+
+
+For an asynchronous network, the activation type for the layer 
+
+\hypertarget{class_n_n_gen_1_1_layer_setup_aba1fd67f0b1f840794b46dcd3626e05f}{}\index{N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}!bias\+Enabled@{bias\+Enabled}}
+\index{bias\+Enabled@{bias\+Enabled}!N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}}
+\subsubsection[{bias\+Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Layer\+Setup.\+bias\+Enabled\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_layer_setup_aba1fd67f0b1f840794b46dcd3626e05f}
+
+
+A boolean representing whether the layer can have a bias node (disabled for the output layer) 
+
+\hypertarget{class_n_n_gen_1_1_layer_setup_a44fec12782544a7b0ec9f9705251ebaf}{}\index{N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}!bias\+Value@{bias\+Value}}
+\index{bias\+Value@{bias\+Value}!N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}}
+\subsubsection[{bias\+Value}]{\setlength{\rightskip}{0pt plus 5cm}double N\+N\+Gen.\+Layer\+Setup.\+bias\+Value\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_layer_setup_a44fec12782544a7b0ec9f9705251ebaf}
+
+
+The bias value applied to the layer 
+
+\hypertarget{class_n_n_gen_1_1_layer_setup_afd7deda67d710ebec7628b2eec8f484b}{}\index{N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}!classifier\+Thresholds@{classifier\+Thresholds}}
+\index{classifier\+Thresholds@{classifier\+Thresholds}!N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}}
+\subsubsection[{classifier\+Thresholds}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Layer\+Setup.\+classifier\+Thresholds\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_layer_setup_afd7deda67d710ebec7628b2eec8f484b}
+
+
+A structure for holding the thresholds for a classification network. If the network is a regression network, this item will be blank. 
+
+\hypertarget{class_n_n_gen_1_1_layer_setup_adbccceab05f4b3f3f7aba558408f4e94}{}\index{N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}!is\+Classifier@{is\+Classifier}}
+\index{is\+Classifier@{is\+Classifier}!N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}}
+\subsubsection[{is\+Classifier}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Layer\+Setup.\+is\+Classifier\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_layer_setup_adbccceab05f4b3f3f7aba558408f4e94}
+
+
+A flag for whether this network should be a classification network as opposed to a regression network 
+
+\hypertarget{class_n_n_gen_1_1_layer_setup_a7c89db95e04b0f4b046786ba56b97b76}{}\index{N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}!is\+Last\+Layer@{is\+Last\+Layer}}
+\index{is\+Last\+Layer@{is\+Last\+Layer}!N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}}
+\subsubsection[{is\+Last\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Layer\+Setup.\+is\+Last\+Layer\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_layer_setup_a7c89db95e04b0f4b046786ba56b97b76}
+
+
+A flag for whether this is the last layer in the network 
+
+\hypertarget{class_n_n_gen_1_1_layer_setup_a3c8d928b37fc46a8098bb9698dbd622c}{}\index{N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}!is\+Sync\+Layer@{is\+Sync\+Layer}}
+\index{is\+Sync\+Layer@{is\+Sync\+Layer}!N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}}
+\subsubsection[{is\+Sync\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Layer\+Setup.\+is\+Sync\+Layer\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_layer_setup_a3c8d928b37fc46a8098bb9698dbd622c}
+
+
+A flag for whether this layer is synchronous 
+
+\hypertarget{class_n_n_gen_1_1_layer_setup_ad02db2fa93e561ffd181ad7824d6b296}{}\index{N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}!num\+Neurons@{num\+Neurons}}
+\index{num\+Neurons@{num\+Neurons}!N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}}
+\subsubsection[{num\+Neurons}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Layer\+Setup.\+num\+Neurons\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_layer_setup_ad02db2fa93e561ffd181ad7824d6b296}
+
+
+The number of neurons in the layer 
+
+\hypertarget{class_n_n_gen_1_1_layer_setup_a305c28b6f6a27e7f729362e63280e997}{}\index{N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}!sync\+Activation\+Type@{sync\+Activation\+Type}}
+\index{sync\+Activation\+Type@{sync\+Activation\+Type}!N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}}
+\subsubsection[{sync\+Activation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type} N\+N\+Gen.\+Layer\+Setup.\+sync\+Activation\+Type\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_layer_setup_a305c28b6f6a27e7f729362e63280e997}
+
+
+For a synchronous network, the activation type for the layer. 
+
+\hypertarget{class_n_n_gen_1_1_layer_setup_a8b5e8dd32a59d8ebb4956e3ddb6220b8}{}\index{N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}!thresholding\+Enabled@{thresholding\+Enabled}}
+\index{thresholding\+Enabled@{thresholding\+Enabled}!N\+N\+Gen\+::\+Layer\+Setup@{N\+N\+Gen\+::\+Layer\+Setup}}
+\subsubsection[{thresholding\+Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Layer\+Setup.\+thresholding\+Enabled\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_layer_setup_a8b5e8dd32a59d8ebb4956e3ddb6220b8}
+
+
+A boolean representing whether thresholding is available for the layer (disabled for the input layer) 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_layer_setup_8cs}{Layer\+Setup.\+cs}\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_layer_setup_8_designer_8cs}{Layer\+Setup.\+Designer.\+cs}\end{DoxyCompactItemize}

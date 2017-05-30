@@ -1,0 +1,233 @@
+\hypertarget{class_n_n_gen_1_1_port}{}\section{N\+N\+Gen.\+Port Class Reference}
+\label{class_n_n_gen_1_1_port}\index{N\+N\+Gen.\+Port@{N\+N\+Gen.\+Port}}
+
+
+A datatype representing a port in an entity  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90c}{port\+Direction} \{ \hyperlink{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90cac86ee0d9d7ed3e7b4fdbf486fa6c0ebb}{port\+Direction.\+I\+N}, 
+\hyperlink{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90caef373774188a51f80463f37b6bd9e83a}{port\+Direction.\+O\+U\+T}, 
+\hyperlink{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90ca0c93f5d83bbb636236e9610d01e4f3cd}{port\+Direction.\+I\+N\+O\+U\+T}, 
+\hyperlink{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90ca17de626bcae5109bb2f7a66dfc4a8a1d}{port\+Direction.\+B\+U\+F\+F\+E\+R}
+ \}\begin{DoxyCompactList}\small\item\em An enumeration representing the directions for the port \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_port_a2b360d742ee9a3b11e4c9f95b8a7a956}{Port} (\hyperlink{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90c}{port\+Direction} \+\_\+dir, string \+\_\+name, Utilities.\+V\+H\+D\+L\+Data\+Type \+\_\+type, int \+\_\+top, int \+\_\+bottom)
+\begin{DoxyCompactList}\small\item\em The constructor for a port. \end{DoxyCompactList}\item 
+string \hyperlink{class_n_n_gen_1_1_port_adc50095d3117b0a845e223c5d4502bf1}{V\+H\+D\+L\+String} (bool is\+Last)
+\begin{DoxyCompactList}\small\item\em Returns a string used to declare the port Example\+: C\+L\+K\+: I\+N S\+T\+D\+\_\+\+L\+O\+G\+I\+C; \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_port_ab58db29cb073ac7297104720f1580214}{to\+Signal} (string new\+Name)
+\begin{DoxyCompactList}\small\item\em Returns a signal with the same properties of this port, except for the new name \end{DoxyCompactList}\item 
+void \hyperlink{class_n_n_gen_1_1_port_a7bbd5a0006e1004d9cdaaf82be58fe85}{rename} (string new\+Name)
+\begin{DoxyCompactList}\small\item\em Changes the name of the signal \end{DoxyCompactList}\item 
+void \hyperlink{class_n_n_gen_1_1_port_ad830585db8a043e70c9210797dc80500}{set\+Direction} (\hyperlink{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90c}{Port.\+port\+Direction} dir)
+\begin{DoxyCompactList}\small\item\em Change the direction of the port \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_port_a0dbe21338296f8a5e624b9fe4bbb001f}{copy} ()
+\begin{DoxyCompactList}\small\item\em Copy the definition of the port to another port struct \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90c}{port\+Direction} \hyperlink{class_n_n_gen_1_1_port_a68b34b101d99494b7fa7bcb78608a6bf}{direction}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The direction of this particular port \end{DoxyCompactList}\item 
+string \hyperlink{class_n_n_gen_1_1_port_a0fc8ebe56a544edec825980f9961ed6d}{port\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The V\+H\+D\+L name of the particular port \end{DoxyCompactList}\item 
+Utilities.\+V\+H\+D\+L\+Data\+Type \hyperlink{class_n_n_gen_1_1_port_a2b45b890a0e945e39d37a1cc596d1d20}{type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The datatype of the particular port (see Utilities.\+V\+H\+D\+L\+Data\+Type) \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_port_ad68cf9376f181c135381671f67f03149}{top}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The top number in the (X D\+O\+W\+N\+T\+O Y) statement signifying the width of the signal \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_port_a7bf74261a0fc7d2574c45332a301dcb3}{bottom}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The bottom number in the (X D\+O\+W\+N\+T\+O Y) statement signifying the width of the signal \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A datatype representing a port in an entity 
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90c}{}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!port\+Direction@{port\+Direction}}
+\index{port\+Direction@{port\+Direction}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}
+\subsubsection[{port\+Direction}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf N\+N\+Gen.\+Port.\+port\+Direction}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90c}
+
+
+An enumeration representing the directions for the port 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I\+N@{I\+N}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!I\+N@{I\+N}}\item[{\em 
+\hypertarget{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90cac86ee0d9d7ed3e7b4fdbf486fa6c0ebb}{}I\+N\label{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90cac86ee0d9d7ed3e7b4fdbf486fa6c0ebb}
+}]Input port \index{O\+U\+T@{O\+U\+T}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!O\+U\+T@{O\+U\+T}}\item[{\em 
+\hypertarget{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90caef373774188a51f80463f37b6bd9e83a}{}O\+U\+T\label{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90caef373774188a51f80463f37b6bd9e83a}
+}]Output port \index{I\+N\+O\+U\+T@{I\+N\+O\+U\+T}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!I\+N\+O\+U\+T@{I\+N\+O\+U\+T}}\item[{\em 
+\hypertarget{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90ca0c93f5d83bbb636236e9610d01e4f3cd}{}I\+N\+O\+U\+T\label{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90ca0c93f5d83bbb636236e9610d01e4f3cd}
+}]In\+Out port \index{B\+U\+F\+F\+E\+R@{B\+U\+F\+F\+E\+R}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!B\+U\+F\+F\+E\+R@{B\+U\+F\+F\+E\+R}}\item[{\em 
+\hypertarget{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90ca17de626bcae5109bb2f7a66dfc4a8a1d}{}B\+U\+F\+F\+E\+R\label{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90ca17de626bcae5109bb2f7a66dfc4a8a1d}
+}]Buffer port \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_n_gen_1_1_port_a2b360d742ee9a3b11e4c9f95b8a7a956}{}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!Port@{Port}}
+\index{Port@{Port}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}
+\subsubsection[{Port(port\+Direction \+\_\+dir, string \+\_\+name, Utilities.\+V\+H\+D\+L\+Data\+Type \+\_\+type, int \+\_\+top, int \+\_\+bottom)}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Port.\+Port (
+\begin{DoxyParamCaption}
+\item[{{\bf port\+Direction}}]{\+\_\+dir, }
+\item[{string}]{\+\_\+name, }
+\item[{Utilities.\+V\+H\+D\+L\+Data\+Type}]{\+\_\+type, }
+\item[{int}]{\+\_\+top, }
+\item[{int}]{\+\_\+bottom}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_port_a2b360d742ee9a3b11e4c9f95b8a7a956}
+
+
+The constructor for a port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+dir} & the direction of the port (See port\+Direction)\\
+\hline
+{\em \+\_\+name} & the V\+H\+D\+L name of the port\\
+\hline
+{\em \+\_\+type} & the V\+H\+D\+L datatype of the port\\
+\hline
+{\em \+\_\+top} & The upper limit for the port (X in X D\+O\+W\+N\+T\+O Y)\\
+\hline
+{\em \+\_\+bottom} & The lower limit for the port (Y in X D\+O\+W\+N\+T\+O Y)\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_port_a0dbe21338296f8a5e624b9fe4bbb001f}{}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!copy@{copy}}
+\index{copy@{copy}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}
+\subsubsection[{copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Port.\+copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_port_a0dbe21338296f8a5e624b9fe4bbb001f}
+
+
+Copy the definition of the port to another port struct 
+
+\begin{DoxyReturn}{Returns}
+A copy of the current port
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_port_a7bbd5a0006e1004d9cdaaf82be58fe85}{}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!rename@{rename}}
+\index{rename@{rename}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}
+\subsubsection[{rename(string new\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void N\+N\+Gen.\+Port.\+rename (
+\begin{DoxyParamCaption}
+\item[{string}]{new\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_port_a7bbd5a0006e1004d9cdaaf82be58fe85}
+
+
+Changes the name of the signal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_n_n_gen_1_1_port_ad830585db8a043e70c9210797dc80500}{}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!set\+Direction@{set\+Direction}}
+\index{set\+Direction@{set\+Direction}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}
+\subsubsection[{set\+Direction(\+Port.\+port\+Direction dir)}]{\setlength{\rightskip}{0pt plus 5cm}void N\+N\+Gen.\+Port.\+set\+Direction (
+\begin{DoxyParamCaption}
+\item[{{\bf Port.\+port\+Direction}}]{dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_port_ad830585db8a043e70c9210797dc80500}
+
+
+Change the direction of the port 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & The new direction of the port\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_n_n_gen_1_1_port_ab58db29cb073ac7297104720f1580214}{}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!to\+Signal@{to\+Signal}}
+\index{to\+Signal@{to\+Signal}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}
+\subsubsection[{to\+Signal(string new\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Port.\+to\+Signal (
+\begin{DoxyParamCaption}
+\item[{string}]{new\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_port_ab58db29cb073ac7297104720f1580214}
+
+
+Returns a signal with the same properties of this port, except for the new name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & The name of the newly created signal\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A signal named new\+Name, with the same type and width of the port
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_port_adc50095d3117b0a845e223c5d4502bf1}{}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!V\+H\+D\+L\+String@{V\+H\+D\+L\+String}}
+\index{V\+H\+D\+L\+String@{V\+H\+D\+L\+String}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}
+\subsubsection[{V\+H\+D\+L\+String(bool is\+Last)}]{\setlength{\rightskip}{0pt plus 5cm}string N\+N\+Gen.\+Port.\+V\+H\+D\+L\+String (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\+Last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_port_adc50095d3117b0a845e223c5d4502bf1}
+
+
+Returns a string used to declare the port Example\+: C\+L\+K\+: I\+N S\+T\+D\+\_\+\+L\+O\+G\+I\+C; 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Last} & If false, a semicolon will be printed after the end of the signal statement. If true, it will be omitted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string used to declare the port
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_n_n_gen_1_1_port_a7bf74261a0fc7d2574c45332a301dcb3}{}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!bottom@{bottom}}
+\index{bottom@{bottom}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}
+\subsubsection[{bottom}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Port.\+bottom\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_port_a7bf74261a0fc7d2574c45332a301dcb3}
+
+
+The bottom number in the (X D\+O\+W\+N\+T\+O Y) statement signifying the width of the signal 
+
+\hypertarget{class_n_n_gen_1_1_port_a68b34b101d99494b7fa7bcb78608a6bf}{}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!direction@{direction}}
+\index{direction@{direction}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}
+\subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf port\+Direction} N\+N\+Gen.\+Port.\+direction\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_port_a68b34b101d99494b7fa7bcb78608a6bf}
+
+
+The direction of this particular port 
+
+\hypertarget{class_n_n_gen_1_1_port_a0fc8ebe56a544edec825980f9961ed6d}{}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!port\+Name@{port\+Name}}
+\index{port\+Name@{port\+Name}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}
+\subsubsection[{port\+Name}]{\setlength{\rightskip}{0pt plus 5cm}string N\+N\+Gen.\+Port.\+port\+Name\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_port_a0fc8ebe56a544edec825980f9961ed6d}
+
+
+The V\+H\+D\+L name of the particular port 
+
+\hypertarget{class_n_n_gen_1_1_port_ad68cf9376f181c135381671f67f03149}{}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!top@{top}}
+\index{top@{top}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}
+\subsubsection[{top}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Port.\+top\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_port_ad68cf9376f181c135381671f67f03149}
+
+
+The top number in the (X D\+O\+W\+N\+T\+O Y) statement signifying the width of the signal 
+
+\hypertarget{class_n_n_gen_1_1_port_a2b45b890a0e945e39d37a1cc596d1d20}{}\index{N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}!type@{type}}
+\index{type@{type}!N\+N\+Gen\+::\+Port@{N\+N\+Gen\+::\+Port}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}Utilities.\+V\+H\+D\+L\+Data\+Type N\+N\+Gen.\+Port.\+type\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_port_a2b45b890a0e945e39d37a1cc596d1d20}
+
+
+The datatype of the particular port (see Utilities.\+V\+H\+D\+L\+Data\+Type) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_port_8cs}{Port.\+cs}\end{DoxyCompactItemize}

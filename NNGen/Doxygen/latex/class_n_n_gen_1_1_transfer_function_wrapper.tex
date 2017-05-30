@@ -1,0 +1,316 @@
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper}{}\section{N\+N\+Gen.\+Transfer\+Function\+Wrapper Class Reference}
+\label{class_n_n_gen_1_1_transfer_function_wrapper}\index{N\+N\+Gen.\+Transfer\+Function\+Wrapper@{N\+N\+Gen.\+Transfer\+Function\+Wrapper}}
+
+
+Initializes a wrapper for the transfer function memory element. As all implemented functions are symmetric around x = 0, we can save memory by only saving the values for x greater than 0 value in memory, and computing the x less than 0 values by (value = 1.\+0 -\/ abs(x)) Also, the functions implemented (aside from the Linear node) are very close to 1 or -\/1 when abs(x) $>$= 6.\+0, so when the input is in that range, the output is computed as\+: (out = 1.\+0 $\ast$ sgn(x)) (sgn = \{1 if x $>$ 0, -\/1 otherwise\}) (note, for Unipolar Sigmoid, the lower limit is 0, not -\/1)  
+
+
+Inheritance diagram for N\+N\+Gen.\+Transfer\+Function\+Wrapper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_n_gen_1_1_transfer_function_wrapper}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6}{Memory\+Activation\+Type} \{ \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6aaac544aacc3615aada24897a215f5046}{Memory\+Activation\+Type.\+L\+I\+N\+E\+A\+R}, 
+\hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6a40a595040be78efa1c583f123663f8a8}{Memory\+Activation\+Type.\+U\+N\+I\+P\+O\+L\+A\+R\+\_\+\+S\+I\+G\+M\+O\+I\+D}, 
+\hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6ad465b2bacf5410a807fab76338ad95bd}{Memory\+Activation\+Type.\+B\+I\+P\+O\+L\+A\+R\+\_\+\+S\+I\+G\+M\+O\+I\+D}, 
+\hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6a1b8b4b9feedd482b4faaaa5ba9851770}{Memory\+Activation\+Type.\+H\+Y\+P\+E\+R\+B\+O\+L\+I\+C\+\_\+\+T\+A\+N\+G\+E\+N\+T}
+ \}\begin{DoxyCompactList}\small\item\em The supported memory activation types \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a0d552d42c2b0d881b049d05c2fe7e3a9}{Transfer\+Function\+Wrapper} (int \+\_\+num\+Int\+Bits, int \+\_\+num\+Frac\+Bits, \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6}{Memory\+Activation\+Type} \+\_\+activation\+Type)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper}{Transfer\+Function\+Wrapper} entity \end{DoxyCompactList}\item 
+override string \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a0ee97f1271edd325188fe389f1b25372}{get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Returns the name of the entity \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a383f86ef468440ca41a5018c8670c2ef}{get\+Input\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns the inputs to the device \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_ae687574b26429fd7853a53df4759ca90}{get\+Output\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns the outputs to the device \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_signal}{Signal}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_ae64279d96fae0f113bf6cf0cfbadfdff}{get\+Internal\+Signals} ()
+\begin{DoxyCompactList}\small\item\em Returns the internal signals for the device \end{DoxyCompactList}\item 
+override bool \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a1c011e274cd2df8fc643228d77619890}{write\+V\+H\+D\+L} (string file)
+\begin{DoxyCompactList}\small\item\em Writes the .vhd files necessary to compile this entity. All other necessary entities (i.\+e. neurons, thresholding functions, etc.) will also be written when this function returns \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a06c250469e511bdca837875720dbf5e9}{name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of the \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper}{Transfer\+Function\+Wrapper} entity \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a0b1bd686fd58589ecee085e57596d2e7}{addr}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The address requested from memory (i.\+e. the value of x) \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a4db456cd0b50d330f6b221032d35cc81}{clk}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The clock signal for the memory \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a8898d56d022ccf0311e4cf7ed3ec138a}{data}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The output from the wrapper \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_ac952bf20fb4cef97074cadcb2971b1bd}{inverse\+Addr\+Temp}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Used in computing the value (-\/1 $\ast$ Addr) \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_acb5029596b5ce5da76a4fff79d6a10b0}{inverse\+Addr}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Holds the value (-\/1 $\ast$ Addr) \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a60c3f55dade25c86f36d0524bcaadf6e}{mem\+Addr}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The address from memory to grab \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a164219eb34ccaf82e0ee47ad3dcd3c25}{mem\+Out}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The output of the memory \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aec4c1de29fdd1ffae3ac087477973d48}{mem\+Out\+\_\+sfixed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The output of the memory, cast to sfixed \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a28102412789e840a8d62d4f1d80b6fce}{one\+Minus\+Mem\+Out\+\_\+sfixed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Holds the value of 1 -\/ output (used to compute the values when the input is less than 0) \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a5775b19c91e1a869c0c5e7587aaa4a00}{out\+Sig}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The output of the device \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6}{Memory\+Activation\+Type} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_a6e15bcbf79f66a23f040cbcc69fec3d2}{activation\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The memory activation type to implement \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem}{Sync\+Transfer\+Function\+Mem} \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aecb111b0e3e39a4dec337da6288341f4}{sm}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The memory entity from which to read the transfer function \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Initializes a wrapper for the transfer function memory element. As all implemented functions are symmetric around x = 0, we can save memory by only saving the values for x greater than 0 value in memory, and computing the x less than 0 values by (value = 1.\+0 -\/ abs(x)) Also, the functions implemented (aside from the Linear node) are very close to 1 or -\/1 when abs(x) $>$= 6.\+0, so when the input is in that range, the output is computed as\+: (out = 1.\+0 $\ast$ sgn(x)) (sgn = \{1 if x $>$ 0, -\/1 otherwise\}) (note, for Unipolar Sigmoid, the lower limit is 0, not -\/1) 
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!Memory\+Activation\+Type@{Memory\+Activation\+Type}}
+\index{Memory\+Activation\+Type@{Memory\+Activation\+Type}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{Memory\+Activation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6}
+
+
+The supported memory activation types 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{L\+I\+N\+E\+A\+R@{L\+I\+N\+E\+A\+R}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!L\+I\+N\+E\+A\+R@{L\+I\+N\+E\+A\+R}}\item[{\em 
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6aaac544aacc3615aada24897a215f5046}{}L\+I\+N\+E\+A\+R\label{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6aaac544aacc3615aada24897a215f5046}
+}]Linear\+: F(x) = x \index{U\+N\+I\+P\+O\+L\+A\+R\+\_\+\+S\+I\+G\+M\+O\+I\+D@{U\+N\+I\+P\+O\+L\+A\+R\+\_\+\+S\+I\+G\+M\+O\+I\+D}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!U\+N\+I\+P\+O\+L\+A\+R\+\_\+\+S\+I\+G\+M\+O\+I\+D@{U\+N\+I\+P\+O\+L\+A\+R\+\_\+\+S\+I\+G\+M\+O\+I\+D}}\item[{\em 
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6a40a595040be78efa1c583f123663f8a8}{}U\+N\+I\+P\+O\+L\+A\+R\+\_\+\+S\+I\+G\+M\+O\+I\+D\label{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6a40a595040be78efa1c583f123663f8a8}
+}]Unipolar sigmoid\+: F(x) = 1 / (1 + exp(-\/x)) \index{B\+I\+P\+O\+L\+A\+R\+\_\+\+S\+I\+G\+M\+O\+I\+D@{B\+I\+P\+O\+L\+A\+R\+\_\+\+S\+I\+G\+M\+O\+I\+D}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!B\+I\+P\+O\+L\+A\+R\+\_\+\+S\+I\+G\+M\+O\+I\+D@{B\+I\+P\+O\+L\+A\+R\+\_\+\+S\+I\+G\+M\+O\+I\+D}}\item[{\em 
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6ad465b2bacf5410a807fab76338ad95bd}{}B\+I\+P\+O\+L\+A\+R\+\_\+\+S\+I\+G\+M\+O\+I\+D\label{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6ad465b2bacf5410a807fab76338ad95bd}
+}]Bipolar sigmoid\+: F(x) = -\/1 + (2 / (1 + exp(-\/x)) \index{H\+Y\+P\+E\+R\+B\+O\+L\+I\+C\+\_\+\+T\+A\+N\+G\+E\+N\+T@{H\+Y\+P\+E\+R\+B\+O\+L\+I\+C\+\_\+\+T\+A\+N\+G\+E\+N\+T}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!H\+Y\+P\+E\+R\+B\+O\+L\+I\+C\+\_\+\+T\+A\+N\+G\+E\+N\+T@{H\+Y\+P\+E\+R\+B\+O\+L\+I\+C\+\_\+\+T\+A\+N\+G\+E\+N\+T}}\item[{\em 
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6a1b8b4b9feedd482b4faaaa5ba9851770}{}H\+Y\+P\+E\+R\+B\+O\+L\+I\+C\+\_\+\+T\+A\+N\+G\+E\+N\+T\label{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6a1b8b4b9feedd482b4faaaa5ba9851770}
+}]Hyperbolic Tangent\+: F(\+X) = tanh(x) \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_a0d552d42c2b0d881b049d05c2fe7e3a9}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!Transfer\+Function\+Wrapper@{Transfer\+Function\+Wrapper}}
+\index{Transfer\+Function\+Wrapper@{Transfer\+Function\+Wrapper}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{Transfer\+Function\+Wrapper(int \+\_\+num\+Int\+Bits, int \+\_\+num\+Frac\+Bits, Memory\+Activation\+Type \+\_\+activation\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+Transfer\+Function\+Wrapper (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+num\+Int\+Bits, }
+\item[{int}]{\+\_\+num\+Frac\+Bits, }
+\item[{{\bf Memory\+Activation\+Type}}]{\+\_\+activation\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_a0d552d42c2b0d881b049d05c2fe7e3a9}
+
+
+Create a \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper}{Transfer\+Function\+Wrapper} entity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+num\+Int\+Bits} & The number of integer bits to use\\
+\hline
+{\em \+\_\+num\+Frac\+Bits} & The number of fractional bits to use\\
+\hline
+{\em \+\_\+activation\+Type} & The activation type to implement\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_a383f86ef468440ca41a5018c8670c2ef}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!get\+Input\+Ports@{get\+Input\+Ports}}
+\index{get\+Input\+Ports@{get\+Input\+Ports}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{get\+Input\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+get\+Input\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_a383f86ef468440ca41a5018c8670c2ef}
+
+
+Returns the inputs to the device 
+
+\begin{DoxyReturn}{Returns}
+The inputs to the device
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a01239f05c9efa61ec9e6a29cb2eaad50}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_ae64279d96fae0f113bf6cf0cfbadfdff}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!get\+Internal\+Signals@{get\+Internal\+Signals}}
+\index{get\+Internal\+Signals@{get\+Internal\+Signals}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{get\+Internal\+Signals()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Signal} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+get\+Internal\+Signals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_ae64279d96fae0f113bf6cf0cfbadfdff}
+
+
+Returns the internal signals for the device 
+
+\begin{DoxyReturn}{Returns}
+The internal signals for the device
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a62feb80e95ec84c650ea17bd53f0d510}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_a0ee97f1271edd325188fe389f1b25372}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}override string N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_a0ee97f1271edd325188fe389f1b25372}
+
+
+Returns the name of the entity 
+
+\begin{DoxyReturn}{Returns}
+The name of the entity
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a9f25d1070c9ab8ad343c28443e62e6f2}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_ae687574b26429fd7853a53df4759ca90}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!get\+Output\+Ports@{get\+Output\+Ports}}
+\index{get\+Output\+Ports@{get\+Output\+Ports}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{get\+Output\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+get\+Output\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_ae687574b26429fd7853a53df4759ca90}
+
+
+Returns the outputs to the device 
+
+\begin{DoxyReturn}{Returns}
+The outputs to the device
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_ace06368087778e254a5048c7d28747be}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_a1c011e274cd2df8fc643228d77619890}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!write\+V\+H\+D\+L@{write\+V\+H\+D\+L}}
+\index{write\+V\+H\+D\+L@{write\+V\+H\+D\+L}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{write\+V\+H\+D\+L(string file)}]{\setlength{\rightskip}{0pt plus 5cm}override bool N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+write\+V\+H\+D\+L (
+\begin{DoxyParamCaption}
+\item[{string}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_a1c011e274cd2df8fc643228d77619890}
+
+
+Writes the .vhd files necessary to compile this entity. All other necessary entities (i.\+e. neurons, thresholding functions, etc.) will also be written when this function returns 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path in which to write the files (do N\+O\+T include \char`\"{}...\+name.\+vhd\char`\"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the files were written successfully, false otherwise
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a1111d498446be08b20583b9625893a52}{N\+N\+Gen.\+Entity}.
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_a6e15bcbf79f66a23f040cbcc69fec3d2}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!activation\+Type@{activation\+Type}}
+\index{activation\+Type@{activation\+Type}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{activation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memory\+Activation\+Type} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+activation\+Type\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_a6e15bcbf79f66a23f040cbcc69fec3d2}
+
+
+The memory activation type to implement 
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_a0b1bd686fd58589ecee085e57596d2e7}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!addr@{addr}}
+\index{addr@{addr}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{addr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+addr\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_a0b1bd686fd58589ecee085e57596d2e7}
+
+
+The address requested from memory (i.\+e. the value of x) 
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_a4db456cd0b50d330f6b221032d35cc81}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!clk@{clk}}
+\index{clk@{clk}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{clk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+clk\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_a4db456cd0b50d330f6b221032d35cc81}
+
+
+The clock signal for the memory 
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_a8898d56d022ccf0311e4cf7ed3ec138a}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!data@{data}}
+\index{data@{data}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+data\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_a8898d56d022ccf0311e4cf7ed3ec138a}
+
+
+The output from the wrapper 
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_acb5029596b5ce5da76a4fff79d6a10b0}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!inverse\+Addr@{inverse\+Addr}}
+\index{inverse\+Addr@{inverse\+Addr}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{inverse\+Addr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+inverse\+Addr\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_acb5029596b5ce5da76a4fff79d6a10b0}
+
+
+Holds the value (-\/1 $\ast$ Addr) 
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_ac952bf20fb4cef97074cadcb2971b1bd}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!inverse\+Addr\+Temp@{inverse\+Addr\+Temp}}
+\index{inverse\+Addr\+Temp@{inverse\+Addr\+Temp}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{inverse\+Addr\+Temp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+inverse\+Addr\+Temp\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_ac952bf20fb4cef97074cadcb2971b1bd}
+
+
+Used in computing the value (-\/1 $\ast$ Addr) 
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_a60c3f55dade25c86f36d0524bcaadf6e}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!mem\+Addr@{mem\+Addr}}
+\index{mem\+Addr@{mem\+Addr}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{mem\+Addr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+mem\+Addr\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_a60c3f55dade25c86f36d0524bcaadf6e}
+
+
+The address from memory to grab 
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_a164219eb34ccaf82e0ee47ad3dcd3c25}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!mem\+Out@{mem\+Out}}
+\index{mem\+Out@{mem\+Out}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{mem\+Out}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+mem\+Out\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_a164219eb34ccaf82e0ee47ad3dcd3c25}
+
+
+The output of the memory 
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_aec4c1de29fdd1ffae3ac087477973d48}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!mem\+Out\+\_\+sfixed@{mem\+Out\+\_\+sfixed}}
+\index{mem\+Out\+\_\+sfixed@{mem\+Out\+\_\+sfixed}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{mem\+Out\+\_\+sfixed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+mem\+Out\+\_\+sfixed\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_aec4c1de29fdd1ffae3ac087477973d48}
+
+
+The output of the memory, cast to sfixed 
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_a06c250469e511bdca837875720dbf5e9}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!name@{name}}
+\index{name@{name}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}string N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+name\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_a06c250469e511bdca837875720dbf5e9}
+
+
+The name of the \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper}{Transfer\+Function\+Wrapper} entity 
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_a28102412789e840a8d62d4f1d80b6fce}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!one\+Minus\+Mem\+Out\+\_\+sfixed@{one\+Minus\+Mem\+Out\+\_\+sfixed}}
+\index{one\+Minus\+Mem\+Out\+\_\+sfixed@{one\+Minus\+Mem\+Out\+\_\+sfixed}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{one\+Minus\+Mem\+Out\+\_\+sfixed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+one\+Minus\+Mem\+Out\+\_\+sfixed\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_a28102412789e840a8d62d4f1d80b6fce}
+
+
+Holds the value of 1 -\/ output (used to compute the values when the input is less than 0) 
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_a5775b19c91e1a869c0c5e7587aaa4a00}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!out\+Sig@{out\+Sig}}
+\index{out\+Sig@{out\+Sig}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{out\+Sig}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+out\+Sig\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_a5775b19c91e1a869c0c5e7587aaa4a00}
+
+
+The output of the device 
+
+\hypertarget{class_n_n_gen_1_1_transfer_function_wrapper_aecb111b0e3e39a4dec337da6288341f4}{}\index{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}!sm@{sm}}
+\index{sm@{sm}!N\+N\+Gen\+::\+Transfer\+Function\+Wrapper@{N\+N\+Gen\+::\+Transfer\+Function\+Wrapper}}
+\subsubsection[{sm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sync\+Transfer\+Function\+Mem} N\+N\+Gen.\+Transfer\+Function\+Wrapper.\+sm\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_transfer_function_wrapper_aecb111b0e3e39a4dec337da6288341f4}
+
+
+The memory entity from which to read the transfer function 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_transfer_function_wrapper_8cs}{Transfer\+Function\+Wrapper.\+cs}\end{DoxyCompactItemize}

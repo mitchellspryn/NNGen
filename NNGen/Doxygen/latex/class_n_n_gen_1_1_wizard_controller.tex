@@ -1,0 +1,264 @@
+\hypertarget{class_n_n_gen_1_1_wizard_controller}{}\section{N\+N\+Gen.\+Wizard\+Controller Class Reference}
+\label{class_n_n_gen_1_1_wizard_controller}\index{N\+N\+Gen.\+Wizard\+Controller@{N\+N\+Gen.\+Wizard\+Controller}}
+
+
+A class managing the U\+I forms to show the user, as well as recording their responses  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_wizard_controller_ab4b572ad55d5e544cc65cbf850e4bcf8}{Wizard\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Create a new wizard controller \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_n_n_panel}{N\+N\+Panel} \hyperlink{class_n_n_gen_1_1_wizard_controller_a8cb8ef289bd566a55e9cf63448fb503f}{next} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Get the next screen to show the user \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_n_n_panel}{N\+N\+Panel} \hyperlink{class_n_n_gen_1_1_wizard_controller_a56f2cde3be2146a4d215bae7cc773b42}{previous} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Get the previous screen to display to the user \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_n_n_panel}{N\+N\+Panel} \hyperlink{class_n_n_gen_1_1_wizard_controller_a7fad78197da21bbd70fbd874d16712cb}{current} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Get the current screen \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_wizard_controller_abdc2fb0f10dc7fc8fd0fec5f048060f4}{generate\+N\+N} (string filepath)
+\begin{DoxyCompactList}\small\item\em Writes the neural network files to disk \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_panel_container}{Panel\+Container} \hyperlink{class_n_n_gen_1_1_wizard_controller_a9954efe53bf629492e68dd6692092a94}{pc}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The container for the panels to show the user \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_wizard_controller_ad5eb425198c744f28f5e228eeffc895b}{neuron\+Counts}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An array holding the number of neurons for the network. The i-\/th row represents the i-\/th layer \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_wizard_controller_a0575bbc3820b30e2890579150cb924f0}{bias\+Values}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An array holding the bias values for the networks. The i-\/th row represents the bias value feeding into the i+1-\/th layer \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64}{Async\+Neuron.\+Neuron\+Activation\+Type}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_wizard_controller_acbc7dd16f2727da7272632e3737989d6}{async\+Activation\+Types}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For asynchronous networks, the activation type of each layer. For synchronous networks, this variable is ignored \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6}{Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_wizard_controller_ad211fa93c8e54fb2f0383889bcb28964}{sync\+Activation\+Types}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For synchronous networks, the activation types of each layer. For asynchronous netowrks, this variable is ignored \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_wizard_controller_a5216441fbf991464e4db1b1cc1d54c2d}{num\+Int\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of integer bits to use in the creation of the neurons \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_wizard_controller_a49f443f5a43ad1afbbf72a4176e1dcd6}{num\+Frac\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of fractional bits to use in the creation of the neurons \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_wizard_controller_a8aafaab7cca2632ebd09f0fba6a2f09a}{num\+Weight\+Int\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Then number of integer bits to use in the creation of the weight memory \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_wizard_controller_a9314043770a6c63e71dadc2c3abaf63a}{is\+Classifier}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A flag to save whether the network is a classification network or not. \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_wizard_controller_aa3186397159e779da8e2007b9f1c2884}{is\+Synchronous\+Network}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A flag to represent whether the network being created is synchronous or not \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_wizard_controller_a77607ae6650b0c79f9b503209badce0f}{classifier\+Thresholds}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The classifier thresholds for a classification network. For a regression network, these are null. \end{DoxyCompactList}\item 
+List$<$ double $>$ \hyperlink{class_n_n_gen_1_1_wizard_controller_a6978f46ec504d8be14ec6517959d131a}{weights}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of neuron input weights \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_async_neural_network}{Async\+Neural\+Network} \hyperlink{class_n_n_gen_1_1_wizard_controller_a5bc403949233d912bb2c93e2f43cbc25}{async\+N\+N}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The asynchronous network object to be created. This variable is ignored for synchronous networks \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_sync_neural_network}{Sync\+Neural\+Network} \hyperlink{class_n_n_gen_1_1_wizard_controller_a6231cf0c8041896d72a7225cc5cdef7f}{sync\+N\+N}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The synchronous network object to be created. This variable is ignored for asynchronous networks \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class managing the U\+I forms to show the user, as well as recording their responses 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_n_gen_1_1_wizard_controller_ab4b572ad55d5e544cc65cbf850e4bcf8}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!Wizard\+Controller@{Wizard\+Controller}}
+\index{Wizard\+Controller@{Wizard\+Controller}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{Wizard\+Controller()}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Wizard\+Controller.\+Wizard\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_wizard_controller_ab4b572ad55d5e544cc65cbf850e4bcf8}
+
+
+Create a new wizard controller 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_wizard_controller_a7fad78197da21bbd70fbd874d16712cb}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!current@{current}}
+\index{current@{current}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{current(int width, int height)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+N\+Panel} N\+N\+Gen.\+Wizard\+Controller.\+current (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_wizard_controller_a7fad78197da21bbd70fbd874d16712cb}
+
+
+Get the current screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width at which to display the screen\\
+\hline
+{\em height} & The height at which to display the screen\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_wizard_controller_abdc2fb0f10dc7fc8fd0fec5f048060f4}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!generate\+N\+N@{generate\+N\+N}}
+\index{generate\+N\+N@{generate\+N\+N}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{generate\+N\+N(string filepath)}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Wizard\+Controller.\+generate\+N\+N (
+\begin{DoxyParamCaption}
+\item[{string}]{filepath}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_wizard_controller_abdc2fb0f10dc7fc8fd0fec5f048060f4}
+
+
+Writes the neural network files to disk 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & The path at which to write the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_wizard_controller_a8cb8ef289bd566a55e9cf63448fb503f}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!next@{next}}
+\index{next@{next}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{next(int width, int height)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+N\+Panel} N\+N\+Gen.\+Wizard\+Controller.\+next (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_wizard_controller_a8cb8ef289bd566a55e9cf63448fb503f}
+
+
+Get the next screen to show the user 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width at which to display the form\\
+\hline
+{\em height} & The height at which to display the form\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_wizard_controller_a56f2cde3be2146a4d215bae7cc773b42}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!previous@{previous}}
+\index{previous@{previous}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{previous(int width, int height)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+N\+Panel} N\+N\+Gen.\+Wizard\+Controller.\+previous (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_wizard_controller_a56f2cde3be2146a4d215bae7cc773b42}
+
+
+Get the previous screen to display to the user 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width at which to display the screen\\
+\hline
+{\em height} & The height at which to display the screen\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_n_n_gen_1_1_wizard_controller_acbc7dd16f2727da7272632e3737989d6}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!async\+Activation\+Types@{async\+Activation\+Types}}
+\index{async\+Activation\+Types@{async\+Activation\+Types}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{async\+Activation\+Types}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Async\+Neuron.\+Neuron\+Activation\+Type} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Wizard\+Controller.\+async\+Activation\+Types\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_wizard_controller_acbc7dd16f2727da7272632e3737989d6}
+
+
+For asynchronous networks, the activation type of each layer. For synchronous networks, this variable is ignored 
+
+\hypertarget{class_n_n_gen_1_1_wizard_controller_a5bc403949233d912bb2c93e2f43cbc25}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!async\+N\+N@{async\+N\+N}}
+\index{async\+N\+N@{async\+N\+N}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{async\+N\+N}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Async\+Neural\+Network} N\+N\+Gen.\+Wizard\+Controller.\+async\+N\+N\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_wizard_controller_a5bc403949233d912bb2c93e2f43cbc25}
+
+
+The asynchronous network object to be created. This variable is ignored for synchronous networks 
+
+\hypertarget{class_n_n_gen_1_1_wizard_controller_a0575bbc3820b30e2890579150cb924f0}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!bias\+Values@{bias\+Values}}
+\index{bias\+Values@{bias\+Values}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{bias\+Values}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Wizard\+Controller.\+bias\+Values\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_wizard_controller_a0575bbc3820b30e2890579150cb924f0}
+
+
+An array holding the bias values for the networks. The i-\/th row represents the bias value feeding into the i+1-\/th layer 
+
+\hypertarget{class_n_n_gen_1_1_wizard_controller_a77607ae6650b0c79f9b503209badce0f}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!classifier\+Thresholds@{classifier\+Thresholds}}
+\index{classifier\+Thresholds@{classifier\+Thresholds}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{classifier\+Thresholds}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Wizard\+Controller.\+classifier\+Thresholds\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_wizard_controller_a77607ae6650b0c79f9b503209badce0f}
+
+
+The classifier thresholds for a classification network. For a regression network, these are null. 
+
+\hypertarget{class_n_n_gen_1_1_wizard_controller_a9314043770a6c63e71dadc2c3abaf63a}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!is\+Classifier@{is\+Classifier}}
+\index{is\+Classifier@{is\+Classifier}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{is\+Classifier}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Wizard\+Controller.\+is\+Classifier\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_wizard_controller_a9314043770a6c63e71dadc2c3abaf63a}
+
+
+A flag to save whether the network is a classification network or not. 
+
+\hypertarget{class_n_n_gen_1_1_wizard_controller_aa3186397159e779da8e2007b9f1c2884}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!is\+Synchronous\+Network@{is\+Synchronous\+Network}}
+\index{is\+Synchronous\+Network@{is\+Synchronous\+Network}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{is\+Synchronous\+Network}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Wizard\+Controller.\+is\+Synchronous\+Network\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_wizard_controller_aa3186397159e779da8e2007b9f1c2884}
+
+
+A flag to represent whether the network being created is synchronous or not 
+
+\hypertarget{class_n_n_gen_1_1_wizard_controller_ad5eb425198c744f28f5e228eeffc895b}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!neuron\+Counts@{neuron\+Counts}}
+\index{neuron\+Counts@{neuron\+Counts}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{neuron\+Counts}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Wizard\+Controller.\+neuron\+Counts\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_wizard_controller_ad5eb425198c744f28f5e228eeffc895b}
+
+
+An array holding the number of neurons for the network. The i-\/th row represents the i-\/th layer 
+
+\hypertarget{class_n_n_gen_1_1_wizard_controller_a49f443f5a43ad1afbbf72a4176e1dcd6}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!num\+Frac\+Bits@{num\+Frac\+Bits}}
+\index{num\+Frac\+Bits@{num\+Frac\+Bits}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{num\+Frac\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Wizard\+Controller.\+num\+Frac\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_wizard_controller_a49f443f5a43ad1afbbf72a4176e1dcd6}
+
+
+The number of fractional bits to use in the creation of the neurons 
+
+\hypertarget{class_n_n_gen_1_1_wizard_controller_a5216441fbf991464e4db1b1cc1d54c2d}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!num\+Int\+Bits@{num\+Int\+Bits}}
+\index{num\+Int\+Bits@{num\+Int\+Bits}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{num\+Int\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Wizard\+Controller.\+num\+Int\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_wizard_controller_a5216441fbf991464e4db1b1cc1d54c2d}
+
+
+The number of integer bits to use in the creation of the neurons 
+
+\hypertarget{class_n_n_gen_1_1_wizard_controller_a8aafaab7cca2632ebd09f0fba6a2f09a}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!num\+Weight\+Int\+Bits@{num\+Weight\+Int\+Bits}}
+\index{num\+Weight\+Int\+Bits@{num\+Weight\+Int\+Bits}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{num\+Weight\+Int\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Wizard\+Controller.\+num\+Weight\+Int\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_wizard_controller_a8aafaab7cca2632ebd09f0fba6a2f09a}
+
+
+Then number of integer bits to use in the creation of the weight memory 
+
+\hypertarget{class_n_n_gen_1_1_wizard_controller_a9954efe53bf629492e68dd6692092a94}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!pc@{pc}}
+\index{pc@{pc}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{pc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Panel\+Container} N\+N\+Gen.\+Wizard\+Controller.\+pc\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_wizard_controller_a9954efe53bf629492e68dd6692092a94}
+
+
+The container for the panels to show the user 
+
+\hypertarget{class_n_n_gen_1_1_wizard_controller_ad211fa93c8e54fb2f0383889bcb28964}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!sync\+Activation\+Types@{sync\+Activation\+Types}}
+\index{sync\+Activation\+Types@{sync\+Activation\+Types}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{sync\+Activation\+Types}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Wizard\+Controller.\+sync\+Activation\+Types\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_wizard_controller_ad211fa93c8e54fb2f0383889bcb28964}
+
+
+For synchronous networks, the activation types of each layer. For asynchronous netowrks, this variable is ignored 
+
+\hypertarget{class_n_n_gen_1_1_wizard_controller_a6231cf0c8041896d72a7225cc5cdef7f}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!sync\+N\+N@{sync\+N\+N}}
+\index{sync\+N\+N@{sync\+N\+N}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{sync\+N\+N}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sync\+Neural\+Network} N\+N\+Gen.\+Wizard\+Controller.\+sync\+N\+N\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_wizard_controller_a6231cf0c8041896d72a7225cc5cdef7f}
+
+
+The synchronous network object to be created. This variable is ignored for asynchronous networks 
+
+\hypertarget{class_n_n_gen_1_1_wizard_controller_a6978f46ec504d8be14ec6517959d131a}{}\index{N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}!weights@{weights}}
+\index{weights@{weights}!N\+N\+Gen\+::\+Wizard\+Controller@{N\+N\+Gen\+::\+Wizard\+Controller}}
+\subsubsection[{weights}]{\setlength{\rightskip}{0pt plus 5cm}List$<$double$>$ N\+N\+Gen.\+Wizard\+Controller.\+weights\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_wizard_controller_a6978f46ec504d8be14ec6517959d131a}
+
+
+The list of neuron input weights 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_wizard_controller_8cs}{Wizard\+Controller.\+cs}\end{DoxyCompactItemize}

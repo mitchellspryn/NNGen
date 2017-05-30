@@ -1,0 +1,154 @@
+\hypertarget{class_n_n_gen_1_1_signal}{}\section{N\+N\+Gen.\+Signal Class Reference}
+\label{class_n_n_gen_1_1_signal}\index{N\+N\+Gen.\+Signal@{N\+N\+Gen.\+Signal}}
+
+
+A class representing an internal signal for a V\+H\+D\+L entity  
+
+
+Inheritance diagram for N\+N\+Gen.\+Signal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_n_gen_1_1_signal}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_signal_a8e17b61cd22e4d1492b42f93f0f066f9}{Signal} (string \+\_\+name, Utilities.\+V\+H\+D\+L\+Data\+Type \+\_\+type, string \+\_\+default\+Value, int \+\_\+top, int \+\_\+bottom)
+\begin{DoxyCompactList}\small\item\em Initializes a signal \end{DoxyCompactList}\item 
+virtual string \hyperlink{class_n_n_gen_1_1_signal_a35818f3d3a0c4c567701300d90c846ff}{V\+H\+D\+L\+String} ()
+\begin{DoxyCompactList}\small\item\em Returns a string declaring the signal \end{DoxyCompactList}\item 
+virtual \hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_signal_a15f668236a819dab4054232fc8e82895}{to\+Port} (\hyperlink{class_n_n_gen_1_1_port_ac3b8f11a7a6bd6872e6954b64721d90c}{Port.\+port\+Direction} \+\_\+dir)
+\begin{DoxyCompactList}\small\item\em Returns a port with the same parameters of the signal \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_n_n_gen_1_1_signal_ae7a3bd5d6385e96cbd244dfdf674a6e6}{name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of the signal \end{DoxyCompactList}\item 
+Utilities.\+V\+H\+D\+L\+Data\+Type \hyperlink{class_n_n_gen_1_1_signal_a587998f4c25cb8bdaf5358e9f240c122}{type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The datatype of the signal \end{DoxyCompactList}\item 
+string \hyperlink{class_n_n_gen_1_1_signal_ac98333aa2ce1fdd3f3748ba8cfc4b932}{default\+Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The default value of the signal. If not specified, then it will be null \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_signal_a0ba4a498e3bc647b39a2c100c7d8cd60}{top}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The top integer in the bus width declaration (i.\+e. the \textquotesingle{}X\textquotesingle{} in (X D\+O\+W\+N\+T\+O Y)) \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_signal_a62c486db61e28bb2348c2534f25780cc}{bottom}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The bottom integer in the bus width declaration (i.\+e. the \textquotesingle{}Y\textquotesingle{} in (X D\+O\+W\+N\+T\+O Y)) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class representing an internal signal for a V\+H\+D\+L entity 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_n_gen_1_1_signal_a8e17b61cd22e4d1492b42f93f0f066f9}{}\index{N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}!Signal@{Signal}}
+\index{Signal@{Signal}!N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}}
+\subsubsection[{Signal(string \+\_\+name, Utilities.\+V\+H\+D\+L\+Data\+Type \+\_\+type, string \+\_\+default\+Value, int \+\_\+top, int \+\_\+bottom)}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Signal.\+Signal (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+name, }
+\item[{Utilities.\+V\+H\+D\+L\+Data\+Type}]{\+\_\+type, }
+\item[{string}]{\+\_\+default\+Value, }
+\item[{int}]{\+\_\+top, }
+\item[{int}]{\+\_\+bottom}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_signal_a8e17b61cd22e4d1492b42f93f0f066f9}
+
+
+Initializes a signal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The name of the signal\\
+\hline
+{\em \+\_\+type} & The datatype of the signal\\
+\hline
+{\em \+\_\+default\+Value} & The default value for the signal. If not specified, pass \textquotesingle{}null\textquotesingle{}\\
+\hline
+{\em \+\_\+top} & The top integer in the bus width declaration (i.\+e. the \textquotesingle{}X\textquotesingle{} in (X D\+O\+W\+N\+T\+O Y))\\
+\hline
+{\em \+\_\+bottom} & The bottom integer in the bus width declaration (i.\+e. the \textquotesingle{}Y\textquotesingle{} in (X D\+O\+W\+N\+T\+O Y))\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_signal_a15f668236a819dab4054232fc8e82895}{}\index{N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}!to\+Port@{to\+Port}}
+\index{to\+Port@{to\+Port}!N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}}
+\subsubsection[{to\+Port(\+Port.\+port\+Direction \+\_\+dir)}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Port} N\+N\+Gen.\+Signal.\+to\+Port (
+\begin{DoxyParamCaption}
+\item[{{\bf Port.\+port\+Direction}}]{\+\_\+dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_signal_a15f668236a819dab4054232fc8e82895}
+
+
+Returns a port with the same parameters of the signal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+dir} & The direction of the newly created port\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A port object with the same width, name, and datatype of the current signal
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_signal_a35818f3d3a0c4c567701300d90c846ff}{}\index{N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}!V\+H\+D\+L\+String@{V\+H\+D\+L\+String}}
+\index{V\+H\+D\+L\+String@{V\+H\+D\+L\+String}!N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}}
+\subsubsection[{V\+H\+D\+L\+String()}]{\setlength{\rightskip}{0pt plus 5cm}virtual string N\+N\+Gen.\+Signal.\+V\+H\+D\+L\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_signal_a35818f3d3a0c4c567701300d90c846ff}
+
+
+Returns a string declaring the signal 
+
+\begin{DoxyReturn}{Returns}
+A string declaring the signal
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_n_n_gen_1_1_array_signal_a2fa5704a3963a12c2bb188520681a9e6}{N\+N\+Gen.\+Array\+Signal}.
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_n_n_gen_1_1_signal_a62c486db61e28bb2348c2534f25780cc}{}\index{N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}!bottom@{bottom}}
+\index{bottom@{bottom}!N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}}
+\subsubsection[{bottom}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Signal.\+bottom\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_signal_a62c486db61e28bb2348c2534f25780cc}
+
+
+The bottom integer in the bus width declaration (i.\+e. the \textquotesingle{}Y\textquotesingle{} in (X D\+O\+W\+N\+T\+O Y)) 
+
+\hypertarget{class_n_n_gen_1_1_signal_ac98333aa2ce1fdd3f3748ba8cfc4b932}{}\index{N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}!default\+Value@{default\+Value}}
+\index{default\+Value@{default\+Value}!N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}}
+\subsubsection[{default\+Value}]{\setlength{\rightskip}{0pt plus 5cm}string N\+N\+Gen.\+Signal.\+default\+Value\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_signal_ac98333aa2ce1fdd3f3748ba8cfc4b932}
+
+
+The default value of the signal. If not specified, then it will be null 
+
+\hypertarget{class_n_n_gen_1_1_signal_ae7a3bd5d6385e96cbd244dfdf674a6e6}{}\index{N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}!name@{name}}
+\index{name@{name}!N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}string N\+N\+Gen.\+Signal.\+name\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_signal_ae7a3bd5d6385e96cbd244dfdf674a6e6}
+
+
+The name of the signal 
+
+\hypertarget{class_n_n_gen_1_1_signal_a0ba4a498e3bc647b39a2c100c7d8cd60}{}\index{N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}!top@{top}}
+\index{top@{top}!N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}}
+\subsubsection[{top}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Signal.\+top\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_signal_a0ba4a498e3bc647b39a2c100c7d8cd60}
+
+
+The top integer in the bus width declaration (i.\+e. the \textquotesingle{}X\textquotesingle{} in (X D\+O\+W\+N\+T\+O Y)) 
+
+\hypertarget{class_n_n_gen_1_1_signal_a587998f4c25cb8bdaf5358e9f240c122}{}\index{N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}!type@{type}}
+\index{type@{type}!N\+N\+Gen\+::\+Signal@{N\+N\+Gen\+::\+Signal}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}Utilities.\+V\+H\+D\+L\+Data\+Type N\+N\+Gen.\+Signal.\+type\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_signal_a587998f4c25cb8bdaf5358e9f240c122}
+
+
+The datatype of the signal 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_signal_8cs}{Signal.\+cs}\end{DoxyCompactItemize}

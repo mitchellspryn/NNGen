@@ -1,0 +1,12 @@
+\hypertarget{_transfer_function_wrapper_8cs}{}\section{E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\+Transfer\+Function\+Wrapper.cs File Reference}
+\label{_transfer_function_wrapper_8cs}\index{E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\+Transfer\+Function\+Wrapper.\+cs@{E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\+Transfer\+Function\+Wrapper.\+cs}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper}{N\+N\+Gen.\+Transfer\+Function\+Wrapper}
+\begin{DoxyCompactList}\small\item\em Initializes a wrapper for the transfer function memory element. As all implemented functions are symmetric around x = 0, we can save memory by only saving the values for x greater than 0 value in memory, and computing the x less than 0 values by (value = 1.\+0 -\/ abs(x)) Also, the functions implemented (aside from the Linear node) are very close to 1 or -\/1 when abs(x) $>$= 6.\+0, so when the input is in that range, the output is computed as\+: (out = 1.\+0 $\ast$ sgn(x)) (sgn = \{1 if x $>$ 0, -\/1 otherwise\}) (note, for Unipolar Sigmoid, the lower limit is 0, not -\/1) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_n_n_gen}{N\+N\+Gen}
+\end{DoxyCompactItemize}

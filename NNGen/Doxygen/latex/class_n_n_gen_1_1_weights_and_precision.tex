@@ -1,0 +1,161 @@
+\hypertarget{class_n_n_gen_1_1_weights_and_precision}{}\section{N\+N\+Gen.\+Weights\+And\+Precision Class Reference}
+\label{class_n_n_gen_1_1_weights_and_precision}\index{N\+N\+Gen.\+Weights\+And\+Precision@{N\+N\+Gen.\+Weights\+And\+Precision}}
+
+
+A U\+I element to allow the user to specify the location for the weights to input to the network, as well as the precision with which to perform the neuron\textquotesingle{}s computations.  
+
+
+Inheritance diagram for N\+N\+Gen.\+Weights\+And\+Precision\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_n_n_gen_1_1_weights_and_precision}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_weights_and_precision_a16fd27e0739e8a26bbf6f9585e173c7e}{Weights\+And\+Precision} (int \+\_\+num\+Weights\+Expected, int \+\_\+max\+Int\+Bits, int \+\_\+max\+Frac\+Bits, string \+\_\+file\+Path)
+\begin{DoxyCompactList}\small\item\em Initialize a \hyperlink{class_n_n_gen_1_1_weights_and_precision}{Weights\+And\+Precision} form \end{DoxyCompactList}\item 
+override bool \hyperlink{class_n_n_gen_1_1_weights_and_precision_a55e25affc261256144c0cd9866a63b7a}{verify} ()
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_n_n_gen_1_1_weights_and_precision_a55e25affc261256144c0cd9866a63b7a}{verify()} method implementation for this class. See N\+N\+Pannel.\+verify() for more documentation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_n_n_gen_1_1_weights_and_precision_af1cc940e6b317254d29e32b7c2ebc70f}{Dispose} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_n_n_gen_1_1_weights_and_precision_adadd8787371829217f9e9f11fe4f6043}{file\+Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The file path from which to load the weights \end{DoxyCompactList}\item 
+List$<$ double $>$ \hyperlink{class_n_n_gen_1_1_weights_and_precision_afe90c4fc998ce882228b7bf4459cf100}{weights}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The weights read from the user-\/specified input file \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_weights_and_precision_a677dd8c72d4d4a7a2b18b292b1a9f6ee}{max\+Int\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of integer bits to use in the computations \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_weights_and_precision_a3ee82e53091eb1795bd64cb9b252b952}{max\+Frac\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of fractional bits to use in the computation \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_weights_and_precision_a2dcb1b5045b95f5182ef8e8064931269}{valid\+File\+Selected}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A flag to determine whether a valid file has been selected by the user \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_weights_and_precision_a670093e800483388eede4a81440dfb0c}{num\+Weights\+Expected}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of weights needed to fully initialize the network. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A U\+I element to allow the user to specify the location for the weights to input to the network, as well as the precision with which to perform the neuron\textquotesingle{}s computations. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_n_gen_1_1_weights_and_precision_a16fd27e0739e8a26bbf6f9585e173c7e}{}\index{N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}!Weights\+And\+Precision@{Weights\+And\+Precision}}
+\index{Weights\+And\+Precision@{Weights\+And\+Precision}!N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}}
+\subsubsection[{Weights\+And\+Precision(int \+\_\+num\+Weights\+Expected, int \+\_\+max\+Int\+Bits, int \+\_\+max\+Frac\+Bits, string \+\_\+file\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Weights\+And\+Precision.\+Weights\+And\+Precision (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+num\+Weights\+Expected, }
+\item[{int}]{\+\_\+max\+Int\+Bits, }
+\item[{int}]{\+\_\+max\+Frac\+Bits, }
+\item[{string}]{\+\_\+file\+Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_weights_and_precision_a16fd27e0739e8a26bbf6f9585e173c7e}
+
+
+Initialize a \hyperlink{class_n_n_gen_1_1_weights_and_precision}{Weights\+And\+Precision} form 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+num\+Weights\+Expected} & The seed value for the number of weights expected for the network\\
+\hline
+{\em \+\_\+max\+Int\+Bits} & The seed value for the maximal number of integer bits used in the computation\\
+\hline
+{\em \+\_\+max\+Frac\+Bits} & The seed value for the maximal number of fractional bits used in the computation\\
+\hline
+{\em \+\_\+file\+Path} & The seed value for the filepath from which to read the weights\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_weights_and_precision_af1cc940e6b317254d29e32b7c2ebc70f}{}\index{N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}}
+\subsubsection[{Dispose(bool disposing)}]{\setlength{\rightskip}{0pt plus 5cm}override void N\+N\+Gen.\+Weights\+And\+Precision.\+Dispose (
+\begin{DoxyParamCaption}
+\item[{bool}]{disposing}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_n_n_gen_1_1_weights_and_precision_af1cc940e6b317254d29e32b7c2ebc70f}
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_n_n_gen_1_1_weights_and_precision_a55e25affc261256144c0cd9866a63b7a}{}\index{N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}!verify@{verify}}
+\index{verify@{verify}!N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}}
+\subsubsection[{verify()}]{\setlength{\rightskip}{0pt plus 5cm}override bool N\+N\+Gen.\+Weights\+And\+Precision.\+verify (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_weights_and_precision_a55e25affc261256144c0cd9866a63b7a}
+
+
+The \hyperlink{class_n_n_gen_1_1_weights_and_precision_a55e25affc261256144c0cd9866a63b7a}{verify()} method implementation for this class. See N\+N\+Pannel.\+verify() for more documentation. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_n_n_gen_1_1_n_n_panel_a36e3bcf90c9e561e8502eac6f884582a}{N\+N\+Gen.\+N\+N\+Panel}.
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_n_n_gen_1_1_weights_and_precision_adadd8787371829217f9e9f11fe4f6043}{}\index{N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}!file\+Path@{file\+Path}}
+\index{file\+Path@{file\+Path}!N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}}
+\subsubsection[{file\+Path}]{\setlength{\rightskip}{0pt plus 5cm}string N\+N\+Gen.\+Weights\+And\+Precision.\+file\+Path\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_weights_and_precision_adadd8787371829217f9e9f11fe4f6043}
+
+
+The file path from which to load the weights 
+
+\hypertarget{class_n_n_gen_1_1_weights_and_precision_a3ee82e53091eb1795bd64cb9b252b952}{}\index{N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}!max\+Frac\+Bits@{max\+Frac\+Bits}}
+\index{max\+Frac\+Bits@{max\+Frac\+Bits}!N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}}
+\subsubsection[{max\+Frac\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Weights\+And\+Precision.\+max\+Frac\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_weights_and_precision_a3ee82e53091eb1795bd64cb9b252b952}
+
+
+The number of fractional bits to use in the computation 
+
+\hypertarget{class_n_n_gen_1_1_weights_and_precision_a677dd8c72d4d4a7a2b18b292b1a9f6ee}{}\index{N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}!max\+Int\+Bits@{max\+Int\+Bits}}
+\index{max\+Int\+Bits@{max\+Int\+Bits}!N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}}
+\subsubsection[{max\+Int\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Weights\+And\+Precision.\+max\+Int\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_weights_and_precision_a677dd8c72d4d4a7a2b18b292b1a9f6ee}
+
+
+The number of integer bits to use in the computations 
+
+\hypertarget{class_n_n_gen_1_1_weights_and_precision_a670093e800483388eede4a81440dfb0c}{}\index{N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}!num\+Weights\+Expected@{num\+Weights\+Expected}}
+\index{num\+Weights\+Expected@{num\+Weights\+Expected}!N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}}
+\subsubsection[{num\+Weights\+Expected}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Weights\+And\+Precision.\+num\+Weights\+Expected\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_weights_and_precision_a670093e800483388eede4a81440dfb0c}
+
+
+The number of weights needed to fully initialize the network. 
+
+\hypertarget{class_n_n_gen_1_1_weights_and_precision_a2dcb1b5045b95f5182ef8e8064931269}{}\index{N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}!valid\+File\+Selected@{valid\+File\+Selected}}
+\index{valid\+File\+Selected@{valid\+File\+Selected}!N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}}
+\subsubsection[{valid\+File\+Selected}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Weights\+And\+Precision.\+valid\+File\+Selected\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_weights_and_precision_a2dcb1b5045b95f5182ef8e8064931269}
+
+
+A flag to determine whether a valid file has been selected by the user 
+
+\hypertarget{class_n_n_gen_1_1_weights_and_precision_afe90c4fc998ce882228b7bf4459cf100}{}\index{N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}!weights@{weights}}
+\index{weights@{weights}!N\+N\+Gen\+::\+Weights\+And\+Precision@{N\+N\+Gen\+::\+Weights\+And\+Precision}}
+\subsubsection[{weights}]{\setlength{\rightskip}{0pt plus 5cm}List$<$double$>$ N\+N\+Gen.\+Weights\+And\+Precision.\+weights\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_weights_and_precision_afe90c4fc998ce882228b7bf4459cf100}
+
+
+The weights read from the user-\/specified input file 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_weights_and_precision_8cs}{Weights\+And\+Precision.\+cs}\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_weights_and_precision_8_designer_8cs}{Weights\+And\+Precision.\+Designer.\+cs}\end{DoxyCompactItemize}

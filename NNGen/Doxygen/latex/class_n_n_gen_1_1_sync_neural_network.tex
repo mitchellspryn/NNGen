@@ -1,0 +1,508 @@
+\hypertarget{class_n_n_gen_1_1_sync_neural_network}{}\section{N\+N\+Gen.\+Sync\+Neural\+Network Class Reference}
+\label{class_n_n_gen_1_1_sync_neural_network}\index{N\+N\+Gen.\+Sync\+Neural\+Network@{N\+N\+Gen.\+Sync\+Neural\+Network}}
+
+
+A class representing a synchronous neural network  
+
+
+Inheritance diagram for N\+N\+Gen.\+Sync\+Neural\+Network\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_n_gen_1_1_sync_neural_network}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_sync_neural_network_a668e06ab5c0814666d34e5d5fddce9dc}{Sync\+Neural\+Network} (int\mbox{[}$\,$\mbox{]} \+\_\+neuron\+Counts, double\mbox{[}$\,$\mbox{]} \+\_\+bias\+Values, \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6}{Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type}\mbox{[}$\,$\mbox{]} \+\_\+activation\+Types, int \+\_\+num\+Int\+Bits, int \+\_\+num\+Frac\+Bits, int \+\_\+num\+Weight\+Upper\+Bits, bool \+\_\+is\+Classifier, double\mbox{[}$\,$\mbox{]} \+\_\+classifier\+Thresholds, List$<$ double $>$ \+\_\+weights)
+\begin{DoxyCompactList}\small\item\em The constructor for a neural network object. Calling this method\textquotesingle{}s write() function will write the entire network. \end{DoxyCompactList}\item 
+override string \hyperlink{class_n_n_gen_1_1_sync_neural_network_a91d58e0d612c6398c3164dee0fc34347}{get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Returns the name of the entity. \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a8ed253e22e640d3ec0501dd1c43ad784}{get\+Input\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns the input ports of the entity. \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_neural_network_aff93a78db054336cfe8b2f43885f145d}{get\+Output\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns the output ports of the entity. \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_signal}{Signal}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a9303b53dc2d792c18ffa72e386eb0eae}{get\+Internal\+Signals} ()
+\begin{DoxyCompactList}\small\item\em Returns the internal signals of the entity. \end{DoxyCompactList}\item 
+override bool \hyperlink{class_n_n_gen_1_1_sync_neural_network_ab236b9511b805fa1cabe60f3a2c871d6}{write\+V\+H\+D\+L} (string file)
+\begin{DoxyCompactList}\small\item\em Writes the .vhd files necessary to compile this entity. All other necessary entities (i.\+e. neurons, thresholding functions, etc.) will also be written when this function returns \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_sync_neuron}{Sync\+Neuron}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a6358777de50d4b9fafde5b88bc9b96f7}{neurons}
+\begin{DoxyCompactList}\small\item\em An array of neurons to implement in the design. The i-\/th element corresponds for the neuron object in the i-\/th row \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a6d72194820925ead7f84387e53390f9d}{nn\+Input\+Ports}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of input ports to the network \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a9e0690fdd6bd2ee365d76b2b9d3ad593}{nn\+Output\+Ports}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of output ports to the network \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a6306a2d9e689ed32c74ccc5222284315}{ready}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This signal will go high when the network has been initialized after a reset. It will go low when the device is in reset \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_sync_neural_network_ab3381bb9b85c8a08ff4f31a123c9c246}{clk}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A clock used for synchronous loading of the neuron weights from memory \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a6479fe503fb64dead6508c80c773b042}{reset}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An active high reset for the network \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6}{Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_neural_network_ab9c0e21b58643ab79c5a540181f91a09}{activation\+Types}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The activation types for each layer of the network. The i-\/th member corresponds to the activations of the i-\/th layer of the network \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_neural_network_aed5af731ce355a68af7607477e8544e9}{neuron\+Counts}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of neurons in each layer of the network. The i-\/th member corresponds to the i-\/th layer of the network \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_neural_network_ae766b78572c54e97ec3be60f7d623dc7}{bias\+Values}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The bias values for each layer. The i-\/th member corresponds to the bias value fed into the i+1-\/th layer of the network \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper}{Transfer\+Function\+Wrapper} $>$ \hyperlink{class_n_n_gen_1_1_sync_neural_network_ad94e116de1c91c9e5f6deb61df5bb23f}{Transfer\+Function\+Wrappers}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Transfer\+Function\+Wrappers to implement in the final design \end{DoxyCompactList}\item 
+Sorted\+Dictionary$<$ int, \hyperlink{class_n_n_gen_1_1_signal}{Signal} $>$ \hyperlink{class_n_n_gen_1_1_sync_neural_network_a76ca03cc953d58f1b392cb723fe3e86a}{Transfer\+Function\+Memories\+Outputs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A mapping between the output of the neuron layer and the transfer function to use \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_weight_memory}{Weight\+Memory} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a372529d19a342c3636c76319bc91af9a}{weight\+Memory}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A memory instance for the neuron weights \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_neural_network_ac94c01526c4547dd8bf1e0b18d23dde9}{input\+\_\+latched}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The latches for the inputs to the network. The inputs are sampled once each time the network is run; latching ensures that they remain constant while the network is in operation \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a9d1fb07536404577262d6c5ccecf2361}{output\+\_\+latched}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The latches for the output to the network. Ensures that the outputs don\textquotesingle{}t fluctuate while the network is computing \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_array_signal}{Array\+Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_ad10e93be47aead04db2b445124bb6649}{Neuron\+Outputs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An array of outputs for each of the neurons \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_array_signal}{Array\+Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a6edeb1a10c731dbc74be6e227201deb0}{Thresh\+Neuron\+Outputs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The output of the neurons after they\textquotesingle{}ve been run thorugh the respective thresholding functions \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_ac41b8c6d91dd8c38f1bc6800890ed099}{Current\+Neuron\+Output}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current neuron output to feed into the thresholding function \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a79c1844f10a33887abfdae4506524e61}{Current\+Thresh\+Neuron\+Output}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current neuron output from the thresholding function \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_ac2ec6cef24b9127af62c98111bc8ce95}{internal\+Ready}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A signal to determine whether the network has been loaded with the weights and is ready to accept inputs \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_aed787094117713be3ef2eaa612e321e1}{W\+M\+Out}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The output of the weight memory \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a69b1e243c9d77ba27a38e3859147f588}{Load\+Val}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The value of the output of the weight memory to be loaded into the neuron \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_af587100e0516b187c280dc23b2c226e0}{Load\+Off}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The offset in the neuron\textquotesingle{}s memory at which the memory is to be loaded \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a26d6d7d846eadc650f466ec37b69c2cb}{W\+M\+Addr}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The address from which to read in the weight memory \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_adde5cc8cf981b7e6dd24ddcb0193cd9a}{Hold\+W\+M}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em When high, pauses the W\+M clk signal. Needed during the load process to avoid skipping weights \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_ad0473c03570ed0231da8b2d62487b99a}{W\+M\+Clk}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The clock signal for the weight memory. \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a3d9360657f0a709cc8682eac7465e96f}{Activate\+Sig}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A signal used to determine which neurons are active. When the i-\/th bit is \textquotesingle{}1\textquotesingle{}, the i-\/th layer is computing \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a6671f2beb14d4e2f2cec90c79046f656}{Clock\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A counter used to compute when the different bits of Activate\+Sig should be set \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a0da1ffac1794b37b1b27b81fd03253a3}{Final\+Loads}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A signal to hold the Final\+Load signals from the neurons \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sync_neural_network_a5005f0c6c9b6377dfc66c2894251f4dd}{Load\+Enables}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A signal used to enable or disable loading of the weights of a neuron \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_n_n_gen_1_1_signal}{Signal} $>$ \hyperlink{class_n_n_gen_1_1_sync_neural_network_a5d11d979c5498deaa585533ef25883ce}{transfer\+Fxn\+Outputs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The outputs from the Transfer\+Function\+Memory\+Wrappers. Eventually multiplexed into Current\+Thresh\+Neuron\+Output \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_sync_neural_network_ac4b6c7f973b66d41e7e12795b027887d}{is\+Classifier}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If the neural network is to be used for classification, then this variable should be set to true. This will instantiate comparitors on the output neurons. \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_sync_neural_network_a66e287c50de3ae1932ea768fc3fa54fc}{num\+Int\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of integer bits to be used for the neural network inputs \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_sync_neural_network_a82e208d521ab24cb49b0fdfa1ed285c1}{num\+Frac\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of fractional bits to be used for the neural network inputs and for the neural network weights \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_sync_neural_network_afe97a4c00e87742409fe9a5a16922822}{num\+Weight\+Upper\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of integer bits to be used for the neural network weights. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_neural_network_ad044d0ce18e20de41ea9c30ad30b96b1}{classifier\+Thresholds}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The values to be used for thresholding the output neurons. The i-\/th member of this array corresponds to the theshold value for the i-\/th output neuron. If the network is not a classification network (i.\+e. is\+Classifier = false), then this member is unused. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class representing a synchronous neural network 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a668e06ab5c0814666d34e5d5fddce9dc}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!Sync\+Neural\+Network@{Sync\+Neural\+Network}}
+\index{Sync\+Neural\+Network@{Sync\+Neural\+Network}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{Sync\+Neural\+Network(int[] \+\_\+neuron\+Counts, double[] \+\_\+bias\+Values, Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type[] \+\_\+activation\+Types, int \+\_\+num\+Int\+Bits, int \+\_\+num\+Frac\+Bits, int \+\_\+num\+Weight\+Upper\+Bits, bool \+\_\+is\+Classifier, double[] \+\_\+classifier\+Thresholds, List$<$ double $>$ \+\_\+weights)}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Sync\+Neural\+Network.\+Sync\+Neural\+Network (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{\+\_\+neuron\+Counts, }
+\item[{double\mbox{[}$\,$\mbox{]}}]{\+\_\+bias\+Values, }
+\item[{{\bf Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type}\mbox{[}$\,$\mbox{]}}]{\+\_\+activation\+Types, }
+\item[{int}]{\+\_\+num\+Int\+Bits, }
+\item[{int}]{\+\_\+num\+Frac\+Bits, }
+\item[{int}]{\+\_\+num\+Weight\+Upper\+Bits, }
+\item[{bool}]{\+\_\+is\+Classifier, }
+\item[{double\mbox{[}$\,$\mbox{]}}]{\+\_\+classifier\+Thresholds, }
+\item[{List$<$ double $>$}]{\+\_\+weights}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_sync_neural_network_a668e06ab5c0814666d34e5d5fddce9dc}
+
+
+The constructor for a neural network object. Calling this method\textquotesingle{}s write() function will write the entire network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+neuron\+Counts} & The number of neurons in each layer, excluding the bias node.\\
+\hline
+{\em \+\_\+bias\+Values} & The bias value feeding forward into the next layer. \\
+\hline
+{\em \+\_\+activation\+Types} & The activation types for the neurons in each layer\\
+\hline
+{\em \+\_\+num\+Int\+Bits} & The number of integer bits to use for the inputs for each neuron (Sigmoid activated neurons automatically get this set to zero)\\
+\hline
+{\em \+\_\+num\+Frac\+Bits} & The number of fractional bits to use for the inputs for each neuron\\
+\hline
+{\em \+\_\+num\+Weight\+Upper\+Bits} & The number of integer bits used for the weights for each neuron.\\
+\hline
+{\em \+\_\+is\+Classifier} & If true, a comparitor will be instantiatated at the output to each node, comparing the output layer nodes to the threshold value.\\
+\hline
+{\em \+\_\+classifier\+Thresholds} & The threshold values for the output comparitors\\
+\hline
+{\em \+\_\+weights} & The list of weights read in for the neurons from Weight\+Reader.\+read\+Weights\+From\+File()\\
+\hline
+\end{DoxyParams}
+$<$remark$>$ For example, to intialize a classification neural network with three inputs, two hidden sigmoid-\/activated nodes, and one linear output node, use the following line\+:$<$/remark$>$ 
+
+Neural\+Network nn = new Neural\+Network(\mbox{[}3, 2, 1\mbox{]}, \mbox{[}-\/1, -\/1\mbox{]}, \mbox{[}..S\+I\+G\+M\+O\+I\+D\+\_\+\+P\+O\+L\+Y\+\_\+\+A\+P\+P\+R\+O\+X, ..L\+I\+N\+E\+A\+R\mbox{]}, 4, 4, 4, true, \mbox{[}0.\+5\mbox{]}, \+\_\+weights);
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a8ed253e22e640d3ec0501dd1c43ad784}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!get\+Input\+Ports@{get\+Input\+Ports}}
+\index{get\+Input\+Ports@{get\+Input\+Ports}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{get\+Input\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Neural\+Network.\+get\+Input\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sync_neural_network_a8ed253e22e640d3ec0501dd1c43ad784}
+
+
+Returns the input ports of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The input ports of the entity
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a01239f05c9efa61ec9e6a29cb2eaad50}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a9303b53dc2d792c18ffa72e386eb0eae}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!get\+Internal\+Signals@{get\+Internal\+Signals}}
+\index{get\+Internal\+Signals@{get\+Internal\+Signals}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{get\+Internal\+Signals()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Signal} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Neural\+Network.\+get\+Internal\+Signals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sync_neural_network_a9303b53dc2d792c18ffa72e386eb0eae}
+
+
+Returns the internal signals of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The internal signals of the entity
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a62feb80e95ec84c650ea17bd53f0d510}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a91d58e0d612c6398c3164dee0fc34347}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}override string N\+N\+Gen.\+Sync\+Neural\+Network.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sync_neural_network_a91d58e0d612c6398c3164dee0fc34347}
+
+
+Returns the name of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The name of the entity
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a9f25d1070c9ab8ad343c28443e62e6f2}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_aff93a78db054336cfe8b2f43885f145d}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!get\+Output\+Ports@{get\+Output\+Ports}}
+\index{get\+Output\+Ports@{get\+Output\+Ports}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{get\+Output\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Neural\+Network.\+get\+Output\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sync_neural_network_aff93a78db054336cfe8b2f43885f145d}
+
+
+Returns the output ports of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The output ports of the entity
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_ace06368087778e254a5048c7d28747be}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_ab236b9511b805fa1cabe60f3a2c871d6}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!write\+V\+H\+D\+L@{write\+V\+H\+D\+L}}
+\index{write\+V\+H\+D\+L@{write\+V\+H\+D\+L}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{write\+V\+H\+D\+L(string file)}]{\setlength{\rightskip}{0pt plus 5cm}override bool N\+N\+Gen.\+Sync\+Neural\+Network.\+write\+V\+H\+D\+L (
+\begin{DoxyParamCaption}
+\item[{string}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sync_neural_network_ab236b9511b805fa1cabe60f3a2c871d6}
+
+
+Writes the .vhd files necessary to compile this entity. All other necessary entities (i.\+e. neurons, thresholding functions, etc.) will also be written when this function returns 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path in which to write the files (do N\+O\+T include \char`\"{}...\+name.\+vhd\char`\"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the files were written successfully, false otherwise
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a1111d498446be08b20583b9625893a52}{N\+N\+Gen.\+Entity}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a6358777de50d4b9fafde5b88bc9b96f7}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!neurons@{neurons}}
+\index{neurons@{neurons}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{neurons}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sync\+Neuron} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Neural\+Network.\+neurons}\label{class_n_n_gen_1_1_sync_neural_network_a6358777de50d4b9fafde5b88bc9b96f7}
+
+
+An array of neurons to implement in the design. The i-\/th element corresponds for the neuron object in the i-\/th row 
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a3d9360657f0a709cc8682eac7465e96f}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!Activate\+Sig@{Activate\+Sig}}
+\index{Activate\+Sig@{Activate\+Sig}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{Activate\+Sig}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+Activate\+Sig\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a3d9360657f0a709cc8682eac7465e96f}
+
+
+A signal used to determine which neurons are active. When the i-\/th bit is \textquotesingle{}1\textquotesingle{}, the i-\/th layer is computing 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_ab9c0e21b58643ab79c5a540181f91a09}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!activation\+Types@{activation\+Types}}
+\index{activation\+Types@{activation\+Types}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{activation\+Types}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Neural\+Network.\+activation\+Types\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_ab9c0e21b58643ab79c5a540181f91a09}
+
+
+The activation types for each layer of the network. The i-\/th member corresponds to the activations of the i-\/th layer of the network 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_ae766b78572c54e97ec3be60f7d623dc7}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!bias\+Values@{bias\+Values}}
+\index{bias\+Values@{bias\+Values}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{bias\+Values}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Neural\+Network.\+bias\+Values\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_ae766b78572c54e97ec3be60f7d623dc7}
+
+
+The bias values for each layer. The i-\/th member corresponds to the bias value fed into the i+1-\/th layer of the network 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_ad044d0ce18e20de41ea9c30ad30b96b1}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!classifier\+Thresholds@{classifier\+Thresholds}}
+\index{classifier\+Thresholds@{classifier\+Thresholds}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{classifier\+Thresholds}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Neural\+Network.\+classifier\+Thresholds\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_ad044d0ce18e20de41ea9c30ad30b96b1}
+
+
+The values to be used for thresholding the output neurons. The i-\/th member of this array corresponds to the theshold value for the i-\/th output neuron. If the network is not a classification network (i.\+e. is\+Classifier = false), then this member is unused. 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_ab3381bb9b85c8a08ff4f31a123c9c246}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!clk@{clk}}
+\index{clk@{clk}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{clk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Sync\+Neural\+Network.\+clk\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_ab3381bb9b85c8a08ff4f31a123c9c246}
+
+
+A clock used for synchronous loading of the neuron weights from memory 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a6671f2beb14d4e2f2cec90c79046f656}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!Clock\+Count@{Clock\+Count}}
+\index{Clock\+Count@{Clock\+Count}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{Clock\+Count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+Clock\+Count\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a6671f2beb14d4e2f2cec90c79046f656}
+
+
+A counter used to compute when the different bits of Activate\+Sig should be set 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_ac41b8c6d91dd8c38f1bc6800890ed099}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!Current\+Neuron\+Output@{Current\+Neuron\+Output}}
+\index{Current\+Neuron\+Output@{Current\+Neuron\+Output}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{Current\+Neuron\+Output}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+Current\+Neuron\+Output\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_ac41b8c6d91dd8c38f1bc6800890ed099}
+
+
+The current neuron output to feed into the thresholding function 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a79c1844f10a33887abfdae4506524e61}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!Current\+Thresh\+Neuron\+Output@{Current\+Thresh\+Neuron\+Output}}
+\index{Current\+Thresh\+Neuron\+Output@{Current\+Thresh\+Neuron\+Output}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{Current\+Thresh\+Neuron\+Output}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+Current\+Thresh\+Neuron\+Output\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a79c1844f10a33887abfdae4506524e61}
+
+
+The current neuron output from the thresholding function 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a0da1ffac1794b37b1b27b81fd03253a3}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!Final\+Loads@{Final\+Loads}}
+\index{Final\+Loads@{Final\+Loads}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{Final\+Loads}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+Final\+Loads\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a0da1ffac1794b37b1b27b81fd03253a3}
+
+
+A signal to hold the Final\+Load signals from the neurons 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_adde5cc8cf981b7e6dd24ddcb0193cd9a}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!Hold\+W\+M@{Hold\+W\+M}}
+\index{Hold\+W\+M@{Hold\+W\+M}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{Hold\+W\+M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+Hold\+W\+M\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_adde5cc8cf981b7e6dd24ddcb0193cd9a}
+
+
+When high, pauses the W\+M clk signal. Needed during the load process to avoid skipping weights 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_ac94c01526c4547dd8bf1e0b18d23dde9}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!input\+\_\+latched@{input\+\_\+latched}}
+\index{input\+\_\+latched@{input\+\_\+latched}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{input\+\_\+latched}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Neural\+Network.\+input\+\_\+latched\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_ac94c01526c4547dd8bf1e0b18d23dde9}
+
+
+The latches for the inputs to the network. The inputs are sampled once each time the network is run; latching ensures that they remain constant while the network is in operation 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_ac2ec6cef24b9127af62c98111bc8ce95}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!internal\+Ready@{internal\+Ready}}
+\index{internal\+Ready@{internal\+Ready}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{internal\+Ready}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+internal\+Ready\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_ac2ec6cef24b9127af62c98111bc8ce95}
+
+
+A signal to determine whether the network has been loaded with the weights and is ready to accept inputs 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_ac4b6c7f973b66d41e7e12795b027887d}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!is\+Classifier@{is\+Classifier}}
+\index{is\+Classifier@{is\+Classifier}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{is\+Classifier}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Sync\+Neural\+Network.\+is\+Classifier\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_ac4b6c7f973b66d41e7e12795b027887d}
+
+
+If the neural network is to be used for classification, then this variable should be set to true. This will instantiate comparitors on the output neurons. 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a5005f0c6c9b6377dfc66c2894251f4dd}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!Load\+Enables@{Load\+Enables}}
+\index{Load\+Enables@{Load\+Enables}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{Load\+Enables}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+Load\+Enables\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a5005f0c6c9b6377dfc66c2894251f4dd}
+
+
+A signal used to enable or disable loading of the weights of a neuron 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_af587100e0516b187c280dc23b2c226e0}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!Load\+Off@{Load\+Off}}
+\index{Load\+Off@{Load\+Off}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{Load\+Off}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+Load\+Off\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_af587100e0516b187c280dc23b2c226e0}
+
+
+The offset in the neuron\textquotesingle{}s memory at which the memory is to be loaded 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a69b1e243c9d77ba27a38e3859147f588}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!Load\+Val@{Load\+Val}}
+\index{Load\+Val@{Load\+Val}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{Load\+Val}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+Load\+Val\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a69b1e243c9d77ba27a38e3859147f588}
+
+
+The value of the output of the weight memory to be loaded into the neuron 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_aed5af731ce355a68af7607477e8544e9}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!neuron\+Counts@{neuron\+Counts}}
+\index{neuron\+Counts@{neuron\+Counts}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{neuron\+Counts}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Neural\+Network.\+neuron\+Counts\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_aed5af731ce355a68af7607477e8544e9}
+
+
+The number of neurons in each layer of the network. The i-\/th member corresponds to the i-\/th layer of the network 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_ad10e93be47aead04db2b445124bb6649}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!Neuron\+Outputs@{Neuron\+Outputs}}
+\index{Neuron\+Outputs@{Neuron\+Outputs}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{Neuron\+Outputs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Array\+Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+Neuron\+Outputs\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_ad10e93be47aead04db2b445124bb6649}
+
+
+An array of outputs for each of the neurons 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a6d72194820925ead7f84387e53390f9d}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!nn\+Input\+Ports@{nn\+Input\+Ports}}
+\index{nn\+Input\+Ports@{nn\+Input\+Ports}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{nn\+Input\+Ports}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Neural\+Network.\+nn\+Input\+Ports\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a6d72194820925ead7f84387e53390f9d}
+
+
+The list of input ports to the network 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a9e0690fdd6bd2ee365d76b2b9d3ad593}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!nn\+Output\+Ports@{nn\+Output\+Ports}}
+\index{nn\+Output\+Ports@{nn\+Output\+Ports}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{nn\+Output\+Ports}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Neural\+Network.\+nn\+Output\+Ports\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a9e0690fdd6bd2ee365d76b2b9d3ad593}
+
+
+The list of output ports to the network 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a82e208d521ab24cb49b0fdfa1ed285c1}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!num\+Frac\+Bits@{num\+Frac\+Bits}}
+\index{num\+Frac\+Bits@{num\+Frac\+Bits}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{num\+Frac\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Sync\+Neural\+Network.\+num\+Frac\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a82e208d521ab24cb49b0fdfa1ed285c1}
+
+
+The number of fractional bits to be used for the neural network inputs and for the neural network weights 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a66e287c50de3ae1932ea768fc3fa54fc}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!num\+Int\+Bits@{num\+Int\+Bits}}
+\index{num\+Int\+Bits@{num\+Int\+Bits}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{num\+Int\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Sync\+Neural\+Network.\+num\+Int\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a66e287c50de3ae1932ea768fc3fa54fc}
+
+
+The number of integer bits to be used for the neural network inputs 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_afe97a4c00e87742409fe9a5a16922822}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!num\+Weight\+Upper\+Bits@{num\+Weight\+Upper\+Bits}}
+\index{num\+Weight\+Upper\+Bits@{num\+Weight\+Upper\+Bits}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{num\+Weight\+Upper\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Sync\+Neural\+Network.\+num\+Weight\+Upper\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_afe97a4c00e87742409fe9a5a16922822}
+
+
+The number of integer bits to be used for the neural network weights. 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a9d1fb07536404577262d6c5ccecf2361}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!output\+\_\+latched@{output\+\_\+latched}}
+\index{output\+\_\+latched@{output\+\_\+latched}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{output\+\_\+latched}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Neural\+Network.\+output\+\_\+latched\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a9d1fb07536404577262d6c5ccecf2361}
+
+
+The latches for the output to the network. Ensures that the outputs don\textquotesingle{}t fluctuate while the network is computing 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a6306a2d9e689ed32c74ccc5222284315}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!ready@{ready}}
+\index{ready@{ready}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{ready}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Sync\+Neural\+Network.\+ready\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a6306a2d9e689ed32c74ccc5222284315}
+
+
+This signal will go high when the network has been initialized after a reset. It will go low when the device is in reset 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a6479fe503fb64dead6508c80c773b042}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!reset@{reset}}
+\index{reset@{reset}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Sync\+Neural\+Network.\+reset\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a6479fe503fb64dead6508c80c773b042}
+
+
+An active high reset for the network 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a6edeb1a10c731dbc74be6e227201deb0}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!Thresh\+Neuron\+Outputs@{Thresh\+Neuron\+Outputs}}
+\index{Thresh\+Neuron\+Outputs@{Thresh\+Neuron\+Outputs}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{Thresh\+Neuron\+Outputs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Array\+Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+Thresh\+Neuron\+Outputs\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a6edeb1a10c731dbc74be6e227201deb0}
+
+
+The output of the neurons after they\textquotesingle{}ve been run thorugh the respective thresholding functions 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a76ca03cc953d58f1b392cb723fe3e86a}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!Transfer\+Function\+Memories\+Outputs@{Transfer\+Function\+Memories\+Outputs}}
+\index{Transfer\+Function\+Memories\+Outputs@{Transfer\+Function\+Memories\+Outputs}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{Transfer\+Function\+Memories\+Outputs}]{\setlength{\rightskip}{0pt plus 5cm}Sorted\+Dictionary$<$int, {\bf Signal}$>$ N\+N\+Gen.\+Sync\+Neural\+Network.\+Transfer\+Function\+Memories\+Outputs\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a76ca03cc953d58f1b392cb723fe3e86a}
+
+
+A mapping between the output of the neuron layer and the transfer function to use 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_ad94e116de1c91c9e5f6deb61df5bb23f}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!Transfer\+Function\+Wrappers@{Transfer\+Function\+Wrappers}}
+\index{Transfer\+Function\+Wrappers@{Transfer\+Function\+Wrappers}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{Transfer\+Function\+Wrappers}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Transfer\+Function\+Wrapper}$>$ N\+N\+Gen.\+Sync\+Neural\+Network.\+Transfer\+Function\+Wrappers\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_ad94e116de1c91c9e5f6deb61df5bb23f}
+
+
+The Transfer\+Function\+Wrappers to implement in the final design 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a5d11d979c5498deaa585533ef25883ce}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!transfer\+Fxn\+Outputs@{transfer\+Fxn\+Outputs}}
+\index{transfer\+Fxn\+Outputs@{transfer\+Fxn\+Outputs}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{transfer\+Fxn\+Outputs}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Signal}$>$ N\+N\+Gen.\+Sync\+Neural\+Network.\+transfer\+Fxn\+Outputs\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a5d11d979c5498deaa585533ef25883ce}
+
+
+The outputs from the Transfer\+Function\+Memory\+Wrappers. Eventually multiplexed into Current\+Thresh\+Neuron\+Output 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a372529d19a342c3636c76319bc91af9a}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!weight\+Memory@{weight\+Memory}}
+\index{weight\+Memory@{weight\+Memory}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{weight\+Memory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Weight\+Memory} N\+N\+Gen.\+Sync\+Neural\+Network.\+weight\+Memory\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a372529d19a342c3636c76319bc91af9a}
+
+
+A memory instance for the neuron weights 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_a26d6d7d846eadc650f466ec37b69c2cb}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!W\+M\+Addr@{W\+M\+Addr}}
+\index{W\+M\+Addr@{W\+M\+Addr}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{W\+M\+Addr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+W\+M\+Addr\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_a26d6d7d846eadc650f466ec37b69c2cb}
+
+
+The address from which to read in the weight memory 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_ad0473c03570ed0231da8b2d62487b99a}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!W\+M\+Clk@{W\+M\+Clk}}
+\index{W\+M\+Clk@{W\+M\+Clk}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{W\+M\+Clk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+W\+M\+Clk\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_ad0473c03570ed0231da8b2d62487b99a}
+
+
+The clock signal for the weight memory. 
+
+\hypertarget{class_n_n_gen_1_1_sync_neural_network_aed787094117713be3ef2eaa612e321e1}{}\index{N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}!W\+M\+Out@{W\+M\+Out}}
+\index{W\+M\+Out@{W\+M\+Out}!N\+N\+Gen\+::\+Sync\+Neural\+Network@{N\+N\+Gen\+::\+Sync\+Neural\+Network}}
+\subsubsection[{W\+M\+Out}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sync\+Neural\+Network.\+W\+M\+Out\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_neural_network_aed787094117713be3ef2eaa612e321e1}
+
+
+The output of the weight memory 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_sync_neural_network_8cs}{Sync\+Neural\+Network.\+cs}\end{DoxyCompactItemize}

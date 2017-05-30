@@ -1,0 +1,212 @@
+\hypertarget{class_n_n_gen_1_1_weight_memory}{}\section{N\+N\+Gen.\+Weight\+Memory Class Reference}
+\label{class_n_n_gen_1_1_weight_memory}\index{N\+N\+Gen.\+Weight\+Memory@{N\+N\+Gen.\+Weight\+Memory}}
+
+
+An entity that infers memory intended to be used for initializing a neural network  
+
+
+Inheritance diagram for N\+N\+Gen.\+Weight\+Memory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_n_gen_1_1_weight_memory}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_weight_memory_a5be8cc5e6e42aedf41967c299efd75cf}{Weight\+Memory} (int \+\_\+num\+Int\+Bits, int \+\_\+num\+Frac\+Bits, List$<$ double $>$ \+\_\+weights)
+\begin{DoxyCompactList}\small\item\em Initializes the entity \end{DoxyCompactList}\item 
+override string \hyperlink{class_n_n_gen_1_1_weight_memory_a000cfa9b5dd1d41042ed77dbad178aeb}{get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Returns the name of the entity \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_weight_memory_a0f80fe3a06082c2e238f1c7b552c723d}{get\+Input\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns the inputs to the device \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_weight_memory_a96cae98991fe72526efcc94aa27c3294}{get\+Output\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns the outputs to the device \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_signal}{Signal}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_weight_memory_a7166780b7824c585e92da81172aaba22}{get\+Internal\+Signals} ()
+\begin{DoxyCompactList}\small\item\em Returns the internal signals for the device \end{DoxyCompactList}\item 
+override bool \hyperlink{class_n_n_gen_1_1_weight_memory_a638a0f1ce7d8f3983ef0a0beb59e887d}{write\+V\+H\+D\+L} (string file)
+\begin{DoxyCompactList}\small\item\em Writes the .vhd files necessary to compile this entity. All other necessary entities (i.\+e. neurons, thresholding functions, etc.) will also be written when this function returns \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_weight_memory_afd016b54cfb5b510f02e5e9d47dd0292}{clk}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The clock signal. The memory device output is rising-\/edge registered \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_weight_memory_a86f72ffc5ccc873778854121075a52da}{addr}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The address lines for the memory \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_weight_memory_a83826d4cceec2993daebe283204e12b6}{data}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Memory output. On rising edge, the contents of memory pointed to by \char`\"{}addr\char`\"{} will appear on \char`\"{}q\char`\"{} \end{DoxyCompactList}\item 
+List$<$ string $>$ \hyperlink{class_n_n_gen_1_1_weight_memory_a969c7f7f162b75653ff1cb94eb1d11a8}{weights\+\_\+str}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The initialization values for the memory. the i-\/th element will appear in the i-\/th address on startup. \end{DoxyCompactList}\item 
+string \hyperlink{class_n_n_gen_1_1_weight_memory_a4b89726fb6f1303d0b898f29d28545cc}{name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of the entity \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An entity that infers memory intended to be used for initializing a neural network 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_n_gen_1_1_weight_memory_a5be8cc5e6e42aedf41967c299efd75cf}{}\index{N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}!Weight\+Memory@{Weight\+Memory}}
+\index{Weight\+Memory@{Weight\+Memory}!N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}}
+\subsubsection[{Weight\+Memory(int \+\_\+num\+Int\+Bits, int \+\_\+num\+Frac\+Bits, List$<$ double $>$ \+\_\+weights)}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Weight\+Memory.\+Weight\+Memory (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+num\+Int\+Bits, }
+\item[{int}]{\+\_\+num\+Frac\+Bits, }
+\item[{List$<$ double $>$}]{\+\_\+weights}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_weight_memory_a5be8cc5e6e42aedf41967c299efd75cf}
+
+
+Initializes the entity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+num\+Int\+Bits} & The number of integer bits to be used on the output bus\\
+\hline
+{\em \+\_\+num\+Frac\+Bits} & The number of fractional bits to be used on the output bus\\
+\hline
+{\em \+\_\+weights} & The list of startup weights (see weights\+\_\+str)\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_weight_memory_a0f80fe3a06082c2e238f1c7b552c723d}{}\index{N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}!get\+Input\+Ports@{get\+Input\+Ports}}
+\index{get\+Input\+Ports@{get\+Input\+Ports}!N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}}
+\subsubsection[{get\+Input\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Weight\+Memory.\+get\+Input\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_weight_memory_a0f80fe3a06082c2e238f1c7b552c723d}
+
+
+Returns the inputs to the device 
+
+\begin{DoxyReturn}{Returns}
+The inputs to the device
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a01239f05c9efa61ec9e6a29cb2eaad50}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_weight_memory_a7166780b7824c585e92da81172aaba22}{}\index{N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}!get\+Internal\+Signals@{get\+Internal\+Signals}}
+\index{get\+Internal\+Signals@{get\+Internal\+Signals}!N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}}
+\subsubsection[{get\+Internal\+Signals()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Signal} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Weight\+Memory.\+get\+Internal\+Signals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_weight_memory_a7166780b7824c585e92da81172aaba22}
+
+
+Returns the internal signals for the device 
+
+\begin{DoxyReturn}{Returns}
+The internal signals for the device
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a62feb80e95ec84c650ea17bd53f0d510}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_weight_memory_a000cfa9b5dd1d41042ed77dbad178aeb}{}\index{N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}override string N\+N\+Gen.\+Weight\+Memory.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_weight_memory_a000cfa9b5dd1d41042ed77dbad178aeb}
+
+
+Returns the name of the entity 
+
+\begin{DoxyReturn}{Returns}
+The name of the entity
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a9f25d1070c9ab8ad343c28443e62e6f2}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_weight_memory_a96cae98991fe72526efcc94aa27c3294}{}\index{N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}!get\+Output\+Ports@{get\+Output\+Ports}}
+\index{get\+Output\+Ports@{get\+Output\+Ports}!N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}}
+\subsubsection[{get\+Output\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Weight\+Memory.\+get\+Output\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_weight_memory_a96cae98991fe72526efcc94aa27c3294}
+
+
+Returns the outputs to the device 
+
+\begin{DoxyReturn}{Returns}
+The outputs to the device
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_ace06368087778e254a5048c7d28747be}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_weight_memory_a638a0f1ce7d8f3983ef0a0beb59e887d}{}\index{N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}!write\+V\+H\+D\+L@{write\+V\+H\+D\+L}}
+\index{write\+V\+H\+D\+L@{write\+V\+H\+D\+L}!N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}}
+\subsubsection[{write\+V\+H\+D\+L(string file)}]{\setlength{\rightskip}{0pt plus 5cm}override bool N\+N\+Gen.\+Weight\+Memory.\+write\+V\+H\+D\+L (
+\begin{DoxyParamCaption}
+\item[{string}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_weight_memory_a638a0f1ce7d8f3983ef0a0beb59e887d}
+
+
+Writes the .vhd files necessary to compile this entity. All other necessary entities (i.\+e. neurons, thresholding functions, etc.) will also be written when this function returns 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path in which to write the files (do N\+O\+T include \char`\"{}...\+name.\+vhd\char`\"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the files were written successfully, false otherwise
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a1111d498446be08b20583b9625893a52}{N\+N\+Gen.\+Entity}.
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_n_n_gen_1_1_weight_memory_a86f72ffc5ccc873778854121075a52da}{}\index{N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}!addr@{addr}}
+\index{addr@{addr}!N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}}
+\subsubsection[{addr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Weight\+Memory.\+addr\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_weight_memory_a86f72ffc5ccc873778854121075a52da}
+
+
+The address lines for the memory 
+
+\hypertarget{class_n_n_gen_1_1_weight_memory_afd016b54cfb5b510f02e5e9d47dd0292}{}\index{N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}!clk@{clk}}
+\index{clk@{clk}!N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}}
+\subsubsection[{clk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Weight\+Memory.\+clk\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_weight_memory_afd016b54cfb5b510f02e5e9d47dd0292}
+
+
+The clock signal. The memory device output is rising-\/edge registered 
+
+\hypertarget{class_n_n_gen_1_1_weight_memory_a83826d4cceec2993daebe283204e12b6}{}\index{N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}!data@{data}}
+\index{data@{data}!N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Weight\+Memory.\+data\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_weight_memory_a83826d4cceec2993daebe283204e12b6}
+
+
+Memory output. On rising edge, the contents of memory pointed to by \char`\"{}addr\char`\"{} will appear on \char`\"{}q\char`\"{} 
+
+\hypertarget{class_n_n_gen_1_1_weight_memory_a4b89726fb6f1303d0b898f29d28545cc}{}\index{N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}!name@{name}}
+\index{name@{name}!N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}string N\+N\+Gen.\+Weight\+Memory.\+name\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_weight_memory_a4b89726fb6f1303d0b898f29d28545cc}
+
+
+The name of the entity 
+
+\hypertarget{class_n_n_gen_1_1_weight_memory_a969c7f7f162b75653ff1cb94eb1d11a8}{}\index{N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}!weights\+\_\+str@{weights\+\_\+str}}
+\index{weights\+\_\+str@{weights\+\_\+str}!N\+N\+Gen\+::\+Weight\+Memory@{N\+N\+Gen\+::\+Weight\+Memory}}
+\subsubsection[{weights\+\_\+str}]{\setlength{\rightskip}{0pt plus 5cm}List$<$string$>$ N\+N\+Gen.\+Weight\+Memory.\+weights\+\_\+str\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_weight_memory_a969c7f7f162b75653ff1cb94eb1d11a8}
+
+
+The initialization values for the memory. the i-\/th element will appear in the i-\/th address on startup. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_weight_memory_8cs}{Weight\+Memory.\+cs}\end{DoxyCompactItemize}

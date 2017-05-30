@@ -1,0 +1,275 @@
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx}{}\section{N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx Class Reference}
+\label{class_n_n_gen_1_1_sigmoid___poly_approx}\index{N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx}}
+
+
+A thresholding function approximating the sigmoid function 1/(1 + exp(-\/x))  
+
+
+Inheritance diagram for N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_n_gen_1_1_sigmoid___poly_approx}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_afcf01b0610e4b2835f237038e7f3ff40}{Sigmoid\+\_\+\+Poly\+Approx} (\hyperlink{class_n_n_gen_1_1_port}{Port} \+\_\+sigmoid\+Input\+Port, int \+\_\+output\+Int\+Bits, int \+\_\+output\+Frac\+Bits, string \+\_\+name)
+\begin{DoxyCompactList}\small\item\em Initializes the Sigmoid thresholding element \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_a911d3d616c3eceb6ff57bfe371489264}{Sigmoid\+\_\+\+Poly\+Approx} (\hyperlink{class_n_n_gen_1_1_signal}{Signal} \+\_\+sigmoid\+Input\+Sigmal, int \+\_\+output\+Int\+Bits, int \+\_\+output\+Frac\+Bits, string \+\_\+name)
+\begin{DoxyCompactList}\small\item\em Initializes the Sigmoid thresholding element \end{DoxyCompactList}\item 
+override string \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_a68e8a0e324f6cae64ee7d2f841c35506}{get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Returns the name of the entity \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_ac4cf07415c0dc69efdaf91cfc561b68f}{get\+Input\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns the input ports to the device \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_ad4add2a8c53cc31373dab81e8ea634e2}{get\+Output\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns the output ports to the device \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_signal}{Signal}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_aa9ea30f1d5fa7e2ff1874f00e37deffb}{get\+Internal\+Signals} ()
+\begin{DoxyCompactList}\small\item\em Returns the internal signals of the device \end{DoxyCompactList}\item 
+override bool \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_a1d78cd23e2a1f4e686980052ad8c7a44}{write\+V\+H\+D\+L} (string file)
+\begin{DoxyCompactList}\small\item\em Writes the .vhd files necessary to compile this entity. All other necessary entities (i.\+e. neurons, thresholding functions, etc.) will also be written when this function returns \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_ae95905d2d05007afee1e105e93c64045}{name} = \char`\"{}sigmoid\+\_\+poly\+Approx\char`\"{}
+\begin{DoxyCompactList}\small\item\em The name of the entity \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_ae6da90acd8f62414c3ead1c2cc8538da}{sigmoid\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The input signal to the thresholding function \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_a93bf10c040a0ed7dd4428c9df4539188}{sigmoid\+Output}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The output signal to the thresholding function \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_a14047a901c8101e599e807f4ef07d46d}{numerator}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An internal signal used in the sigmoid computation \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_a371e8a19a69ffabafa7f6e2819b3c5b6}{denominator}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An internal signal used in the sigmoid computation \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_af795af0bd003e50d11e5f3c904d03dca}{thresh\+\_\+sum}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An internal signal used in the sigmoid computation \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_a3834aa67d528e6f7b4698d651a28d027}{output\+Frac\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of bits to use in the output signal representing the fractional portion of the result \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx_ad9f06e6995afc2b5f049c4d062e6b716}{output\+Int\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of integer bits to use in the output signal. These will all be zeros, but this member can be useful to merge signal sizes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A thresholding function approximating the sigmoid function 1/(1 + exp(-\/x)) 
+
+This class uses the approximation sigmoid(x) $\sim$ (1/2) $\ast$ ( 1 + (x/(x+1)) ) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_afcf01b0610e4b2835f237038e7f3ff40}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!Sigmoid\+\_\+\+Poly\+Approx@{Sigmoid\+\_\+\+Poly\+Approx}}
+\index{Sigmoid\+\_\+\+Poly\+Approx@{Sigmoid\+\_\+\+Poly\+Approx}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{Sigmoid\+\_\+\+Poly\+Approx(\+Port \+\_\+sigmoid\+Input\+Port, int \+\_\+output\+Int\+Bits, int \+\_\+output\+Frac\+Bits, string \+\_\+name)}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+Sigmoid\+\_\+\+Poly\+Approx (
+\begin{DoxyParamCaption}
+\item[{{\bf Port}}]{\+\_\+sigmoid\+Input\+Port, }
+\item[{int}]{\+\_\+output\+Int\+Bits, }
+\item[{int}]{\+\_\+output\+Frac\+Bits, }
+\item[{string}]{\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_afcf01b0610e4b2835f237038e7f3ff40}
+
+
+Initializes the Sigmoid thresholding element 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+sigmoid\+Input\+Port} & The input port to the device\\
+\hline
+{\em \+\_\+output\+Int\+Bits} & The number of integer bits to be used in the output. These will all be zeroes, but this can be useful in matching bus widths in higher level entities\\
+\hline
+{\em \+\_\+output\+Frac\+Bits} & The number of fractional bits to be used in the output.\\
+\hline
+{\em \+\_\+name} & The name of the entity\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_a911d3d616c3eceb6ff57bfe371489264}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!Sigmoid\+\_\+\+Poly\+Approx@{Sigmoid\+\_\+\+Poly\+Approx}}
+\index{Sigmoid\+\_\+\+Poly\+Approx@{Sigmoid\+\_\+\+Poly\+Approx}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{Sigmoid\+\_\+\+Poly\+Approx(\+Signal \+\_\+sigmoid\+Input\+Sigmal, int \+\_\+output\+Int\+Bits, int \+\_\+output\+Frac\+Bits, string \+\_\+name)}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+Sigmoid\+\_\+\+Poly\+Approx (
+\begin{DoxyParamCaption}
+\item[{{\bf Signal}}]{\+\_\+sigmoid\+Input\+Sigmal, }
+\item[{int}]{\+\_\+output\+Int\+Bits, }
+\item[{int}]{\+\_\+output\+Frac\+Bits, }
+\item[{string}]{\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_a911d3d616c3eceb6ff57bfe371489264}
+
+
+Initializes the Sigmoid thresholding element 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+sigmoid\+Input\+Sigmal} & The input signal to the device\\
+\hline
+{\em \+\_\+output\+Int\+Bits} & The number of integer bits to be used in the output. These will all be zeroes, but this can be useful in matching bus widths in higher level entities\\
+\hline
+{\em \+\_\+output\+Frac\+Bits} & The number of fractional bits to be used in the output.\\
+\hline
+{\em \+\_\+name} & The name of the entity\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_ac4cf07415c0dc69efdaf91cfc561b68f}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!get\+Input\+Ports@{get\+Input\+Ports}}
+\index{get\+Input\+Ports@{get\+Input\+Ports}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{get\+Input\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+get\+Input\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_ac4cf07415c0dc69efdaf91cfc561b68f}
+
+
+Returns the input ports to the device 
+
+\begin{DoxyReturn}{Returns}
+The input ports to the device
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a01239f05c9efa61ec9e6a29cb2eaad50}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_aa9ea30f1d5fa7e2ff1874f00e37deffb}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!get\+Internal\+Signals@{get\+Internal\+Signals}}
+\index{get\+Internal\+Signals@{get\+Internal\+Signals}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{get\+Internal\+Signals()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Signal} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+get\+Internal\+Signals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_aa9ea30f1d5fa7e2ff1874f00e37deffb}
+
+
+Returns the internal signals of the device 
+
+\begin{DoxyReturn}{Returns}
+The internal signals of the device
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a62feb80e95ec84c650ea17bd53f0d510}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_a68e8a0e324f6cae64ee7d2f841c35506}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}override string N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_a68e8a0e324f6cae64ee7d2f841c35506}
+
+
+Returns the name of the entity 
+
+\begin{DoxyReturn}{Returns}
+The name of the entity
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a9f25d1070c9ab8ad343c28443e62e6f2}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_ad4add2a8c53cc31373dab81e8ea634e2}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!get\+Output\+Ports@{get\+Output\+Ports}}
+\index{get\+Output\+Ports@{get\+Output\+Ports}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{get\+Output\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+get\+Output\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_ad4add2a8c53cc31373dab81e8ea634e2}
+
+
+Returns the output ports to the device 
+
+\begin{DoxyReturn}{Returns}
+The output ports of the device
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_ace06368087778e254a5048c7d28747be}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_a1d78cd23e2a1f4e686980052ad8c7a44}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!write\+V\+H\+D\+L@{write\+V\+H\+D\+L}}
+\index{write\+V\+H\+D\+L@{write\+V\+H\+D\+L}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{write\+V\+H\+D\+L(string file)}]{\setlength{\rightskip}{0pt plus 5cm}override bool N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+write\+V\+H\+D\+L (
+\begin{DoxyParamCaption}
+\item[{string}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_a1d78cd23e2a1f4e686980052ad8c7a44}
+
+
+Writes the .vhd files necessary to compile this entity. All other necessary entities (i.\+e. neurons, thresholding functions, etc.) will also be written when this function returns 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path in which to write the files (do N\+O\+T include \char`\"{}...\+name.\+vhd\char`\"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the files were written successfully, false otherwise
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a1111d498446be08b20583b9625893a52}{N\+N\+Gen.\+Entity}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_ae95905d2d05007afee1e105e93c64045}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!name@{name}}
+\index{name@{name}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}string N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+name = \char`\"{}sigmoid\+\_\+poly\+Approx\char`\"{}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_ae95905d2d05007afee1e105e93c64045}
+
+
+The name of the entity 
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_a371e8a19a69ffabafa7f6e2819b3c5b6}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!denominator@{denominator}}
+\index{denominator@{denominator}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{denominator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+denominator\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_a371e8a19a69ffabafa7f6e2819b3c5b6}
+
+
+An internal signal used in the sigmoid computation 
+
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_a14047a901c8101e599e807f4ef07d46d}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!numerator@{numerator}}
+\index{numerator@{numerator}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{numerator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+numerator\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_a14047a901c8101e599e807f4ef07d46d}
+
+
+An internal signal used in the sigmoid computation 
+
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_a3834aa67d528e6f7b4698d651a28d027}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!output\+Frac\+Bits@{output\+Frac\+Bits}}
+\index{output\+Frac\+Bits@{output\+Frac\+Bits}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{output\+Frac\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+output\+Frac\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_a3834aa67d528e6f7b4698d651a28d027}
+
+
+The number of bits to use in the output signal representing the fractional portion of the result 
+
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_ad9f06e6995afc2b5f049c4d062e6b716}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!output\+Int\+Bits@{output\+Int\+Bits}}
+\index{output\+Int\+Bits@{output\+Int\+Bits}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{output\+Int\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+output\+Int\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_ad9f06e6995afc2b5f049c4d062e6b716}
+
+
+The number of integer bits to use in the output signal. These will all be zeros, but this member can be useful to merge signal sizes 
+
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_ae6da90acd8f62414c3ead1c2cc8538da}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!sigmoid\+Input@{sigmoid\+Input}}
+\index{sigmoid\+Input@{sigmoid\+Input}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{sigmoid\+Input}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+sigmoid\+Input\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_ae6da90acd8f62414c3ead1c2cc8538da}
+
+
+The input signal to the thresholding function 
+
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_a93bf10c040a0ed7dd4428c9df4539188}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!sigmoid\+Output@{sigmoid\+Output}}
+\index{sigmoid\+Output@{sigmoid\+Output}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{sigmoid\+Output}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+sigmoid\+Output\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_a93bf10c040a0ed7dd4428c9df4539188}
+
+
+The output signal to the thresholding function 
+
+\hypertarget{class_n_n_gen_1_1_sigmoid___poly_approx_af795af0bd003e50d11e5f3c904d03dca}{}\index{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}!thresh\+\_\+sum@{thresh\+\_\+sum}}
+\index{thresh\+\_\+sum@{thresh\+\_\+sum}!N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx@{N\+N\+Gen\+::\+Sigmoid\+\_\+\+Poly\+Approx}}
+\subsubsection[{thresh\+\_\+sum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Sigmoid\+\_\+\+Poly\+Approx.\+thresh\+\_\+sum\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sigmoid___poly_approx_af795af0bd003e50d11e5f3c904d03dca}
+
+
+An internal signal used in the sigmoid computation 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{sigmoid__poly_approx_8cs}{sigmoid\+\_\+poly\+Approx.\+cs}\end{DoxyCompactItemize}

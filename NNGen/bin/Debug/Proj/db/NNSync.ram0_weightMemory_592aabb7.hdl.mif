@@ -1,0 +1,19 @@
+-- begin_signature
+-- weightMemory
+-- end_signature
+WIDTH=9;
+DEPTH=8;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	7 :	111111000;
+	6 :	000001000;
+	5 :	111111000;
+	4 :	000001000;
+	3 :	111110000;
+	2 :	000010000;
+	1 :	000010000;
+	0 :	111110000;
+END;

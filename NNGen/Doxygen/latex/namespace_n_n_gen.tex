@@ -1,0 +1,63 @@
+\hypertarget{namespace_n_n_gen}{}\section{N\+N\+Gen Namespace Reference}
+\label{namespace_n_n_gen}\index{N\+N\+Gen@{N\+N\+Gen}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_n_n_gen_1_1_array_signal}{Array\+Signal}
+\begin{DoxyCompactList}\small\item\em A class to represent an array of signals \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_async_neural_network}{Async\+Neural\+Network}
+\begin{DoxyCompactList}\small\item\em An abstraction of a neural network entity. \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_async_neuron}{Async\+Neuron}
+\begin{DoxyCompactList}\small\item\em An abstraction of a single neuron within a network \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_entity}{Entity}
+\begin{DoxyCompactList}\small\item\em An interface for any object that will eventually generate a V\+H\+D\+L entity \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_form1}{Form1}
+\begin{DoxyCompactList}\small\item\em The main user interface form for testing the application Not much documentation is provided, as these aren\textquotesingle{}t meant to be public members. They are very straightforward, and can be used as example cod,e however. \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_layer_setup}{Layer\+Setup}
+\begin{DoxyCompactList}\small\item\em A pannel for setting up a single layer of the Neural Network \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_main_form}{Main\+Form}
+\begin{DoxyCompactList}\small\item\em The main window for the application \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_network_setup}{Network\+Setup}
+\begin{DoxyCompactList}\small\item\em A screen for setting up the number of layers in the network \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_n_n_panel}{N\+N\+Panel}
+\begin{DoxyCompactList}\small\item\em An abstraction of a single screen (pannel) in the U\+I \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_panel_container}{Panel\+Container}
+\begin{DoxyCompactList}\small\item\em A container for holding the list of panels to show the user \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_port}{Port}
+\begin{DoxyCompactList}\small\item\em A datatype representing a port in an entity \end{DoxyCompactList}\item 
+class {\bfseries Program}
+\item 
+class \hyperlink{class_n_n_gen_1_1_save_control}{Save\+Control}
+\begin{DoxyCompactList}\small\item\em A U\+I element to allow the user to determine the folder in which the generated files will be saved \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_sigmoid___poly_approx}{Sigmoid\+\_\+\+Poly\+Approx}
+\begin{DoxyCompactList}\small\item\em A thresholding function approximating the sigmoid function 1/(1 + exp(-\/x)) \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_signal}{Signal}
+\begin{DoxyCompactList}\small\item\em A class representing an internal signal for a V\+H\+D\+L entity \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_sync_neural_network}{Sync\+Neural\+Network}
+\begin{DoxyCompactList}\small\item\em A class representing a synchronous neural network \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_sync_neuron}{Sync\+Neuron}
+\begin{DoxyCompactList}\small\item\em A class representing a singular neuron in a synchronous neural network \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_sync_or_async}{Sync\+Or\+Async}
+\begin{DoxyCompactList}\small\item\em A U\+I element allowing the user to set whether the network is synchronous or asynchronous \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem}{Sync\+Transfer\+Function\+Mem}
+\begin{DoxyCompactList}\small\item\em A synchronous transfer function stored in memory. The transfer function is assumed to be symmetric around x = 0 \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_thank_you}{Thank\+You}
+\begin{DoxyCompactList}\small\item\em Thanks the user for using the tool \+:) \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper}{Transfer\+Function\+Wrapper}
+\begin{DoxyCompactList}\small\item\em Initializes a wrapper for the transfer function memory element. As all implemented functions are symmetric around x = 0, we can save memory by only saving the values for x greater than 0 value in memory, and computing the x less than 0 values by (value = 1.\+0 -\/ abs(x)) Also, the functions implemented (aside from the Linear node) are very close to 1 or -\/1 when abs(x) $>$= 6.\+0, so when the input is in that range, the output is computed as\+: (out = 1.\+0 $\ast$ sgn(x)) (sgn = \{1 if x $>$ 0, -\/1 otherwise\}) (note, for Unipolar Sigmoid, the lower limit is 0, not -\/1) \end{DoxyCompactList}\item 
+class {\bfseries Utilities}
+\begin{DoxyCompactList}\small\item\em A collection of useful utilities that don\textquotesingle{}t really fit anywhere else \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_visualizer}{Visualizer}
+\begin{DoxyCompactList}\small\item\em A for for visualizing the network that is to be generated by the generator \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_visualizer_arrow}{Visualizer\+Arrow}
+\begin{DoxyCompactList}\small\item\em Represents an arrow in the visualizer diagram \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_visualizer_layer}{Visualizer\+Layer}
+\begin{DoxyCompactList}\small\item\em A representation of a layer in the \hyperlink{class_n_n_gen_1_1_visualizer}{Visualizer} \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_weight_memory}{Weight\+Memory}
+\begin{DoxyCompactList}\small\item\em An entity that infers memory intended to be used for initializing a neural network \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_weights_and_precision}{Weights\+And\+Precision}
+\begin{DoxyCompactList}\small\item\em A U\+I element to allow the user to specify the location for the weights to input to the network, as well as the precision with which to perform the neuron\textquotesingle{}s computations. \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_welcome}{Welcome}
+\begin{DoxyCompactList}\small\item\em A form displaying the welcome message to the user \end{DoxyCompactList}\item 
+class \hyperlink{class_n_n_gen_1_1_wizard_controller}{Wizard\+Controller}
+\begin{DoxyCompactList}\small\item\em A class managing the U\+I forms to show the user, as well as recording their responses \end{DoxyCompactList}\end{DoxyCompactItemize}

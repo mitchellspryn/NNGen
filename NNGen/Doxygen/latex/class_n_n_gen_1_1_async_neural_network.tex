@@ -1,0 +1,412 @@
+\hypertarget{class_n_n_gen_1_1_async_neural_network}{}\section{N\+N\+Gen.\+Async\+Neural\+Network Class Reference}
+\label{class_n_n_gen_1_1_async_neural_network}\index{N\+N\+Gen.\+Async\+Neural\+Network@{N\+N\+Gen.\+Async\+Neural\+Network}}
+
+
+An abstraction of a neural network entity.  
+
+
+Inheritance diagram for N\+N\+Gen.\+Async\+Neural\+Network\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_n_gen_1_1_async_neural_network}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_async_neural_network_ab9139877c5f02159b52437004c5011ac}{Async\+Neural\+Network} (int\mbox{[}$\,$\mbox{]} \+\_\+neuron\+Counts, double\mbox{[}$\,$\mbox{]} \+\_\+bias\+Values, \hyperlink{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64}{Async\+Neuron.\+Neuron\+Activation\+Type}\mbox{[}$\,$\mbox{]} \+\_\+activation\+Types, int \+\_\+num\+Int\+Bits, int \+\_\+num\+Frac\+Bits, int \+\_\+num\+Weight\+Upper\+Bits, bool \+\_\+is\+Classifier, double\mbox{[}$\,$\mbox{]} \+\_\+classifier\+Thresholds, List$<$ double $>$ \+\_\+weights)
+\begin{DoxyCompactList}\small\item\em The constructor for a neural network object. Calling this method\textquotesingle{}s write() function will write the entire network. \end{DoxyCompactList}\item 
+override string \hyperlink{class_n_n_gen_1_1_async_neural_network_affd3f3ffb007593e408d63dccf256238}{get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Returns the name of the entity. \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neural_network_a94ad9532f7e80514db3ff3eb16ba42cf}{get\+Input\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns the input ports of the entity. \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neural_network_a1efde159a323347b01cd88527d61c14e}{get\+Output\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns the output ports of the entity. \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_signal}{Signal}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neural_network_a4ef8c71674da4a162680bf5b5c22d928}{get\+Internal\+Signals} ()
+\begin{DoxyCompactList}\small\item\em Returns the internal signals of the entity. \end{DoxyCompactList}\item 
+override bool \hyperlink{class_n_n_gen_1_1_async_neural_network_ad57a90889256277e0da34e8e7f3e7848}{write\+V\+H\+D\+L} (string file)
+\begin{DoxyCompactList}\small\item\em Writes the .vhd files necessary to compile this entity. All other necessary entities (i.\+e. neurons, thresholding functions, etc.) will also be written when this function returns \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neural_network_a6422fde806a9cf2188ca93c5166ebb23}{nn\+Input\+Ports}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of input ports to the network \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neural_network_a666078677fa5db12619f912ca472bdee}{nn\+Output\+Ports}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of output ports to the network \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_async_neural_network_a30cb0df931a8da4dd7e911f953caaf02}{ready}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This signal will go high when the network has been initialized after a reset. It will go low when the device is in reset \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_async_neural_network_ad3bb38686daf90675f37c81e6b8e749e}{clk}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A clock used for synchronous loading of the neuron weights from memory \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_async_neural_network_a7205fb71714f4aa3c144c72c44af2787}{reset}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An active high reset for the network \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64}{Async\+Neuron.\+Neuron\+Activation\+Type}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neural_network_ad1d4a0489b5e32e36e8927eee2992725}{activation\+Types}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The activation types for each layer of the network. The i-\/th member corresponds to the activations of the i-\/th layer of the network \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neural_network_aec2195cbfa8c8f568dc512ab511d06c0}{neuron\+Counts}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of neurons in each layer of the network. The i-\/th member corresponds to the i-\/th layer of the network \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neural_network_aaccc75ccaaf278324874a5c3b45d711f}{bias\+Values}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The bias values for each layer. The i-\/th member corresponds to the bias value fed into the i+1-\/th layer of the network \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_async_neural_network_a4bb7830d6bbc7f19ea5eefdb49ab848a}{load\+\_\+sig}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A signal used to enable a single neuron to accept weights from memory \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_async_neural_network_aced8cd708a7084592d28cbcca93a7278}{load\+Val}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A signal to hold the values of data coming from memory \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_async_neural_network_aedc34ca8e8b46a154d3953776c809cd9}{load\+Offset}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A signal used to index into an individual neuron\textquotesingle{}s weight signals Used during the load process \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_async_neural_network_a62f80368a823158ee82fd29b879ad157}{addr\+Counter}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A signal used to index into memory to obtain the weights during the load process \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neural_network_ac912fc0d486aeb193cf0f104f06b68a4}{neuron\+\_\+outputs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The signals that will hold the outputs to each individual neuron \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_async_neural_network_ade446cacb56d0ddf2aae1510e2425591}{ready\+\_\+signal}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A signal used in determining whether the device has completed the loading process \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neural_network_a17ce3ebd6db5f93a473bd2b45527c726}{final\+Load\+Signals}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A collection of signals to hold the final\+\_\+load outputs from the individual neurons in the network \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_async_neural_network_a559b0be95e6e62b80a0064de584805d3}{load\+Val\+Conv}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A signal used to convert the output of memory (S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+\+V\+E\+C\+T\+O\+R) into the appropriate type to be used in the neuron (S\+I\+G\+N\+E\+D\+\_\+\+F\+I\+X\+E\+D\+\_\+\+P\+O\+I\+N\+T) \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neural_network_a9a2da98105807d64bf8d25f9f4279d3f}{classifier\+Thresholds}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The values to be used for thresholding the output neurons. The i-\/th member of this array corresponds to the theshold value for the i-\/th output neuron. If the network is not a classification network (i.\+e. is\+Classifier = false), then this member is unused. \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_async_neural_network_a07f0f12e804555587a5869b821e2ab0f}{is\+Classifier}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If the neural network is to be used for classification, then this variable should be set to true. This will instantiate comparitors on the output neurons. \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_async_neural_network_aa792285911d8e4b6d402451efe7d57c2}{num\+Int\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of integer bits to be used for the neural network inputs \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_async_neural_network_a195b5331d3ed6f5babecb6e7e6b22cb7}{num\+Frac\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of fractional bits to be used for the neural network inputs and for the neural network weights \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_async_neural_network_a098bee8b58e461ea1141e5a2c165ee88}{num\+Weight\+Upper\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of integer bits to be used for the neural network weights. \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_weight_memory}{Weight\+Memory} \hyperlink{class_n_n_gen_1_1_async_neural_network_a94241380da2839193000b7c3e78fe8cd}{wm}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A memory entity used to store and load the neural network weights on startup \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_async_neuron}{Async\+Neuron}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neural_network_aeaec2eb4cfb3a7dba9c40d04c2fe7fb1}{neuron\+Entities}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An array of the neurons in the network. It is sequentually loaded, first by layer, then by order within the layer. So, for a net of N layers, each with M neurons in the layer, the array will be \mbox{[}Neuron\+\_\+0\+\_\+0, Neuron\+\_\+0\+\_\+1, ..., Neuron\+\_\+0\+\_\+\+M, Neuron\+\_\+1\+\_\+0, Neuron\+\_\+1\+\_\+1, ..., Neuron\+\_\+\+N\+\_\+\+M\mbox{]} \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_n_n_gen_1_1_async_neuron}{Async\+Neuron} $>$ \hyperlink{class_n_n_gen_1_1_async_neural_network_a0f6322f9b2736a40e4f63b3107f8981d}{unique\+Neuron\+Entities}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A list of the unique neuron entities for which separate V\+H\+D\+L files will need to be generated. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neural_network_a545f2bfc72b27d96c054de93d82a7571}{int\+Bus\+Widths}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The bus widths for each neuron \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstraction of a neural network entity. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_n_gen_1_1_async_neural_network_ab9139877c5f02159b52437004c5011ac}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!Async\+Neural\+Network@{Async\+Neural\+Network}}
+\index{Async\+Neural\+Network@{Async\+Neural\+Network}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{Async\+Neural\+Network(int[] \+\_\+neuron\+Counts, double[] \+\_\+bias\+Values, Async\+Neuron.\+Neuron\+Activation\+Type[] \+\_\+activation\+Types, int \+\_\+num\+Int\+Bits, int \+\_\+num\+Frac\+Bits, int \+\_\+num\+Weight\+Upper\+Bits, bool \+\_\+is\+Classifier, double[] \+\_\+classifier\+Thresholds, List$<$ double $>$ \+\_\+weights)}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Async\+Neural\+Network.\+Async\+Neural\+Network (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{\+\_\+neuron\+Counts, }
+\item[{double\mbox{[}$\,$\mbox{]}}]{\+\_\+bias\+Values, }
+\item[{{\bf Async\+Neuron.\+Neuron\+Activation\+Type}\mbox{[}$\,$\mbox{]}}]{\+\_\+activation\+Types, }
+\item[{int}]{\+\_\+num\+Int\+Bits, }
+\item[{int}]{\+\_\+num\+Frac\+Bits, }
+\item[{int}]{\+\_\+num\+Weight\+Upper\+Bits, }
+\item[{bool}]{\+\_\+is\+Classifier, }
+\item[{double\mbox{[}$\,$\mbox{]}}]{\+\_\+classifier\+Thresholds, }
+\item[{List$<$ double $>$}]{\+\_\+weights}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_async_neural_network_ab9139877c5f02159b52437004c5011ac}
+
+
+The constructor for a neural network object. Calling this method\textquotesingle{}s write() function will write the entire network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+neuron\+Counts} & The number of neurons in each layer, excluding the bias node.\\
+\hline
+{\em \+\_\+bias\+Values} & The bias value feeding forward into the next layer. \\
+\hline
+{\em \+\_\+activation\+Types} & The activation types for the neurons in each layer\\
+\hline
+{\em \+\_\+num\+Int\+Bits} & The number of integer bits to use for the inputs for each neuron (Sigmoid activated neurons automatically get this set to zero)\\
+\hline
+{\em \+\_\+num\+Frac\+Bits} & The number of fractional bits to use for the inputs for each neuron\\
+\hline
+{\em \+\_\+num\+Weight\+Upper\+Bits} & The number of integer bits used for the weights for each neuron.\\
+\hline
+{\em \+\_\+is\+Classifier} & If true, a comparitor will be instantiatated at the output to each node, comparing the output layer nodes to the threshold value.\\
+\hline
+{\em \+\_\+classifier\+Thresholds} & The threshold values for the output comparitors\\
+\hline
+{\em \+\_\+weights} & The list of weights read in for the neurons from Weight\+Reader.\+read\+Weights\+From\+File()\\
+\hline
+\end{DoxyParams}
+$<$remark$>$ For example, to intialize a classification neural network with three inputs, two hidden sigmoid-\/activated nodes, and one linear output node, use the following line\+:$<$/remark$>$ 
+
+Neural\+Network nn = new Neural\+Network(\mbox{[}3, 2, 1\mbox{]}, \mbox{[}-\/1, -\/1\mbox{]}, \mbox{[}..S\+I\+G\+M\+O\+I\+D\+\_\+\+P\+O\+L\+Y\+\_\+\+A\+P\+P\+R\+O\+X, ..L\+I\+N\+E\+A\+R\mbox{]}, 4, 4, 4, true, \mbox{[}0.\+5\mbox{]}, \+\_\+weights);
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a94ad9532f7e80514db3ff3eb16ba42cf}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!get\+Input\+Ports@{get\+Input\+Ports}}
+\index{get\+Input\+Ports@{get\+Input\+Ports}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{get\+Input\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neural\+Network.\+get\+Input\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_async_neural_network_a94ad9532f7e80514db3ff3eb16ba42cf}
+
+
+Returns the input ports of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The input ports of the entity
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a01239f05c9efa61ec9e6a29cb2eaad50}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a4ef8c71674da4a162680bf5b5c22d928}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!get\+Internal\+Signals@{get\+Internal\+Signals}}
+\index{get\+Internal\+Signals@{get\+Internal\+Signals}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{get\+Internal\+Signals()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Signal} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neural\+Network.\+get\+Internal\+Signals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_async_neural_network_a4ef8c71674da4a162680bf5b5c22d928}
+
+
+Returns the internal signals of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The internal signals of the entity
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a62feb80e95ec84c650ea17bd53f0d510}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_affd3f3ffb007593e408d63dccf256238}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}override string N\+N\+Gen.\+Async\+Neural\+Network.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_async_neural_network_affd3f3ffb007593e408d63dccf256238}
+
+
+Returns the name of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The name of the entity
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a9f25d1070c9ab8ad343c28443e62e6f2}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a1efde159a323347b01cd88527d61c14e}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!get\+Output\+Ports@{get\+Output\+Ports}}
+\index{get\+Output\+Ports@{get\+Output\+Ports}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{get\+Output\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neural\+Network.\+get\+Output\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_async_neural_network_a1efde159a323347b01cd88527d61c14e}
+
+
+Returns the output ports of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The output ports of the entity
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_ace06368087778e254a5048c7d28747be}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_ad57a90889256277e0da34e8e7f3e7848}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!write\+V\+H\+D\+L@{write\+V\+H\+D\+L}}
+\index{write\+V\+H\+D\+L@{write\+V\+H\+D\+L}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{write\+V\+H\+D\+L(string file)}]{\setlength{\rightskip}{0pt plus 5cm}override bool N\+N\+Gen.\+Async\+Neural\+Network.\+write\+V\+H\+D\+L (
+\begin{DoxyParamCaption}
+\item[{string}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_async_neural_network_ad57a90889256277e0da34e8e7f3e7848}
+
+
+Writes the .vhd files necessary to compile this entity. All other necessary entities (i.\+e. neurons, thresholding functions, etc.) will also be written when this function returns 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path in which to write the files (do N\+O\+T include \char`\"{}...\+name.\+vhd\char`\"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the files were written successfully, false otherwise
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a1111d498446be08b20583b9625893a52}{N\+N\+Gen.\+Entity}.
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_n_n_gen_1_1_async_neural_network_ad1d4a0489b5e32e36e8927eee2992725}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!activation\+Types@{activation\+Types}}
+\index{activation\+Types@{activation\+Types}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{activation\+Types}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Async\+Neuron.\+Neuron\+Activation\+Type} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neural\+Network.\+activation\+Types\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_ad1d4a0489b5e32e36e8927eee2992725}
+
+
+The activation types for each layer of the network. The i-\/th member corresponds to the activations of the i-\/th layer of the network 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a62f80368a823158ee82fd29b879ad157}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!addr\+Counter@{addr\+Counter}}
+\index{addr\+Counter@{addr\+Counter}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{addr\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Async\+Neural\+Network.\+addr\+Counter\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a62f80368a823158ee82fd29b879ad157}
+
+
+A signal used to index into memory to obtain the weights during the load process 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_aaccc75ccaaf278324874a5c3b45d711f}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!bias\+Values@{bias\+Values}}
+\index{bias\+Values@{bias\+Values}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{bias\+Values}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neural\+Network.\+bias\+Values\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_aaccc75ccaaf278324874a5c3b45d711f}
+
+
+The bias values for each layer. The i-\/th member corresponds to the bias value fed into the i+1-\/th layer of the network 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a9a2da98105807d64bf8d25f9f4279d3f}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!classifier\+Thresholds@{classifier\+Thresholds}}
+\index{classifier\+Thresholds@{classifier\+Thresholds}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{classifier\+Thresholds}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neural\+Network.\+classifier\+Thresholds\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a9a2da98105807d64bf8d25f9f4279d3f}
+
+
+The values to be used for thresholding the output neurons. The i-\/th member of this array corresponds to the theshold value for the i-\/th output neuron. If the network is not a classification network (i.\+e. is\+Classifier = false), then this member is unused. 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_ad3bb38686daf90675f37c81e6b8e749e}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!clk@{clk}}
+\index{clk@{clk}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{clk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Async\+Neural\+Network.\+clk\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_ad3bb38686daf90675f37c81e6b8e749e}
+
+
+A clock used for synchronous loading of the neuron weights from memory 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a17ce3ebd6db5f93a473bd2b45527c726}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!final\+Load\+Signals@{final\+Load\+Signals}}
+\index{final\+Load\+Signals@{final\+Load\+Signals}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{final\+Load\+Signals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neural\+Network.\+final\+Load\+Signals\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a17ce3ebd6db5f93a473bd2b45527c726}
+
+
+A collection of signals to hold the final\+\_\+load outputs from the individual neurons in the network 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a545f2bfc72b27d96c054de93d82a7571}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!int\+Bus\+Widths@{int\+Bus\+Widths}}
+\index{int\+Bus\+Widths@{int\+Bus\+Widths}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{int\+Bus\+Widths}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neural\+Network.\+int\+Bus\+Widths\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a545f2bfc72b27d96c054de93d82a7571}
+
+
+The bus widths for each neuron 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a07f0f12e804555587a5869b821e2ab0f}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!is\+Classifier@{is\+Classifier}}
+\index{is\+Classifier@{is\+Classifier}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{is\+Classifier}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Async\+Neural\+Network.\+is\+Classifier\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a07f0f12e804555587a5869b821e2ab0f}
+
+
+If the neural network is to be used for classification, then this variable should be set to true. This will instantiate comparitors on the output neurons. 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a4bb7830d6bbc7f19ea5eefdb49ab848a}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!load\+\_\+sig@{load\+\_\+sig}}
+\index{load\+\_\+sig@{load\+\_\+sig}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{load\+\_\+sig}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Async\+Neural\+Network.\+load\+\_\+sig\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a4bb7830d6bbc7f19ea5eefdb49ab848a}
+
+
+A signal used to enable a single neuron to accept weights from memory 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_aedc34ca8e8b46a154d3953776c809cd9}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!load\+Offset@{load\+Offset}}
+\index{load\+Offset@{load\+Offset}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{load\+Offset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Async\+Neural\+Network.\+load\+Offset\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_aedc34ca8e8b46a154d3953776c809cd9}
+
+
+A signal used to index into an individual neuron\textquotesingle{}s weight signals Used during the load process 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_aced8cd708a7084592d28cbcca93a7278}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!load\+Val@{load\+Val}}
+\index{load\+Val@{load\+Val}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{load\+Val}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Async\+Neural\+Network.\+load\+Val\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_aced8cd708a7084592d28cbcca93a7278}
+
+
+A signal to hold the values of data coming from memory 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a559b0be95e6e62b80a0064de584805d3}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!load\+Val\+Conv@{load\+Val\+Conv}}
+\index{load\+Val\+Conv@{load\+Val\+Conv}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{load\+Val\+Conv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Async\+Neural\+Network.\+load\+Val\+Conv\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a559b0be95e6e62b80a0064de584805d3}
+
+
+A signal used to convert the output of memory (S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+\+V\+E\+C\+T\+O\+R) into the appropriate type to be used in the neuron (S\+I\+G\+N\+E\+D\+\_\+\+F\+I\+X\+E\+D\+\_\+\+P\+O\+I\+N\+T) 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_ac912fc0d486aeb193cf0f104f06b68a4}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!neuron\+\_\+outputs@{neuron\+\_\+outputs}}
+\index{neuron\+\_\+outputs@{neuron\+\_\+outputs}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{neuron\+\_\+outputs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neural\+Network.\+neuron\+\_\+outputs\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_ac912fc0d486aeb193cf0f104f06b68a4}
+
+
+The signals that will hold the outputs to each individual neuron 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_aec2195cbfa8c8f568dc512ab511d06c0}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!neuron\+Counts@{neuron\+Counts}}
+\index{neuron\+Counts@{neuron\+Counts}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{neuron\+Counts}]{\setlength{\rightskip}{0pt plus 5cm}int \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neural\+Network.\+neuron\+Counts\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_aec2195cbfa8c8f568dc512ab511d06c0}
+
+
+The number of neurons in each layer of the network. The i-\/th member corresponds to the i-\/th layer of the network 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_aeaec2eb4cfb3a7dba9c40d04c2fe7fb1}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!neuron\+Entities@{neuron\+Entities}}
+\index{neuron\+Entities@{neuron\+Entities}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{neuron\+Entities}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Async\+Neuron} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neural\+Network.\+neuron\+Entities\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_aeaec2eb4cfb3a7dba9c40d04c2fe7fb1}
+
+
+An array of the neurons in the network. It is sequentually loaded, first by layer, then by order within the layer. So, for a net of N layers, each with M neurons in the layer, the array will be \mbox{[}Neuron\+\_\+0\+\_\+0, Neuron\+\_\+0\+\_\+1, ..., Neuron\+\_\+0\+\_\+\+M, Neuron\+\_\+1\+\_\+0, Neuron\+\_\+1\+\_\+1, ..., Neuron\+\_\+\+N\+\_\+\+M\mbox{]} 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a6422fde806a9cf2188ca93c5166ebb23}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!nn\+Input\+Ports@{nn\+Input\+Ports}}
+\index{nn\+Input\+Ports@{nn\+Input\+Ports}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{nn\+Input\+Ports}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neural\+Network.\+nn\+Input\+Ports\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a6422fde806a9cf2188ca93c5166ebb23}
+
+
+The list of input ports to the network 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a666078677fa5db12619f912ca472bdee}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!nn\+Output\+Ports@{nn\+Output\+Ports}}
+\index{nn\+Output\+Ports@{nn\+Output\+Ports}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{nn\+Output\+Ports}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neural\+Network.\+nn\+Output\+Ports\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a666078677fa5db12619f912ca472bdee}
+
+
+The list of output ports to the network 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a195b5331d3ed6f5babecb6e7e6b22cb7}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!num\+Frac\+Bits@{num\+Frac\+Bits}}
+\index{num\+Frac\+Bits@{num\+Frac\+Bits}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{num\+Frac\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Async\+Neural\+Network.\+num\+Frac\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a195b5331d3ed6f5babecb6e7e6b22cb7}
+
+
+The number of fractional bits to be used for the neural network inputs and for the neural network weights 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_aa792285911d8e4b6d402451efe7d57c2}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!num\+Int\+Bits@{num\+Int\+Bits}}
+\index{num\+Int\+Bits@{num\+Int\+Bits}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{num\+Int\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Async\+Neural\+Network.\+num\+Int\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_aa792285911d8e4b6d402451efe7d57c2}
+
+
+The number of integer bits to be used for the neural network inputs 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a098bee8b58e461ea1141e5a2c165ee88}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!num\+Weight\+Upper\+Bits@{num\+Weight\+Upper\+Bits}}
+\index{num\+Weight\+Upper\+Bits@{num\+Weight\+Upper\+Bits}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{num\+Weight\+Upper\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Async\+Neural\+Network.\+num\+Weight\+Upper\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a098bee8b58e461ea1141e5a2c165ee88}
+
+
+The number of integer bits to be used for the neural network weights. 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a30cb0df931a8da4dd7e911f953caaf02}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!ready@{ready}}
+\index{ready@{ready}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{ready}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Async\+Neural\+Network.\+ready\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a30cb0df931a8da4dd7e911f953caaf02}
+
+
+This signal will go high when the network has been initialized after a reset. It will go low when the device is in reset 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_ade446cacb56d0ddf2aae1510e2425591}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!ready\+\_\+signal@{ready\+\_\+signal}}
+\index{ready\+\_\+signal@{ready\+\_\+signal}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{ready\+\_\+signal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Async\+Neural\+Network.\+ready\+\_\+signal\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_ade446cacb56d0ddf2aae1510e2425591}
+
+
+A signal used in determining whether the device has completed the loading process 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a7205fb71714f4aa3c144c72c44af2787}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!reset@{reset}}
+\index{reset@{reset}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Async\+Neural\+Network.\+reset\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a7205fb71714f4aa3c144c72c44af2787}
+
+
+An active high reset for the network 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a0f6322f9b2736a40e4f63b3107f8981d}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!unique\+Neuron\+Entities@{unique\+Neuron\+Entities}}
+\index{unique\+Neuron\+Entities@{unique\+Neuron\+Entities}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{unique\+Neuron\+Entities}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Async\+Neuron}$>$ N\+N\+Gen.\+Async\+Neural\+Network.\+unique\+Neuron\+Entities\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a0f6322f9b2736a40e4f63b3107f8981d}
+
+
+A list of the unique neuron entities for which separate V\+H\+D\+L files will need to be generated. 
+
+\hypertarget{class_n_n_gen_1_1_async_neural_network_a94241380da2839193000b7c3e78fe8cd}{}\index{N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}!wm@{wm}}
+\index{wm@{wm}!N\+N\+Gen\+::\+Async\+Neural\+Network@{N\+N\+Gen\+::\+Async\+Neural\+Network}}
+\subsubsection[{wm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Weight\+Memory} N\+N\+Gen.\+Async\+Neural\+Network.\+wm\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neural_network_a94241380da2839193000b7c3e78fe8cd}
+
+
+A memory entity used to store and load the neural network weights on startup 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_async_neural_network_8cs}{Async\+Neural\+Network.\+cs}\end{DoxyCompactItemize}

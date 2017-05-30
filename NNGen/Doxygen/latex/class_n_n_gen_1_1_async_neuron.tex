@@ -1,0 +1,377 @@
+\hypertarget{class_n_n_gen_1_1_async_neuron}{}\section{N\+N\+Gen.\+Async\+Neuron Class Reference}
+\label{class_n_n_gen_1_1_async_neuron}\index{N\+N\+Gen.\+Async\+Neuron@{N\+N\+Gen.\+Async\+Neuron}}
+
+
+An abstraction of a single neuron within a network  
+
+
+Inheritance diagram for N\+N\+Gen.\+Async\+Neuron\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_n_gen_1_1_async_neuron}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64}{Neuron\+Activation\+Type} \{ \hyperlink{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64aaac544aacc3615aada24897a215f5046}{Neuron\+Activation\+Type.\+L\+I\+N\+E\+A\+R}, 
+\hyperlink{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64a71a8e1c2711781820e9e3ce31dadfd9b}{Neuron\+Activation\+Type.\+S\+I\+G\+M\+O\+I\+D\+\_\+\+P\+O\+L\+Y\+\_\+\+A\+P\+P\+R\+O\+X}, 
+\hyperlink{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64ab50339a10e1de285ac99d4c3990b8693}{Neuron\+Activation\+Type.\+N\+O\+N\+E}
+ \}\begin{DoxyCompactList}\small\item\em An enumeration representing the different output activation functions supported by the neuron \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_async_neuron_a38668566c40b9e34ce3f36b692fbb1ea}{Async\+Neuron} (\hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \+\_\+input\+Ports, int \+\_\+num\+Output\+Int\+Bits, int \+\_\+num\+Output\+Frac\+Bits, int \+\_\+num\+Weight\+Int\+Bits, \hyperlink{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64}{Neuron\+Activation\+Type} \+\_\+activation\+Type, string \+\_\+name)
+\begin{DoxyCompactList}\small\item\em The neuron constructor \end{DoxyCompactList}\item 
+override string \hyperlink{class_n_n_gen_1_1_async_neuron_a28513dfbc9af1012436c00d02322c278}{get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Returns the name of the neuron \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neuron_a76ace6a3638e3f47135fd010ebfee4a0}{get\+Input\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns the input ports to the neuron \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neuron_ad10df3705cc6c39aaec226b0730a687e}{get\+Output\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns the output ports of the neuron \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_signal}{Signal}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neuron_aeb97d091f87eae66eeb865557d674b72}{get\+Internal\+Signals} ()
+\begin{DoxyCompactList}\small\item\em Returns a list of internal signals for the neuron \end{DoxyCompactList}\item 
+override bool \hyperlink{class_n_n_gen_1_1_async_neuron_a8877af523d2fb9a4e55e74d17eb0d081}{write\+V\+H\+D\+L} (string file)
+\begin{DoxyCompactList}\small\item\em Writes the .vhd file that describes the neuron. \end{DoxyCompactList}\item 
+override bool \hyperlink{class_n_n_gen_1_1_async_neuron_ac096c73ce466fa58932a14ad68d0648b}{Equals} (object obj)
+\begin{DoxyCompactList}\small\item\em Determines if two neurons are equal \end{DoxyCompactList}\item 
+override int \hyperlink{class_n_n_gen_1_1_async_neuron_a4cc474f3e3bd5d36fbd47a6aa8b8c68f}{Get\+Hash\+Code} ()
+\begin{DoxyCompactList}\small\item\em Returns the hash code of the object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neuron_ae248edac3250fffe3fdba7ff2dd8288b}{neuron\+Inputs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The inputs to the neuron \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_async_neuron_a374b98dccdbd95b77e6e64d896220a8b}{load\+Clk\+Port}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A clock port used for the synchornous loading of the neuron weights \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_async_neuron_a83a3e6466b062e49a29ce46508e2bdf0}{load\+Enable\+Port}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em When high, the loading process will be enabled. \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_async_neuron_a765bcf8344758b0e967117390749882d}{load\+Value\+Port}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em During weight loading, the value presented on this port will be clocked into one of the weight signals on the rising edge of load\+Clk\+Port \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_async_neuron_a96074bc794e643df031319b43efb986c}{load\+Offset\+Port}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em During weight loading, the weight signal pointed to by this signal will be loaded with the value of load\+Value\+Port \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_async_neuron_a06f594e2b75be48f0444010a2204d7b2}{final\+Load\+Port}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This port goes high once the final weight has been loaded \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_async_neuron_a5b2ce64b48dcdfeddd29ea02a933f119}{neuron\+Output}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The output port from the neuron \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neuron_a73d47ce9be628ff13a518e071f695096}{product\+Signals}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The signals used for holding the value of the product (weight\+\_\+i $\ast$ input\+\_\+i) \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_async_neuron_aeeb431fe55c9cda6e2889691c27c344c}{weight\+Signals}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The signals used for holding the weights of the network \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_async_neuron_abcb9157df57ac1f3751b2e730703bd58}{sum}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The signal used for holding the value of sum(product\+\_\+i) \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_signal}{Signal} \hyperlink{class_n_n_gen_1_1_async_neuron_a1e0f902ec842b3b970e18c4d02401c4e}{thresholded\+Sum}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The signal used for holding the output of the thresholding function \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_async_neuron_a3b0880328253a0c90da2d8ed655941bd}{num\+Output\+Frac\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of fractional bits to maintain on the output of the neuron \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_async_neuron_a0a5f5459d5bfe73ec3c6e1fd584ea126}{num\+Output\+Int\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of integer bits to maintain on the output of the neuron \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64}{Neuron\+Activation\+Type} \hyperlink{class_n_n_gen_1_1_async_neuron_aafa1d92f75c77c36546567c214840818}{activation\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The thresholding function used for the neuron \end{DoxyCompactList}\item 
+string \hyperlink{class_n_n_gen_1_1_async_neuron_a1b216c193a13ad763fee071d3238aab1}{name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of this particular neuron \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstraction of a single neuron within a network 
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!Neuron\+Activation\+Type@{Neuron\+Activation\+Type}}
+\index{Neuron\+Activation\+Type@{Neuron\+Activation\+Type}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{Neuron\+Activation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf N\+N\+Gen.\+Async\+Neuron.\+Neuron\+Activation\+Type}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64}
+
+
+An enumeration representing the different output activation functions supported by the neuron 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{L\+I\+N\+E\+A\+R@{L\+I\+N\+E\+A\+R}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!L\+I\+N\+E\+A\+R@{L\+I\+N\+E\+A\+R}}\item[{\em 
+\hypertarget{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64aaac544aacc3615aada24897a215f5046}{}L\+I\+N\+E\+A\+R\label{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64aaac544aacc3615aada24897a215f5046}
+}]A linear neuron \index{S\+I\+G\+M\+O\+I\+D\+\_\+\+P\+O\+L\+Y\+\_\+\+A\+P\+P\+R\+O\+X@{S\+I\+G\+M\+O\+I\+D\+\_\+\+P\+O\+L\+Y\+\_\+\+A\+P\+P\+R\+O\+X}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!S\+I\+G\+M\+O\+I\+D\+\_\+\+P\+O\+L\+Y\+\_\+\+A\+P\+P\+R\+O\+X@{S\+I\+G\+M\+O\+I\+D\+\_\+\+P\+O\+L\+Y\+\_\+\+A\+P\+P\+R\+O\+X}}\item[{\em 
+\hypertarget{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64a71a8e1c2711781820e9e3ce31dadfd9b}{}S\+I\+G\+M\+O\+I\+D\+\_\+\+P\+O\+L\+Y\+\_\+\+A\+P\+P\+R\+O\+X\label{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64a71a8e1c2711781820e9e3ce31dadfd9b}
+}]A sigmoid approximation using f(x) $\sim$ (1/2)$\ast$(1 + (x/(x+1)) ) \index{N\+O\+N\+E@{N\+O\+N\+E}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!N\+O\+N\+E@{N\+O\+N\+E}}\item[{\em 
+\hypertarget{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64ab50339a10e1de285ac99d4c3990b8693}{}N\+O\+N\+E\label{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64ab50339a10e1de285ac99d4c3990b8693}
+}]Represents no activation function, used for input neurons \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_n_gen_1_1_async_neuron_a38668566c40b9e34ce3f36b692fbb1ea}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!Async\+Neuron@{Async\+Neuron}}
+\index{Async\+Neuron@{Async\+Neuron}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{Async\+Neuron(\+Port[] \+\_\+input\+Ports, int \+\_\+num\+Output\+Int\+Bits, int \+\_\+num\+Output\+Frac\+Bits, int \+\_\+num\+Weight\+Int\+Bits, Neuron\+Activation\+Type \+\_\+activation\+Type, string \+\_\+name)}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Async\+Neuron.\+Async\+Neuron (
+\begin{DoxyParamCaption}
+\item[{{\bf Port}\mbox{[}$\,$\mbox{]}}]{\+\_\+input\+Ports, }
+\item[{int}]{\+\_\+num\+Output\+Int\+Bits, }
+\item[{int}]{\+\_\+num\+Output\+Frac\+Bits, }
+\item[{int}]{\+\_\+num\+Weight\+Int\+Bits, }
+\item[{{\bf Neuron\+Activation\+Type}}]{\+\_\+activation\+Type, }
+\item[{string}]{\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_async_neuron_a38668566c40b9e34ce3f36b692fbb1ea}
+
+
+The neuron constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+input\+Ports} & An array of input ports to the neuron\\
+\hline
+{\em \+\_\+num\+Output\+Int\+Bits} & The number of integer bits to use on the output\\
+\hline
+{\em \+\_\+num\+Output\+Frac\+Bits} & The number of fractional bits to be used on the output\\
+\hline
+{\em \+\_\+num\+Weight\+Int\+Bits} & The number of integer bits used to represent the weights\\
+\hline
+{\em \+\_\+activation\+Type} & The thresholding function used to compute the output of the neuron\\
+\hline
+{\em \+\_\+name} & The name of the neuron\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_async_neuron_ac096c73ce466fa58932a14ad68d0648b}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!Equals@{Equals}}
+\index{Equals@{Equals}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{Equals(object obj)}]{\setlength{\rightskip}{0pt plus 5cm}override bool N\+N\+Gen.\+Async\+Neuron.\+Equals (
+\begin{DoxyParamCaption}
+\item[{object}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_async_neuron_ac096c73ce466fa58932a14ad68d0648b}
+
+
+Determines if two neurons are equal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Object to compare to this neuron\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the objects are equal, false otherwise
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_async_neuron_a4cc474f3e3bd5d36fbd47a6aa8b8c68f}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!Get\+Hash\+Code@{Get\+Hash\+Code}}
+\index{Get\+Hash\+Code@{Get\+Hash\+Code}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{Get\+Hash\+Code()}]{\setlength{\rightskip}{0pt plus 5cm}override int N\+N\+Gen.\+Async\+Neuron.\+Get\+Hash\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_async_neuron_a4cc474f3e3bd5d36fbd47a6aa8b8c68f}
+
+
+Returns the hash code of the object 
+
+\begin{DoxyReturn}{Returns}
+The hash code of the object
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_async_neuron_a76ace6a3638e3f47135fd010ebfee4a0}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!get\+Input\+Ports@{get\+Input\+Ports}}
+\index{get\+Input\+Ports@{get\+Input\+Ports}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{get\+Input\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neuron.\+get\+Input\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_async_neuron_a76ace6a3638e3f47135fd010ebfee4a0}
+
+
+Returns the input ports to the neuron 
+
+\begin{DoxyReturn}{Returns}
+The input ports to the neuron
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a01239f05c9efa61ec9e6a29cb2eaad50}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_aeb97d091f87eae66eeb865557d674b72}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!get\+Internal\+Signals@{get\+Internal\+Signals}}
+\index{get\+Internal\+Signals@{get\+Internal\+Signals}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{get\+Internal\+Signals()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Signal} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neuron.\+get\+Internal\+Signals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_async_neuron_aeb97d091f87eae66eeb865557d674b72}
+
+
+Returns a list of internal signals for the neuron 
+
+\begin{DoxyReturn}{Returns}
+The internal signals for the neuron
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a62feb80e95ec84c650ea17bd53f0d510}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_a28513dfbc9af1012436c00d02322c278}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}override string N\+N\+Gen.\+Async\+Neuron.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_async_neuron_a28513dfbc9af1012436c00d02322c278}
+
+
+Returns the name of the neuron 
+
+\begin{DoxyReturn}{Returns}
+The name of the neuron
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a9f25d1070c9ab8ad343c28443e62e6f2}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_ad10df3705cc6c39aaec226b0730a687e}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!get\+Output\+Ports@{get\+Output\+Ports}}
+\index{get\+Output\+Ports@{get\+Output\+Ports}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{get\+Output\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neuron.\+get\+Output\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_async_neuron_ad10df3705cc6c39aaec226b0730a687e}
+
+
+Returns the output ports of the neuron 
+
+\begin{DoxyReturn}{Returns}
+The output ports of the neuron
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_ace06368087778e254a5048c7d28747be}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_a8877af523d2fb9a4e55e74d17eb0d081}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!write\+V\+H\+D\+L@{write\+V\+H\+D\+L}}
+\index{write\+V\+H\+D\+L@{write\+V\+H\+D\+L}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{write\+V\+H\+D\+L(string file)}]{\setlength{\rightskip}{0pt plus 5cm}override bool N\+N\+Gen.\+Async\+Neuron.\+write\+V\+H\+D\+L (
+\begin{DoxyParamCaption}
+\item[{string}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_async_neuron_a8877af523d2fb9a4e55e74d17eb0d081}
+
+
+Writes the .vhd file that describes the neuron. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The root file path for the network. Do not include \char`\"{}(name).\+vhd\char`\"{} in the filepath\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the file was written successfully, false otherwise
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a1111d498446be08b20583b9625893a52}{N\+N\+Gen.\+Entity}.
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_n_n_gen_1_1_async_neuron_aafa1d92f75c77c36546567c214840818}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!activation\+Type@{activation\+Type}}
+\index{activation\+Type@{activation\+Type}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{activation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Neuron\+Activation\+Type} N\+N\+Gen.\+Async\+Neuron.\+activation\+Type\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_aafa1d92f75c77c36546567c214840818}
+
+
+The thresholding function used for the neuron 
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_a06f594e2b75be48f0444010a2204d7b2}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!final\+Load\+Port@{final\+Load\+Port}}
+\index{final\+Load\+Port@{final\+Load\+Port}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{final\+Load\+Port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Async\+Neuron.\+final\+Load\+Port\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_a06f594e2b75be48f0444010a2204d7b2}
+
+
+This port goes high once the final weight has been loaded 
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_a374b98dccdbd95b77e6e64d896220a8b}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!load\+Clk\+Port@{load\+Clk\+Port}}
+\index{load\+Clk\+Port@{load\+Clk\+Port}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{load\+Clk\+Port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Async\+Neuron.\+load\+Clk\+Port\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_a374b98dccdbd95b77e6e64d896220a8b}
+
+
+A clock port used for the synchornous loading of the neuron weights 
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_a83a3e6466b062e49a29ce46508e2bdf0}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!load\+Enable\+Port@{load\+Enable\+Port}}
+\index{load\+Enable\+Port@{load\+Enable\+Port}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{load\+Enable\+Port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Async\+Neuron.\+load\+Enable\+Port\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_a83a3e6466b062e49a29ce46508e2bdf0}
+
+
+When high, the loading process will be enabled. 
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_a96074bc794e643df031319b43efb986c}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!load\+Offset\+Port@{load\+Offset\+Port}}
+\index{load\+Offset\+Port@{load\+Offset\+Port}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{load\+Offset\+Port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Async\+Neuron.\+load\+Offset\+Port\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_a96074bc794e643df031319b43efb986c}
+
+
+During weight loading, the weight signal pointed to by this signal will be loaded with the value of load\+Value\+Port 
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_a765bcf8344758b0e967117390749882d}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!load\+Value\+Port@{load\+Value\+Port}}
+\index{load\+Value\+Port@{load\+Value\+Port}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{load\+Value\+Port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Async\+Neuron.\+load\+Value\+Port\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_a765bcf8344758b0e967117390749882d}
+
+
+During weight loading, the value presented on this port will be clocked into one of the weight signals on the rising edge of load\+Clk\+Port 
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_a1b216c193a13ad763fee071d3238aab1}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!name@{name}}
+\index{name@{name}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}string N\+N\+Gen.\+Async\+Neuron.\+name\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_a1b216c193a13ad763fee071d3238aab1}
+
+
+The name of this particular neuron 
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_ae248edac3250fffe3fdba7ff2dd8288b}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!neuron\+Inputs@{neuron\+Inputs}}
+\index{neuron\+Inputs@{neuron\+Inputs}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{neuron\+Inputs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neuron.\+neuron\+Inputs\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_ae248edac3250fffe3fdba7ff2dd8288b}
+
+
+The inputs to the neuron 
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_a5b2ce64b48dcdfeddd29ea02a933f119}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!neuron\+Output@{neuron\+Output}}
+\index{neuron\+Output@{neuron\+Output}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{neuron\+Output}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Async\+Neuron.\+neuron\+Output\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_a5b2ce64b48dcdfeddd29ea02a933f119}
+
+
+The output port from the neuron 
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_a3b0880328253a0c90da2d8ed655941bd}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!num\+Output\+Frac\+Bits@{num\+Output\+Frac\+Bits}}
+\index{num\+Output\+Frac\+Bits@{num\+Output\+Frac\+Bits}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{num\+Output\+Frac\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Async\+Neuron.\+num\+Output\+Frac\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_a3b0880328253a0c90da2d8ed655941bd}
+
+
+The number of fractional bits to maintain on the output of the neuron 
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_a0a5f5459d5bfe73ec3c6e1fd584ea126}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!num\+Output\+Int\+Bits@{num\+Output\+Int\+Bits}}
+\index{num\+Output\+Int\+Bits@{num\+Output\+Int\+Bits}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{num\+Output\+Int\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Async\+Neuron.\+num\+Output\+Int\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_a0a5f5459d5bfe73ec3c6e1fd584ea126}
+
+
+The number of integer bits to maintain on the output of the neuron 
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_a73d47ce9be628ff13a518e071f695096}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!product\+Signals@{product\+Signals}}
+\index{product\+Signals@{product\+Signals}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{product\+Signals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neuron.\+product\+Signals\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_a73d47ce9be628ff13a518e071f695096}
+
+
+The signals used for holding the value of the product (weight\+\_\+i $\ast$ input\+\_\+i) 
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_abcb9157df57ac1f3751b2e730703bd58}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!sum@{sum}}
+\index{sum@{sum}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{sum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Async\+Neuron.\+sum\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_abcb9157df57ac1f3751b2e730703bd58}
+
+
+The signal used for holding the value of sum(product\+\_\+i) 
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_a1e0f902ec842b3b970e18c4d02401c4e}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!thresholded\+Sum@{thresholded\+Sum}}
+\index{thresholded\+Sum@{thresholded\+Sum}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{thresholded\+Sum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} N\+N\+Gen.\+Async\+Neuron.\+thresholded\+Sum\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_a1e0f902ec842b3b970e18c4d02401c4e}
+
+
+The signal used for holding the output of the thresholding function 
+
+\hypertarget{class_n_n_gen_1_1_async_neuron_aeeb431fe55c9cda6e2889691c27c344c}{}\index{N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}!weight\+Signals@{weight\+Signals}}
+\index{weight\+Signals@{weight\+Signals}!N\+N\+Gen\+::\+Async\+Neuron@{N\+N\+Gen\+::\+Async\+Neuron}}
+\subsubsection[{weight\+Signals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Async\+Neuron.\+weight\+Signals\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_async_neuron_aeeb431fe55c9cda6e2889691c27c344c}
+
+
+The signals used for holding the weights of the network 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_async_neuron_8cs}{Async\+Neuron.\+cs}\end{DoxyCompactItemize}

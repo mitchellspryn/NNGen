@@ -1,0 +1,190 @@
+\hypertarget{class_n_n_gen_1_1_panel_container}{}\section{N\+N\+Gen.\+Panel\+Container Class Reference}
+\label{class_n_n_gen_1_1_panel_container}\index{N\+N\+Gen.\+Panel\+Container@{N\+N\+Gen.\+Panel\+Container}}
+
+
+A container for holding the list of panels to show the user  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_panel_container_aff90f9069cacfacb87c98c4683c00a08}{Panel\+Container} (List$<$ \hyperlink{class_n_n_gen_1_1_n_n_panel}{N\+N\+Panel} $>$ \+\_\+panels)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{class_n_n_gen_1_1_panel_container}{Panel\+Container} \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_n_n_panel}{N\+N\+Panel} \hyperlink{class_n_n_gen_1_1_panel_container_abcf640c5145757f67e0e39529e62d9a3}{advance} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Attempt to advance to the next panel. If the current panel has had all of its data entered correctly, then this method returns the next form resized to (width, height) If there is an error, the current panel will be returned \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_n_n_panel}{N\+N\+Panel} \hyperlink{class_n_n_gen_1_1_panel_container_aa1082f9ed06b22a03b46c0228d814f05}{previous} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Safely returns the previous panel in the list resized to (Width, Height) If this method is called on the first panel in the list, then the first panel is returned. \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_n_n_panel}{N\+N\+Panel} \hyperlink{class_n_n_gen_1_1_panel_container_ad9762df6a510b1b7af423720da0f6130}{current} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Return the current panel, resized to (Width, Height) \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_n_n_panel}{N\+N\+Panel} \hyperlink{class_n_n_gen_1_1_panel_container_abb4eb5b543b584a98049316c23f20c8e}{current} ()
+\begin{DoxyCompactList}\small\item\em Return the current panel without resizing \end{DoxyCompactList}\item 
+void \hyperlink{class_n_n_gen_1_1_panel_container_a38332e7d9ea9d92eff375cf40a6458a4}{clear\+To\+End} (int index)
+\begin{DoxyCompactList}\small\item\em Removes all panels from the list with an index greater than or equal to (index) \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_panel_container_a181928c6c73958241a1db08f21cd1257}{is\+End} ()
+\begin{DoxyCompactList}\small\item\em Returns whether the cursor index is at the end of the list \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \hyperlink{class_n_n_gen_1_1_n_n_panel}{N\+N\+Panel} $>$ \hyperlink{class_n_n_gen_1_1_panel_container_a31f3e003f5a5fa87884d717e2c01f310}{panels}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of panels to be shown to the user \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_panel_container_a2134090074da8e94c15b7ed69fe75d06}{current\+Panel\+Index}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The index of the current panel being shown \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A container for holding the list of panels to show the user 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_n_gen_1_1_panel_container_aff90f9069cacfacb87c98c4683c00a08}{}\index{N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}!Panel\+Container@{Panel\+Container}}
+\index{Panel\+Container@{Panel\+Container}!N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}}
+\subsubsection[{Panel\+Container(\+List$<$ N\+N\+Panel $>$ \+\_\+panels)}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Panel\+Container.\+Panel\+Container (
+\begin{DoxyParamCaption}
+\item[{List$<$ {\bf N\+N\+Panel} $>$}]{\+\_\+panels}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_panel_container_aff90f9069cacfacb87c98c4683c00a08}
+
+
+Create a \hyperlink{class_n_n_gen_1_1_panel_container}{Panel\+Container} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+panels} & The list of panels to be shown to the user\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_panel_container_abcf640c5145757f67e0e39529e62d9a3}{}\index{N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}!advance@{advance}}
+\index{advance@{advance}!N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}}
+\subsubsection[{advance(int width, int height)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+N\+Panel} N\+N\+Gen.\+Panel\+Container.\+advance (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_panel_container_abcf640c5145757f67e0e39529e62d9a3}
+
+
+Attempt to advance to the next panel. If the current panel has had all of its data entered correctly, then this method returns the next form resized to (width, height) If there is an error, the current panel will be returned 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the panel to return\\
+\hline
+{\em height} & The height of the panel to return\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The next panel in the list, or the current panel
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_panel_container_a38332e7d9ea9d92eff375cf40a6458a4}{}\index{N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}!clear\+To\+End@{clear\+To\+End}}
+\index{clear\+To\+End@{clear\+To\+End}!N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}}
+\subsubsection[{clear\+To\+End(int index)}]{\setlength{\rightskip}{0pt plus 5cm}void N\+N\+Gen.\+Panel\+Container.\+clear\+To\+End (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_panel_container_a38332e7d9ea9d92eff375cf40a6458a4}
+
+
+Removes all panels from the list with an index greater than or equal to (index) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The starting index to remove\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_n_n_gen_1_1_panel_container_ad9762df6a510b1b7af423720da0f6130}{}\index{N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}!current@{current}}
+\index{current@{current}!N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}}
+\subsubsection[{current(int width, int height)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+N\+Panel} N\+N\+Gen.\+Panel\+Container.\+current (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_panel_container_ad9762df6a510b1b7af423720da0f6130}
+
+
+Return the current panel, resized to (Width, Height) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the panel to return\\
+\hline
+{\em height} & The height of the panel to return\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current panel
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_panel_container_abb4eb5b543b584a98049316c23f20c8e}{}\index{N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}!current@{current}}
+\index{current@{current}!N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}}
+\subsubsection[{current()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+N\+Panel} N\+N\+Gen.\+Panel\+Container.\+current (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_panel_container_abb4eb5b543b584a98049316c23f20c8e}
+
+
+Return the current panel without resizing 
+
+\begin{DoxyReturn}{Returns}
+The current panel
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_panel_container_a181928c6c73958241a1db08f21cd1257}{}\index{N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}!is\+End@{is\+End}}
+\index{is\+End@{is\+End}!N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}}
+\subsubsection[{is\+End()}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Panel\+Container.\+is\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_panel_container_a181928c6c73958241a1db08f21cd1257}
+
+
+Returns whether the cursor index is at the end of the list 
+
+\begin{DoxyReturn}{Returns}
+True if the cursor is at the end of the list
+\end{DoxyReturn}
+\hypertarget{class_n_n_gen_1_1_panel_container_aa1082f9ed06b22a03b46c0228d814f05}{}\index{N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}!previous@{previous}}
+\index{previous@{previous}!N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}}
+\subsubsection[{previous(int width, int height)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+N\+Panel} N\+N\+Gen.\+Panel\+Container.\+previous (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_panel_container_aa1082f9ed06b22a03b46c0228d814f05}
+
+
+Safely returns the previous panel in the list resized to (Width, Height) If this method is called on the first panel in the list, then the first panel is returned. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the panel to return\\
+\hline
+{\em height} & The height of the panel to return\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The previous panel in the list, or the first panel
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_n_n_gen_1_1_panel_container_a2134090074da8e94c15b7ed69fe75d06}{}\index{N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}!current\+Panel\+Index@{current\+Panel\+Index}}
+\index{current\+Panel\+Index@{current\+Panel\+Index}!N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}}
+\subsubsection[{current\+Panel\+Index}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Panel\+Container.\+current\+Panel\+Index\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_n_n_gen_1_1_panel_container_a2134090074da8e94c15b7ed69fe75d06}
+
+
+The index of the current panel being shown 
+
+\hypertarget{class_n_n_gen_1_1_panel_container_a31f3e003f5a5fa87884d717e2c01f310}{}\index{N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}!panels@{panels}}
+\index{panels@{panels}!N\+N\+Gen\+::\+Panel\+Container@{N\+N\+Gen\+::\+Panel\+Container}}
+\subsubsection[{panels}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf N\+N\+Panel}$>$ N\+N\+Gen.\+Panel\+Container.\+panels\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_n_n_gen_1_1_panel_container_a31f3e003f5a5fa87884d717e2c01f310}
+
+
+The list of panels to be shown to the user 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_panel_container_8cs}{Panel\+Container.\+cs}\end{DoxyCompactItemize}

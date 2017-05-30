@@ -1,0 +1,174 @@
+\hypertarget{class_n_n_gen_1_1_visualizer_layer}{}\section{N\+N\+Gen.\+Visualizer\+Layer Class Reference}
+\label{class_n_n_gen_1_1_visualizer_layer}\index{N\+N\+Gen.\+Visualizer\+Layer@{N\+N\+Gen.\+Visualizer\+Layer}}
+
+
+A representation of a layer in the \hyperlink{class_n_n_gen_1_1_visualizer}{Visualizer}  
+
+
+Inheritance diagram for N\+N\+Gen.\+Visualizer\+Layer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_n_gen_1_1_visualizer_layer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_visualizer_layer_a68a8bef64c4066c35865f8f505e6afe7}{Visualizer\+Layer} (int \+\_\+num\+Neurons, \hyperlink{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64}{Async\+Neuron.\+Neuron\+Activation\+Type} \+\_\+async\+Activation\+Type, \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6}{Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type} \+\_\+sync\+Activation\+Type, bool \+\_\+is\+Synchronous, string \+\_\+layer\+Name, bool \+\_\+is\+First\+Layer)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{class_n_n_gen_1_1_visualizer_layer}{Visualizer\+Layer} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_n_n_gen_1_1_visualizer_layer_ab129e028f30623f2377b82d2e3f1c7ed}{On\+Paint} (Paint\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Paints the form \end{DoxyCompactList}\item 
+override void \hyperlink{class_n_n_gen_1_1_visualizer_layer_a94a79048a1188b72705c77503a801008}{Dispose} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_n_n_gen_1_1_visualizer_layer_aaf9ed8af2561bf8203a81cba1bf324be}{num\+Neurons}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of neurons in the network \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_async_neuron_afe8460a52808d1587cbcc0a8e4e23b64}{Async\+Neuron.\+Neuron\+Activation\+Type} \hyperlink{class_n_n_gen_1_1_visualizer_layer_ace064a62dbac8d9ba6ab091f3275f809}{async\+Activation\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For asyncronous networks, the activation type of the layer \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6}{Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type} \hyperlink{class_n_n_gen_1_1_visualizer_layer_a4e3138e1ee1d9220ff8c53d0ac860f14}{sync\+Activation\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For syncronous networks, the activatino type of the layer \end{DoxyCompactList}\item 
+string \hyperlink{class_n_n_gen_1_1_visualizer_layer_a2f19de515420357a18d890cec3a3e43b}{activation\+Type\+\_\+string}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A human-\/readable string representation of the activation type \end{DoxyCompactList}\item 
+string \hyperlink{class_n_n_gen_1_1_visualizer_layer_adf0f91a6cf7dd357ff14b44f5c967a5f}{layer\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of the layer \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_visualizer_layer_ae0cf894b1f6ca60a8cbcfd3e862763f7}{is\+Synchronous}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the layer is synchronous \end{DoxyCompactList}\item 
+bool \hyperlink{class_n_n_gen_1_1_visualizer_layer_a260e665a2e4ec4651ff796c4de269eca}{is\+First\+Layer}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the layer is the first layer in the network \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A representation of a layer in the \hyperlink{class_n_n_gen_1_1_visualizer}{Visualizer} 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_n_gen_1_1_visualizer_layer_a68a8bef64c4066c35865f8f505e6afe7}{}\index{N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}!Visualizer\+Layer@{Visualizer\+Layer}}
+\index{Visualizer\+Layer@{Visualizer\+Layer}!N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}}
+\subsubsection[{Visualizer\+Layer(int \+\_\+num\+Neurons, Async\+Neuron.\+Neuron\+Activation\+Type \+\_\+async\+Activation\+Type, Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type \+\_\+sync\+Activation\+Type, bool \+\_\+is\+Synchronous, string \+\_\+layer\+Name, bool \+\_\+is\+First\+Layer)}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Visualizer\+Layer.\+Visualizer\+Layer (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+num\+Neurons, }
+\item[{{\bf Async\+Neuron.\+Neuron\+Activation\+Type}}]{\+\_\+async\+Activation\+Type, }
+\item[{{\bf Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type}}]{\+\_\+sync\+Activation\+Type, }
+\item[{bool}]{\+\_\+is\+Synchronous, }
+\item[{string}]{\+\_\+layer\+Name, }
+\item[{bool}]{\+\_\+is\+First\+Layer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_visualizer_layer_a68a8bef64c4066c35865f8f505e6afe7}
+
+
+Create a \hyperlink{class_n_n_gen_1_1_visualizer_layer}{Visualizer\+Layer} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+num\+Neurons} & The number of neurons in the layer\\
+\hline
+{\em \+\_\+async\+Activation\+Type} & For an asynchronous network, the activation type. Ignored for synchronous networks\\
+\hline
+{\em \+\_\+sync\+Activation\+Type} & For a synchronous network, the activation type. Ignored for asynchronous networks\\
+\hline
+{\em \+\_\+is\+Synchronous} & A flag determining whether the network is synchronous or not\\
+\hline
+{\em \+\_\+layer\+Name} & The name of the layer\\
+\hline
+{\em \+\_\+is\+First\+Layer} & A flag representing whether this layer is the first layer in the network. Used to mask the activation type\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_visualizer_layer_a94a79048a1188b72705c77503a801008}{}\index{N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}}
+\subsubsection[{Dispose(bool disposing)}]{\setlength{\rightskip}{0pt plus 5cm}override void N\+N\+Gen.\+Visualizer\+Layer.\+Dispose (
+\begin{DoxyParamCaption}
+\item[{bool}]{disposing}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_n_n_gen_1_1_visualizer_layer_a94a79048a1188b72705c77503a801008}
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_n_n_gen_1_1_visualizer_layer_ab129e028f30623f2377b82d2e3f1c7ed}{}\index{N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}!On\+Paint@{On\+Paint}}
+\index{On\+Paint@{On\+Paint}!N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}}
+\subsubsection[{On\+Paint(\+Paint\+Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}override void N\+N\+Gen.\+Visualizer\+Layer.\+On\+Paint (
+\begin{DoxyParamCaption}
+\item[{Paint\+Event\+Args}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_n_n_gen_1_1_visualizer_layer_ab129e028f30623f2377b82d2e3f1c7ed}
+
+
+Paints the form 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_n_n_gen_1_1_visualizer_layer_a2f19de515420357a18d890cec3a3e43b}{}\index{N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}!activation\+Type\+\_\+string@{activation\+Type\+\_\+string}}
+\index{activation\+Type\+\_\+string@{activation\+Type\+\_\+string}!N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}}
+\subsubsection[{activation\+Type\+\_\+string}]{\setlength{\rightskip}{0pt plus 5cm}string N\+N\+Gen.\+Visualizer\+Layer.\+activation\+Type\+\_\+string\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_visualizer_layer_a2f19de515420357a18d890cec3a3e43b}
+
+
+A human-\/readable string representation of the activation type 
+
+\hypertarget{class_n_n_gen_1_1_visualizer_layer_ace064a62dbac8d9ba6ab091f3275f809}{}\index{N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}!async\+Activation\+Type@{async\+Activation\+Type}}
+\index{async\+Activation\+Type@{async\+Activation\+Type}!N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}}
+\subsubsection[{async\+Activation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Async\+Neuron.\+Neuron\+Activation\+Type} N\+N\+Gen.\+Visualizer\+Layer.\+async\+Activation\+Type\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_visualizer_layer_ace064a62dbac8d9ba6ab091f3275f809}
+
+
+For asyncronous networks, the activation type of the layer 
+
+\hypertarget{class_n_n_gen_1_1_visualizer_layer_a260e665a2e4ec4651ff796c4de269eca}{}\index{N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}!is\+First\+Layer@{is\+First\+Layer}}
+\index{is\+First\+Layer@{is\+First\+Layer}!N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}}
+\subsubsection[{is\+First\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Visualizer\+Layer.\+is\+First\+Layer\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_visualizer_layer_a260e665a2e4ec4651ff796c4de269eca}
+
+
+Whether the layer is the first layer in the network 
+
+\hypertarget{class_n_n_gen_1_1_visualizer_layer_ae0cf894b1f6ca60a8cbcfd3e862763f7}{}\index{N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}!is\+Synchronous@{is\+Synchronous}}
+\index{is\+Synchronous@{is\+Synchronous}!N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}}
+\subsubsection[{is\+Synchronous}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+N\+Gen.\+Visualizer\+Layer.\+is\+Synchronous\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_visualizer_layer_ae0cf894b1f6ca60a8cbcfd3e862763f7}
+
+
+Whether the layer is synchronous 
+
+\hypertarget{class_n_n_gen_1_1_visualizer_layer_adf0f91a6cf7dd357ff14b44f5c967a5f}{}\index{N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}!layer\+Name@{layer\+Name}}
+\index{layer\+Name@{layer\+Name}!N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}}
+\subsubsection[{layer\+Name}]{\setlength{\rightskip}{0pt plus 5cm}string N\+N\+Gen.\+Visualizer\+Layer.\+layer\+Name\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_visualizer_layer_adf0f91a6cf7dd357ff14b44f5c967a5f}
+
+
+The name of the layer 
+
+\hypertarget{class_n_n_gen_1_1_visualizer_layer_aaf9ed8af2561bf8203a81cba1bf324be}{}\index{N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}!num\+Neurons@{num\+Neurons}}
+\index{num\+Neurons@{num\+Neurons}!N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}}
+\subsubsection[{num\+Neurons}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Visualizer\+Layer.\+num\+Neurons\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_visualizer_layer_aaf9ed8af2561bf8203a81cba1bf324be}
+
+
+The number of neurons in the network 
+
+\hypertarget{class_n_n_gen_1_1_visualizer_layer_a4e3138e1ee1d9220ff8c53d0ac860f14}{}\index{N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}!sync\+Activation\+Type@{sync\+Activation\+Type}}
+\index{sync\+Activation\+Type@{sync\+Activation\+Type}!N\+N\+Gen\+::\+Visualizer\+Layer@{N\+N\+Gen\+::\+Visualizer\+Layer}}
+\subsubsection[{sync\+Activation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type} N\+N\+Gen.\+Visualizer\+Layer.\+sync\+Activation\+Type\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_visualizer_layer_a4e3138e1ee1d9220ff8c53d0ac860f14}
+
+
+For syncronous networks, the activatino type of the layer 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_visualizer_layer_8cs}{Visualizer\+Layer.\+cs}\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_visualizer_layer_8_designer_8cs}{Visualizer\+Layer.\+Designer.\+cs}\end{DoxyCompactItemize}

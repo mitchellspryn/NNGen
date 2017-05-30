@@ -1,0 +1,239 @@
+\hypertarget{class_n_n_gen_1_1_sync_transfer_function_mem}{}\section{N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem Class Reference}
+\label{class_n_n_gen_1_1_sync_transfer_function_mem}\index{N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem}}
+
+
+A synchronous transfer function stored in memory. The transfer function is assumed to be symmetric around x = 0  
+
+
+Inheritance diagram for N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_n_gen_1_1_sync_transfer_function_mem}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_ad19b1fb77caa8199d378760b7472f950}{Sync\+Transfer\+Function\+Mem} (int \+\_\+num\+Int\+Bits, int \+\_\+num\+Frac\+Bits, \hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6}{Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type} \+\_\+activation\+Type, string \+\_\+name)
+\begin{DoxyCompactList}\small\item\em Create a new instance of a memory implementation of a synchronous transfer function \end{DoxyCompactList}\item 
+override string \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_ad4e64419e06ee98cd0a8e52d7ed866b6}{get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Returns the name of the entity \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_a4e263ba9743751277b49cd90578e2455}{get\+Input\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns the inputs to the device \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_port}{Port}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_a56548ab0fbafaa0384aa3c5cddc4d050}{get\+Output\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Returns the outputs to the device \end{DoxyCompactList}\item 
+override \hyperlink{class_n_n_gen_1_1_signal}{Signal}\mbox{[}$\,$\mbox{]} \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_a6b11efb6fd2d874b9bb5cfaafdb528a5}{get\+Internal\+Signals} ()
+\begin{DoxyCompactList}\small\item\em Returns the internal signals for the device \end{DoxyCompactList}\item 
+override bool \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_a6262571443276194d157c94be915f069}{write\+V\+H\+D\+L} (string file)
+\begin{DoxyCompactList}\small\item\em Writes the .vhd files necessary to compile this entity. All other necessary entities (i.\+e. neurons, thresholding functions, etc.) will also be written when this function returns \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_transfer_function_wrapper_aa338ffadb8fcdf76df75419374a51ff6}{Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type} \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_a98b2591ff8d7243cfc7546a7c37032d7}{activation\+Type}
+\begin{DoxyCompactList}\small\item\em The transfer function to implement \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_a842f5ef77e0b13f7e5a91b69fb10880b}{addr}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The address from which to read the memory \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_a39eac2d524a3ed0d3e55762373f3879c}{clk}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The clock signal for the memory \end{DoxyCompactList}\item 
+\hyperlink{class_n_n_gen_1_1_port}{Port} \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_a1afdcfbaa9233adc7673c2a59724accb}{data}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The output of the memory \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_ac004657938e8276bfcaf430399237501}{num\+Int\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of integer bits to use for the memory \end{DoxyCompactList}\item 
+int \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_ae036daf729a3381857761582bb573498}{num\+Frac\+Bits}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of fractional bits to use for the memory \end{DoxyCompactList}\item 
+string \hyperlink{class_n_n_gen_1_1_sync_transfer_function_mem_adb5f86e770954ca55c554848ea65a5f8}{name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of the memory instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A synchronous transfer function stored in memory. The transfer function is assumed to be symmetric around x = 0 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_n_gen_1_1_sync_transfer_function_mem_ad19b1fb77caa8199d378760b7472f950}{}\index{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}!Sync\+Transfer\+Function\+Mem@{Sync\+Transfer\+Function\+Mem}}
+\index{Sync\+Transfer\+Function\+Mem@{Sync\+Transfer\+Function\+Mem}!N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}}
+\subsubsection[{Sync\+Transfer\+Function\+Mem(int \+\_\+num\+Int\+Bits, int \+\_\+num\+Frac\+Bits, Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type \+\_\+activation\+Type, string \+\_\+name)}]{\setlength{\rightskip}{0pt plus 5cm}N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem.\+Sync\+Transfer\+Function\+Mem (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+num\+Int\+Bits, }
+\item[{int}]{\+\_\+num\+Frac\+Bits, }
+\item[{{\bf Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type}}]{\+\_\+activation\+Type, }
+\item[{string}]{\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_n_gen_1_1_sync_transfer_function_mem_ad19b1fb77caa8199d378760b7472f950}
+
+
+Create a new instance of a memory implementation of a synchronous transfer function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+num\+Int\+Bits} & The number of integer bits to use in the implementation\\
+\hline
+{\em \+\_\+num\+Frac\+Bits} & The number of fractional bits to use in the implementation\\
+\hline
+{\em \+\_\+activation\+Type} & The transfer function to implement\\
+\hline
+{\em \+\_\+name} & The name of the memory entity\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_n_gen_1_1_sync_transfer_function_mem_a4e263ba9743751277b49cd90578e2455}{}\index{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}!get\+Input\+Ports@{get\+Input\+Ports}}
+\index{get\+Input\+Ports@{get\+Input\+Ports}!N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}}
+\subsubsection[{get\+Input\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem.\+get\+Input\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sync_transfer_function_mem_a4e263ba9743751277b49cd90578e2455}
+
+
+Returns the inputs to the device 
+
+\begin{DoxyReturn}{Returns}
+The inputs to the device
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a01239f05c9efa61ec9e6a29cb2eaad50}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_sync_transfer_function_mem_a6b11efb6fd2d874b9bb5cfaafdb528a5}{}\index{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}!get\+Internal\+Signals@{get\+Internal\+Signals}}
+\index{get\+Internal\+Signals@{get\+Internal\+Signals}!N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}}
+\subsubsection[{get\+Internal\+Signals()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Signal} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem.\+get\+Internal\+Signals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sync_transfer_function_mem_a6b11efb6fd2d874b9bb5cfaafdb528a5}
+
+
+Returns the internal signals for the device 
+
+\begin{DoxyReturn}{Returns}
+The internal signals for the device
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a62feb80e95ec84c650ea17bd53f0d510}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_sync_transfer_function_mem_ad4e64419e06ee98cd0a8e52d7ed866b6}{}\index{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}override string N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem.\+get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sync_transfer_function_mem_ad4e64419e06ee98cd0a8e52d7ed866b6}
+
+
+Returns the name of the entity 
+
+\begin{DoxyReturn}{Returns}
+The name of the entity
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a9f25d1070c9ab8ad343c28443e62e6f2}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_sync_transfer_function_mem_a56548ab0fbafaa0384aa3c5cddc4d050}{}\index{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}!get\+Output\+Ports@{get\+Output\+Ports}}
+\index{get\+Output\+Ports@{get\+Output\+Ports}!N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}}
+\subsubsection[{get\+Output\+Ports()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Port} \mbox{[}$\,$\mbox{]} N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem.\+get\+Output\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sync_transfer_function_mem_a56548ab0fbafaa0384aa3c5cddc4d050}
+
+
+Returns the outputs to the device 
+
+\begin{DoxyReturn}{Returns}
+The outputs to the device
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_ace06368087778e254a5048c7d28747be}{N\+N\+Gen.\+Entity}.
+
+\hypertarget{class_n_n_gen_1_1_sync_transfer_function_mem_a6262571443276194d157c94be915f069}{}\index{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}!write\+V\+H\+D\+L@{write\+V\+H\+D\+L}}
+\index{write\+V\+H\+D\+L@{write\+V\+H\+D\+L}!N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}}
+\subsubsection[{write\+V\+H\+D\+L(string file)}]{\setlength{\rightskip}{0pt plus 5cm}override bool N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem.\+write\+V\+H\+D\+L (
+\begin{DoxyParamCaption}
+\item[{string}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_n_n_gen_1_1_sync_transfer_function_mem_a6262571443276194d157c94be915f069}
+
+
+Writes the .vhd files necessary to compile this entity. All other necessary entities (i.\+e. neurons, thresholding functions, etc.) will also be written when this function returns 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path in which to write the files (do N\+O\+T include \char`\"{}...\+name.\+vhd\char`\"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the files were written successfully, false otherwise
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_n_n_gen_1_1_entity_a1111d498446be08b20583b9625893a52}{N\+N\+Gen.\+Entity}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_n_n_gen_1_1_sync_transfer_function_mem_a98b2591ff8d7243cfc7546a7c37032d7}{}\index{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}!activation\+Type@{activation\+Type}}
+\index{activation\+Type@{activation\+Type}!N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}}
+\subsubsection[{activation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transfer\+Function\+Wrapper.\+Memory\+Activation\+Type} N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem.\+activation\+Type}\label{class_n_n_gen_1_1_sync_transfer_function_mem_a98b2591ff8d7243cfc7546a7c37032d7}
+
+
+The transfer function to implement 
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_n_n_gen_1_1_sync_transfer_function_mem_a842f5ef77e0b13f7e5a91b69fb10880b}{}\index{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}!addr@{addr}}
+\index{addr@{addr}!N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}}
+\subsubsection[{addr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem.\+addr\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_transfer_function_mem_a842f5ef77e0b13f7e5a91b69fb10880b}
+
+
+The address from which to read the memory 
+
+\hypertarget{class_n_n_gen_1_1_sync_transfer_function_mem_a39eac2d524a3ed0d3e55762373f3879c}{}\index{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}!clk@{clk}}
+\index{clk@{clk}!N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}}
+\subsubsection[{clk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem.\+clk\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_transfer_function_mem_a39eac2d524a3ed0d3e55762373f3879c}
+
+
+The clock signal for the memory 
+
+\hypertarget{class_n_n_gen_1_1_sync_transfer_function_mem_a1afdcfbaa9233adc7673c2a59724accb}{}\index{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}!data@{data}}
+\index{data@{data}!N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem.\+data\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_transfer_function_mem_a1afdcfbaa9233adc7673c2a59724accb}
+
+
+The output of the memory 
+
+\hypertarget{class_n_n_gen_1_1_sync_transfer_function_mem_adb5f86e770954ca55c554848ea65a5f8}{}\index{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}!name@{name}}
+\index{name@{name}!N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}string N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem.\+name\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_transfer_function_mem_adb5f86e770954ca55c554848ea65a5f8}
+
+
+The name of the memory instance 
+
+\hypertarget{class_n_n_gen_1_1_sync_transfer_function_mem_ae036daf729a3381857761582bb573498}{}\index{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}!num\+Frac\+Bits@{num\+Frac\+Bits}}
+\index{num\+Frac\+Bits@{num\+Frac\+Bits}!N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}}
+\subsubsection[{num\+Frac\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem.\+num\+Frac\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_transfer_function_mem_ae036daf729a3381857761582bb573498}
+
+
+The number of fractional bits to use for the memory 
+
+\hypertarget{class_n_n_gen_1_1_sync_transfer_function_mem_ac004657938e8276bfcaf430399237501}{}\index{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}!num\+Int\+Bits@{num\+Int\+Bits}}
+\index{num\+Int\+Bits@{num\+Int\+Bits}!N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem@{N\+N\+Gen\+::\+Sync\+Transfer\+Function\+Mem}}
+\subsubsection[{num\+Int\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}int N\+N\+Gen.\+Sync\+Transfer\+Function\+Mem.\+num\+Int\+Bits\hspace{0.3cm}{\ttfamily [get]}}\label{class_n_n_gen_1_1_sync_transfer_function_mem_ac004657938e8276bfcaf430399237501}
+
+
+The number of integer bits to use for the memory 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/\+Visual Studio 2013/\+Projects/\+Neural\+Network/\+N\+N\+Gen/\hyperlink{_sync_transfer_function_mem_8cs}{Sync\+Transfer\+Function\+Mem.\+cs}\end{DoxyCompactItemize}
